@@ -1,5 +1,12 @@
 --[[message
 Let Krawlers float like never before!
+
+
+	Your Starting LP: 1
+	Opponent's Starting LP: 20800
+	Complexity: ?/10.
+	Objective: Win this turn.
+
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,4)

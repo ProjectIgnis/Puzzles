@@ -1,5 +1,11 @@
 --[[message
 SPYRALs were broken even before Double Helix
+
+	Your Starting LP: 1000
+	Opponent's Starting LP: 12200
+	Complexity: ?/10.
+	Objective: Win this turn.
+
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI+DUEL_PSEUDO_SHUFFLE,4)

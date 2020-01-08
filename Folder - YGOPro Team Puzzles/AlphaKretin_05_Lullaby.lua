@@ -1,5 +1,10 @@
 --[[message
 This one's just a meme. Did you know that Lullaby of Obedience ignores summoning conditions?
+
+	Your Starting LP: 2001
+	Opponent's Starting LP: 2000000000
+	Complexity: ?/10.
+	Objective: Win this turn.
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_SIMPLE_AI+DUEL_PSEUDO_SHUFFLE,3)

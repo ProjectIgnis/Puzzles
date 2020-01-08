@@ -1,5 +1,10 @@
 --[[message
 A very conveniently set-up Tag duel to give Cyber Dragon as much ATK as possible
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 9151952
+	Complexity: ?/10.
+	Objective: Win this turn.
 ]]
 --Cyber Dragon Maximum Attack puzzle
 Debug.SetAIName("AlphaKretin")
@@ -108,12 +113,13 @@ Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
 Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
 Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
 Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
-Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
+Debug.AddCard(1142880, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 0, 0, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+
 
 --AI's grave
 Debug.AddCard(70095154, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Cyber Dragon
@@ -158,12 +164,12 @@ Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
 Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
 Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
 Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Drei
-Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
-Debug.AddCard(59281922, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --6 more Drei, taking Nachster's place for now
+Debug.AddCard(1142880, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
+Debug.AddCard(1142880, 1, 1, LOCATION_GRAVE, 0, POS_FACEUP) --Nachster
 
 Debug.ReloadFieldEnd()
 aux.BeginPuzzle()

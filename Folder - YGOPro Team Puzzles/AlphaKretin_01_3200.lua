@@ -1,6 +1,12 @@
 --[[message
 Find a way to attack for game through a board of 3200 ATK behemoths!
+
+	Your Starting LP: 1
+	Opponent's Starting LP: 500
+	Complexity: ?/10.
+	Objective: Win this turn.
 ]]
+
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI+DUEL_PSEUDO_SHUFFLE,3)
 
