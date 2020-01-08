@@ -1,7 +1,15 @@
 --Kuriboh Madness v3
 --Designed and implemented by Andre
 --[[message
-Kuribohs are everywhere!]]
+Kuribohs are everywhere!
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 10000
+	Complexity: ?/10.
+	Objective: Win this turn.
+	Note: this puzzle has various hidden pranks.
+]]
 
 
 --function

@@ -2,11 +2,20 @@
 --Created by Naim
 Debug.SetAIName("AI_Ygopro")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
-Debug.SetPlayerInfo(0,10,0,0)
+Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,30000,0,0)
 
 --[[message
-This puzzle demonstrates Deskbot's ability to output huge damage amount in a single turn!!!!]]
+This puzzle demonstrates Deskbot's ability to output huge damage amount in a single turn!!!!
+
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 30000
+	Complexity: 6/10.
+	Objective: Win this turn.
+	Note: This puzzle is set to Master Rules 3
+]]
 
 
 Debug.ShowHint("Inflict 30000 damage to win this turn!!")

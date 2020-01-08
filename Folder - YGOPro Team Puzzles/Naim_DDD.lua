@@ -1,13 +1,21 @@
 --DDD Combos
 --Created by Naim
 
-Debug.SetAIName("AI_Ygopro")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
-Debug.SetPlayerInfo(0,10,0,0)
+Debug.SetAIName("Naim")
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
+Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,8800,0,0)
 --[[message
 This is a puzzle version of the "D/D (Advance Combo)" from the  RoadoftheDuelist.
-All credits go to the creators of it, in this page (http://roadoftheking.com/dd-advance-combo).]]
+All credits go to the creators of it, in this page (http://roadoftheking.com/dd-advance-combo).
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 8800
+	Complexity: 6/10.
+	Objective: Win this turn.
+	Note: This puzzle is set to Master Rules 3
+]]
 
 
 Debug.ShowHint("Win this turn!!")

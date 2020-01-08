@@ -1,13 +1,19 @@
 --Lunalights Zoodiac
 --Created by Naim
-Debug.SetAIName("AI_Ygopro")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
-Debug.SetPlayerInfo(0,10,0,0)
+Debug.SetAIName("Naim")
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
+Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,56000,0,0)
 
 --[[message
-And this is one of the many reasons Zoodiac Ratpier and Zoodiac Broadbull should stay banned...
-Try to inflict 56000 Damage with Lunalights.]]
+And this is one of the many reasons Zoodiac Ratpier and Zoodiac Broadbull should stay banned... Try to inflict 56000 Damage with Lunalights.
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 56000
+	Complexity: 5/10.
+	Objective: Win this turn.
+	Note: this puzzle is set to Master Rules 3
+]]
 
 Debug.ShowHint("Win this turn!!")
 

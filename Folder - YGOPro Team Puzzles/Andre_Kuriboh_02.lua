@@ -5,7 +5,16 @@ Debug.SetAIName("Jaden?")
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,4850,0,0)
 --[[message
-Even more Kuribohs!]]
+Even more Kuribohs!
+
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 4850
+	Complexity: ?/10.
+	Objective: Win this turn.
+	Note:
+]]
 
 
 --op deck

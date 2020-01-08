@@ -3,7 +3,14 @@
 
 --[[message
 Are Kuribohs a joke?
-Be careful while choosing an attacker.]]
+Be careful while choosing an attacker.
+
+
+	Your Starting LP: 1
+	Opponent's Starting LP: 1000
+	Complexity: 2/10.
+	Objective: Win this turn.
+]]
 function aux.trol(e,tp)
 	local c=e:GetHandler()
 	local a=Duel.GetAttacker()

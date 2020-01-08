@@ -1,12 +1,20 @@
 --Electrum OTK
 --Created by Naim for Ygopro Percy
-Debug.SetAIName("AI_YgoproPercy")
+Debug.SetAIName("Naim")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
-Debug.SetPlayerInfo(0,10,0,0)
+Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,8000,0,0)
 
 --[[message
-This puzzle demonstrates how Electrum OTK is performed, by using the effects of "Chain Material" to overuse "Fusion Gate" and "Elemental Hero Electrum" and continuously summon Superdreadnought Rail Cannon Gustav Max]]
+This puzzle demonstrates how Electrum OTK is performed, by using the effects of "Chain Material" to overuse "Fusion Gate" and "Elemental Hero Electrum" and continuously summon Superdreadnought Rail Cannon Gustav Max
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 8000
+	Complexity: 5/10.
+	Objective: Win this turn.
+	Note: this puzzle is set to Master Rules 3
+]]
 
 Debug.ShowHint("Win this turn!!")
 

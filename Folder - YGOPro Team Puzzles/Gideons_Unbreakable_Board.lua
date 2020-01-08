@@ -7,7 +7,14 @@ Debug.SetPlayerInfo(0,2147483647,0,0)
 Debug.SetPlayerInfo(1,2147483647,0,0)
 --[[message
 This puzzle has an "unbreakable board".
-To win, you need to find a way to remove at least 1 of the cards on the field!]]
+To win, you need to find a way to remove at least 1 of the cards on the field!
+
+
+	Your Starting LP: ?
+	Opponent's Starting LP: ?
+	Complexity: ∞/10.
+	Objective: Find a way to break the board.
+]]
 
 
 local card=Debug.AddCard(35984222,0,0,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
