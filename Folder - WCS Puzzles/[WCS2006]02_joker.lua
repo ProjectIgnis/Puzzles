@@ -1,9 +1,20 @@
 
-Debug.SetAIName("クロースアップマジック！")
+Debug.SetAIName("Non Player Character - WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1400,0,0)
 Debug.SetPlayerInfo(1,4500,0,0)
+
+--[[message
+Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006", using Arcana Knight Joker.
+	
+	
+	Your Starting LP: 1400
+	Opponent's Starting LP: 4500
+	Complexity: 2/10.
+	Objective: Win this turn.
+]]
+
 
 Debug.AddCard(00423585,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 Debug.AddCard(64788463,0,0,LOCATION_DECK,0,POS_FACEDOWN)
@@ -23,5 +34,5 @@ Debug.AddCard(34460239,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.AddCard(06150044,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()

@@ -1,9 +1,18 @@
 
-Debug.SetAIName("強化手術")
+Debug.SetAIName("Non Player Character - WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1000,0,0)
 Debug.SetPlayerInfo(1,8000,0,0)
+--[[message
+Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006", using Cybernetic Magician.
+	
+	
+	Your Starting LP: 1000
+	Opponent's Starting LP: 8000
+	Complexity: 3/10.
+	Objective: Win this turn.
+]]
 
 Debug.AddCard(48094997,0,0,LOCATION_HAND,0,POS_FACEDOWN)
 Debug.AddCard(48766543,0,0,LOCATION_HAND,0,POS_FACEDOWN)
@@ -21,5 +30,5 @@ Debug.AddCard(22609617,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.AddCard(34100324,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
