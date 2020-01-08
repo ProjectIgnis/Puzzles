@@ -5,6 +5,18 @@ Debug.SetAIName("Nightbot")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 Debug.SetPlayerInfo(0,1,0,0)
 Debug.SetPlayerInfo(1,90000,0,0)
+--[[message
+Nightbot was ruler of Percy's Discord for some time. Can you beat it?
+
+
+	Your Starting LP: 8000
+	Opponent's Starting LP: 1000
+	Complexity: 5/10.
+	Objective: Win this turn.
+	Notes: Nightbot has some secrets in play.
+
+]]
+
 
 --Ops grave and stuff for NAA
 --God in grave to "act as discard" >The egyptians did 9/11
@@ -151,7 +163,6 @@ Debug.ReloadFieldEnd()
     e3:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
     Duel.RegisterEffect(e3,1)
 
-Debug.ShowHint("Win against Nightbot!")
 Debug.ShowHint("Non Aggression Area is applyed. :D")
 Debug.ShowHint("Play nice! [warning]")
 --Debug.ShowHint("My ears! Please don't shout. [warning]")

@@ -1,6 +1,17 @@
 Debug.SetAIName("Ha You Can't Attack")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
+--[[message
+Disk Commandar Pre-Errat strikes again.
+
+
+	Your Starting LP: 8000
+	Opponent's Starting LP: 8000
+	Complexity: 5/10.
+	Objective: Win using Exodia, the Forbidden One.
+
+]]
+
 Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,8000,0,0)
 --AI's field
@@ -62,7 +73,7 @@ Debug.AddCard(04035199,1,1,LOCATION_GRAVE,0,POS_FACEUP)
 Debug.AddCard(04035199,1,1,LOCATION_GRAVE,0,POS_FACEUP)
 Debug.AddCard(04035199,1,1,LOCATION_GRAVE,0,POS_FACEUP)
 --Players field
-Debug.AddCard(56570271,0,0,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
+Debug.AddCard(511003116,0,0,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
 Debug.AddCard(34906152,0,0,LOCATION_SZONE,3,POS_FACEUP)
 Debug.AddCard(00027551,0,0,LOCATION_SZONE,0,POS_FACEDOWN)
 Debug.AddCard(00027551,0,0,LOCATION_SZONE,1,POS_FACEDOWN)

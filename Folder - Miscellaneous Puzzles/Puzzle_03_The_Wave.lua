@@ -1,4 +1,14 @@
 --Puzzle made by Gideon, idea by Kingu
+--[[message
+There were many reasons to ban Zoodiacs. Here's another.
+
+
+	Your Starting LP: 8000
+	Opponent's Starting LP: 8000
+	Complexity: 1/10.
+	Objective: Win this turn.
+
+]]
 Debug.SetAIName("Haha_You_Cant_Atk")
 Debug.ReloadFieldBegin(0x80)
 
@@ -48,7 +58,7 @@ Debug.AddCard(43490025,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.AddCard(43490025,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win this turn!")
-Debug.ShowHint("You cannot attack. First turn.")
+Debug.ShowHint("You cannot attack, this is the first turn.")
 aux.BeginPuzzle()
 --LOCATION_DECK
 --LOCATION_SZONE

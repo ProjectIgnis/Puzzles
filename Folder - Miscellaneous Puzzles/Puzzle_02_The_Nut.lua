@@ -1,6 +1,17 @@
 Debug.SetAIName("Oh nuts...")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
+--[[message
+Rodenut and Shapesnatch, an iconic duo.
+
+
+	Your Starting LP: 8000
+	Opponent's Starting LP: 1000
+	Complexity: 5/10.
+	Objective: Win this turn.
+
+]]
+
 Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,1000,0,0)
 --AI stuff

@@ -1,6 +1,15 @@
---puzzle1
-Debug.SetAIName("Ｚ-ＯＮＥ")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+--[[message
+Defeat Z-One's Timelords with Signer Dragons.
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 15300
+	Complexity: 6/10.
+	Objective: Win this turn.
+
+]]
+Debug.SetAIName("Z-One")
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,15300,0,0)
 Debug.AddCard(83764718,0,0,LOCATION_DECK,0,POS_FACEDOWN)
@@ -42,6 +51,7 @@ Debug.AddCard(02403771,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.AddCard(25862681,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.AddCard(73580471,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.AddCard(70902743,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
+
 Debug.AddCard(100000004,1,1,LOCATION_MZONE,4,POS_FACEUP_ATTACK)
 Debug.AddCard(100000008,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
 Debug.AddCard(100000002,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)

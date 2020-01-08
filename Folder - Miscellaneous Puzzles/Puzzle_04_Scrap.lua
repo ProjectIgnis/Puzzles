@@ -1,6 +1,16 @@
---puzzle1
-Debug.SetAIName("高性能电子头脑")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+--[[message
+A synchro spamm puzzle with Level Eater and scrap monsters.
+
+
+	Your Starting LP: 100
+	Opponent's Starting LP: 5900
+	Complexity: 5/10.
+	Objective: Win this turn.
+
+]]
+
+Debug.SetAIName("AI")
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,5900,0,0)
 Debug.AddCard(33396948,0,0,LOCATION_DECK,0,POS_FACEDOWN)
@@ -23,5 +33,5 @@ Debug.AddCard(67030233,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
 Debug.AddCard(70902743,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
 Debug.AddCard(70902743,1,1,LOCATION_MZONE,4,POS_FACEUP_ATTACK)
 Debug.ReloadFieldEnd()
-Debug.ShowHint("Win in this turn!")
+Debug.ShowHint("Win this turn!")
 aux.BeginPuzzle()
