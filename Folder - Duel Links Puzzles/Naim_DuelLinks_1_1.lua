@@ -1,3 +1,12 @@
+--[[message
+Reproduces a Duel Link's puzzle, including its hints.
+
+	Your Starting LP: 4000
+	Opponent's Starting LP: 1700
+	Complexity: 1/10.
+	Objective: Win this turn.
+]]
+
 --Created by Naim for Ygopro Percy
 Debug.SetAIName("Tour Guide From the Underworld")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
