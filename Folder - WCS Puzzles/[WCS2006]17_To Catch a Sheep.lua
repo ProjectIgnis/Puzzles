@@ -26,3 +26,15 @@ Debug.AddCard(31036355,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate 'Armed Dragon LV7''s effect, discard 'Soul Tiger'
+-Flip Summon 'Magician of Faith', select 'Creature Swap'
+-Summon 'The Creator' by tributing 'Magician of Faith' and 'Man-Eater Bug'
+-Activate 'The Creator''s effect, select 'Soul Tiger' and discard 
+'Tsukuyomi'
+-Activate 'Creature Swap', select 'Soul Tiger'
+-Attack 'Soul Tiger' with 'Elemental Hero Erikshieler'
+-Attack directly with the rest
+]]

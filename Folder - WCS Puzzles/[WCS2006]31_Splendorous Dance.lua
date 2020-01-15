@@ -24,3 +24,19 @@ Debug.AddCard(52503575,1,1,LOCATION_SZONE,3,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+
+-Activate Mystical Space Typhoon and select Mirror Force
+-Flip Apprentice Magician and Lady Ninja Yae face up
+-Go into battle phase
+-Attack Troop Dragon with Lady Ninja Yae
+-Attack Troop Dragon with Apprentice Magician (and activate its effect to 
+special summon Hurricail in defense mode)
+-Activate Spiritual Wind Art, sacrificing Lady Ninja Yae, and select 
+opponent's Skill Drain
+-Activate Desert Sunlight and select Troop Dragon due to Wynn's effect
+-Attack and win
+
+]]

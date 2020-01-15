@@ -20,3 +20,22 @@ Debug.AddCard(34187685,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Summon Elemental Hero Avian in attack mode
+-Activate Double Attack, sending Elemental Hero Neo Bubbleman to the 
+graveyard, applying effect to Elemental Hero Avian
+-Set all spell cards on the field
+-Special summon Elemental Hero Bubbleman in attack mode
+-Activate Giant Trunade to return all spell cards to your hand
+-Activate The Warrior Returning Alive to get Elemental Hero Neo Bubbleman 
+from your graveyard
+-Special summon Elemental Hero Neo Bubbleman in attack mode
+-Equip Elemental Hero Neo Bubbleman with Bubble Blaster
+-Go into battle phase
+-Attack Perfectly Ultimate Great Moth with Elemental Hero Neo Bubbleman
+-Attack twice with Elemental Hero Avian and win
+
+
+]]

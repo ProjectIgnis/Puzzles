@@ -23,3 +23,12 @@ Debug.PreEquip(s03, m03)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Summon 'Gilford the Legend' by tributing 'Gearfried the Iron Knight' and 
+'Armed Samurai - Ben Kei', activate its effect and equip everything on 
+'Hayabusa Knight'
+-Attack 'Despair from the Dark' with 'Hayabusa Knight'
+-Attack directly with everyone
+]]

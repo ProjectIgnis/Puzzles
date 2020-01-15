@@ -26,3 +26,16 @@ Debug.AddCard(35809262,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate 'King of the Swamp''s effect
+-Summon 'Wroughtweiler'
+-Activate 'Polymerization' to summon 'Elemental Hero Flame Wingman'
+-Activate 'Polymerization' to summon 'Elemental Hero Shining Flare
+Wingman'
+-Activate 'Premature Burial', select 'King of the Swamp'
+-Attack 'Blue-Eyes Ultimate Dragon' with 'Elemental Hero Shining Flare 
+Wingman'
+-Attack directly with the rest
+]]

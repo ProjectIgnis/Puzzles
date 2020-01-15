@@ -25,3 +25,13 @@ Debug.AddCard(40703222,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Enter battle phase and attack Gadget Soldier with Amazoness Chain Master
+-Use Amazoness Chain Master's effect to get opponent's Kuriboh
+-Enter main phase 2 and summon kuriboh face up
+-Activate Multiply by sacrificing Kuriboh
+-Use Cannon Soldier's effect on the 4 Kuriboh tokens and lastly Cannon 
+Soldier itself
+]]

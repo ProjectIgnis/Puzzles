@@ -20,3 +20,14 @@ Debug.AddCard(04206964,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+--[[Solution
+
+-Activate Shield Crash and select Sand Moth (then special summon Sand Moth
+in attack mode)
+-Activate Acid Trap Hole and select Giant Soldier of Stone
+-Go into battle phase
+-Attack Millennium Scoprion with Sand Moth and then activate Rope of Life 
+after monsters are destroyed
+-Activate Call of the Haunted and select Berserk Gorilla
+-Attack and win
+]]

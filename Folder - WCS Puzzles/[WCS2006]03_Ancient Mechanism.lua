@@ -27,3 +27,18 @@ Debug.AddCard(44095762,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate Ancient Gear Castle
+-Summon Ancient Gear Soldier in attack mode
+-Use Ultimate Offerings effect and summon Ancient Gear Beast by 
+sacrificing Blue-Eyes Ultimate Dragon (note: don't use Ancient Gear 
+Castle's effect!)
+-Use Ultimate Offerings effect again to summon Ancient Gear Golem using 
+Ancient Gear Castle's effect
+-Go into battle phase and attack Blue-Eyes White Dragon with Ancient Gear 
+Golem
+-Attack with other monsters and win
+
+]]

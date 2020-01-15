@@ -50,3 +50,30 @@ Debug.AddCard(84970821,1,1,LOCATION_SZONE,4,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+
+--[[
+Solution:
+
+-Use Mystical Space Typhoon and select Mirror Force
+-Use Dust Tornado and select Skill Drain
+-Flip Hiro's Shadow Scout face up
+-Activate Mystik Wok and select Double Coston (select ATK)
+-Summon Ancient Gear Beast in attack mode by sacrificing Hiro's Shadow 
+Scout
+-Activate Ultimate Offering's effect to summon both Zolga and The Ancient 
+Sun Helios in attack mode
+-Activate Ultimate Offering's effect to summon Dark Magician of Chaos in 
+attack mode (by sacrificing Zolga and The Ancient Sun Helios) and get 
+Mystical Space Typhone from the graveyard with Dark Magician of Chaos' 
+effect
+-Activate Mysitcal Space Typhoon and select Widespread Ruin
+-Activate Card Destruction
+-Activate Ultimate Offering's effect to summon Helios Duo Megiste in 
+attack mode by sacrificing Banisher of the Light
+-Go into battle phase
+-Attack Nobleman-Eater Bug with Ancient Gear Beast
+-Attack Mechanical Hound with Dark Magician of Chaos
+-Attack with both Helios Duo Megiste and Elemental Hero Bladedge to win
+
+]]

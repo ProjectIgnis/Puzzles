@@ -29,3 +29,34 @@ Debug.AddCard(85742772,1,1,LOCATION_SZONE,3,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+
+--[[
+Solution:
+
+-Summon Bladefly in attack mode
+-Go into battle phase
+-Attack Neo Bug with Jinzo
+-Go into main phase 2
+-Flip Penguin Soldier and send Jinzo to your hand
+-Activate Ultimate Offering's effect to summon Little Chimera in attack 
+mode
+-Activate Fuh-Rin-Ka-Zan and select Draw 2 cards
+-Activate Mystik Wok and use its effect on Little Chimera (select ATK)
+-Activate Ultimate Offering's effect to summon Catapult Turtle in attack 
+mode (sacrificing Bladefly)
+-Use Great Spirit's effect, then flip it face up and apply effect to 
+itself
+-Activate Ultimate Offering's effect to summon Milus Radiant in attack 
+mode
+-Use Catapult Turtle's effect and select Great Spirit
+-Activate Ultimate Offering's effect to summon Star Boy in attack mode
+-Activate Ultimate Offering's effect to summon Jinzo in attack mode 
+(sacrificing Milus Radiant)
+-Use Catapult Turtle's effect and select Jinzo
+-Use Catapult Turtle's effect and select Penguin Soldier
+-Use Catapult Turtle's effect and select Star Boy
+-Use Catapult Turtle's effect and select itself
+
+
+]]

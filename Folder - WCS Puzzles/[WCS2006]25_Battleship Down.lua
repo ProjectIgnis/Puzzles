@@ -34,3 +34,15 @@ Debug.PreAddCounter(m14,0x1F,3)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+--[[
+solution:
+-Activate 'A Legendary Ocean'
+-Activate 'Stop Defense', select 'B.E.S. Tetran'
+-Activate 'Book of Moon', select 'Big Core'
+-Activate 'Monster Reincarnation', discard 'Nobleman of Crossout' and 
+select 'Armed Samurai - Ben Kei'
+-Summon 'Armed Samurai - Ben Kei'
+-Activate 'Mage Power' and equip it to 'Armed Samurai - Ben Kei'
+-Activate 'Axe of Despair' and equip it to 'Armed Samurai - Ben Kei'
+-Attack 'B.E.S. Tetran' with 'Armed Samurai - Ben Kei' three times
+]]

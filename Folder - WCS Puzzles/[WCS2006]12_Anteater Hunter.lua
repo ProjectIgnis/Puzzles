@@ -24,3 +24,15 @@ Debug.AddCard(44095762,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate 'Generation Shift', select 'Disciple of the Forbidden Spell'
+-Special Summon 'Anteatereatingant' by sending both your trap and spell
+card on the field to the graveyard
+-Activate 'Anteatereatingant''s effect to destroy opponent's trap
+-Summon 'Disciple of the Forbidden Spell', select "Dark" for its effect
+-Attack 'Spirit Reaper' with 'Disciple of the Forbidden Spell'
+-Attack directly with 'Divine Dragon - Excelion'
+-Attack directly with 'Chainsaw Insect'
+]]

@@ -29,3 +29,18 @@ Debug.AddCard(09910360,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+
+
+--[[
+Solution:
+-Activate Magical Stone Excation, discarding a T.A.D.P.O.L.E. and a 
+Treeborn Frog from your hand, to get Polymerization from the graveyard
+-Summon a Des Frog, sacrificing the Treeborn Frog on the field
+-Use Des Frog's summoning effect to summon Des Frog from your deck 
+(important: NOT YOUR HAND!)
+-Use Polymerization to summon D.3.S. Frog in attack position
+-Activate Double Attack, discarding Koitsu, and use it on D.3.S. Frog
+-Go into battle phase
+-Attack twice with D.3.S. Frog and win
+]]

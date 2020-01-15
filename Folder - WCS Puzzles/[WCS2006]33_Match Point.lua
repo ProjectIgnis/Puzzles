@@ -34,3 +34,26 @@ Debug.AddCard(96428622,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+
+-Flip Tornado Bird face up and select your opponent's Sakuretsu Armor and 
+Bottomless Trap Hole
+-Activate Collapse and select Gogiga Gagagigo
+-Activate White Dragon Ritual and select Tyrant Dragon to sacrifice, 
+summoning Paladin of White Dragon in attack mode
+-Activate Premature Burial and select Goblin Attack Force
+-Activate Mystik Wok and select Goblin Attack Force and choose ATK
+-Summon Harpie Girl in attack mode
+-Go into battle phase
+-Attack Stone Statue of the Aztecs with Harpie Girl and chain Damage 
+Condenser after the damage step to summon Tyrant Dragon in attack mode 
+(and discarding Ancient Gear Golem)
+-Attack Ultimate Obedient Fiend with Paladin of White Dragon
+-Activate Windstorm of Etaqua
+-Attack both Stone Statue of the Aztecs and Gogiga Gagagigo with Tyrant 
+Dragon
+-Attack with Blade Knight to win
+
+]]

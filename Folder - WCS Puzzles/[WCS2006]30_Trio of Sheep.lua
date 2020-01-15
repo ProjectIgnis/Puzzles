@@ -23,3 +23,22 @@ Debug.AddCard(29843091,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+
+-Activate Lightning Vortex by discarding Makyura the Destructor
+-Activate Ultimate Offering from your hand (don't use its effect yet)
+-Activate Monster Reincarnation, discarding Maju Garzett, and get Makyura 
+the Destructor from the graveyard
+-Summon Makyura the Destructor in attack mode and change Gear Golem the 
+Moving Fortress to attack mode
+-Go to battle phase
+-Attack with all three monsters
+-Go to Main Phase 2
+-Activate Ojama Trio
+-Activate Ultimate Offering's effect
+-Summon Crush D. Gandra and activate its effect (destroying all monsters 
+to win)
+
+]]

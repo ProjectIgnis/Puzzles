@@ -25,3 +25,15 @@ Debug.AddCard(07902349,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Summon Emissary of the Afterlife in attack mode
+-Equip Mystic Tomato with Axe of Despair
+-Go into battle phase
+-Attack Mine Golem with Emissary of the Afterlife
+-Attack Summoned Skull with Mystic Tomato (do not activate Mystic Tomato's
+effect, but activate Axe of Despair's and sacrifice Emissary of the 
+Afterlife)
+-Activate Backup Soldier and retrieve the other Exodia parts
+]]

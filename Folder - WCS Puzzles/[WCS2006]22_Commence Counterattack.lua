@@ -30,3 +30,19 @@ Debug.PreAddCounter(m13, 0x1F, 3)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate 'Swords of Revealing Light'
+-Activate 'Dust Tornado', target 'Bottomless Trap Hole', chain with 
+'Emergency Provisions', send 'Swords of Revealing Light', 'Book of Taiyou'
+and 'Dust Tornado' to the graveyard
+-Activate 'Brain Control', select 'Chiron the Mage'
+-Flip Summon 'Magician of Faith', select 'Brain Control', chain 'Divine 
+Wrath' to 'Skull Descovery Knight''s effect, discard 'Luminous Soldier', 
+then choose to activate 'Dark Ruler Vandalgyon''s effect
+-Activate 'Brain Control', select 'Ancient Gear Golem'
+-Activate 'System Down'
+-Activate 'Chiron the Mage''s effect
+-Attack directly with everyone
+]]

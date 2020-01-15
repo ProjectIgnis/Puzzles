@@ -39,3 +39,21 @@ Debug.PreEquip(s04,m04)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+
+
+--[[
+Solution:
+-Activate 'Mystic Plasma Zone'
+-Activate 'Raigeki Break', discard 'Penumbral Soldier Lady' and select 
+'Gravity Bind'
+-Activate 'Mystical Space Typhoon', select 'United We Stand'
+-Activate 'Horn of the Unicorn' and equip it to one 'Master of Dragon 
+Soldier'
+-Summon 'Gilford the Legend' by tributing 'Mystic Swordsman LV4' and 
+'Zombyra the Dark', choose to activate its effect, equip 'United We Stand'
+on 'Cliff the Trap Remover' and the two 'Twin Swords of Flashing Light - 
+Tryce' on 'Amazoness Swords Woman'
+-Attack the 'Master of Dragon Soldier' equipped with 'Horn of the Unicorn'
+twice with 'Amazoness Swords Woman'
+]]

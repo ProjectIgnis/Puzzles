@@ -20,3 +20,15 @@ Debug.AddCard(32809211,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+
+--[[
+Solution:
+-Put Throwstone Unit in attack mode
+-Go into battle phase
+-Attack Newdoria with Throwstone Unit and chain trap Option Hunter when 
+sent to the graveyard
+-Attack Newdoria with Ancient Gear Soldier
+-Go to main phase 2
+-Activate Tremendous Fire and chain Serial Spell
+]]

@@ -36,3 +36,21 @@ Debug.AddCard(06150044,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate Summon Monk's effect, discarding Monster Reincarnation, 
+summoning Queen's Knight to the field
+-Activate Generation Shift and use its effect on Summon Monk to put a 
+Summon Monk in your hand from your deck
+-Activate Reinforcements of the Army and get King's Knight from your deck
+-Summon King's Knight and activate his effect to get Jack's Knight on the 
+field
+-Use Polymerization to summon Arcana Knight Joker in attack position with 
+all your knights on the field
+-Use Premature Burial to summon Jack's Knight to the field
+-Go into battle phase
+-Attack Newdoria with Jack's Knight and use Arcana Knight Joker's effect 
+to disable Newdoria by discarding Summon Monk
+-Attack with Arcana Knight Joker to win
+]]

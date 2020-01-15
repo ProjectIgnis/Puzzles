@@ -24,3 +24,15 @@ Debug.AddCard(07076131,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate 'Tribute to the Doomed', discard 'Hysteric Fairy' and select 
+'Divine Dragon - Excelion'
+-Activate 'Back to Square One', discard 'Dark Hole' and select 'Divine 
+Dragon - Excelion'
+-Activate 'Next to be Lost'
+-Activate 'Monster Reincarnation', select 'Divine Dragon - Excelion'
+-Summon 'Divine Dragon - Excelion', select the first and last effects
+-Attack 'Metalzoa' with 'Divine Dragon - Excelion'
+]]

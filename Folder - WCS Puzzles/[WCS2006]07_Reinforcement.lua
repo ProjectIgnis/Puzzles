@@ -32,3 +32,16 @@ Debug.AddCard(34100324,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Use Cybernetic Magician's effect on both Spirit Reapers, discarding 
+Battle Footballer and Cyber-tech Alligator
+-Put Cybernetic Magician into defense mode
+-Activate Scapegoat
+-Activate Zero Gravity
+-Activate Backup Soldier and bring 3 monsters back from the graveyard
+-Use Cybernetic Magician's effect 3 more time on three different 
+scapegoats tokens
+-Go into battle phase, attack and win
+]]

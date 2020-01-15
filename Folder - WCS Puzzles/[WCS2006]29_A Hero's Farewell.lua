@@ -31,3 +31,25 @@ Debug.AddCard(25366484,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+
+-Activate Monster Reincarnation, sending Full Salvo to the graveyard, to 
+get Elemental Hero Burstinatrix
+-Use Polymerization to summon Elemental Hero Flame Wingman in attack mode
+-Summon Elemental Hero Sparkman in attack mode
+-Set Chthonian Blast and Giant Trunade on the field
+-Special summon Elemental Hero Bubbleman in attack mode
+-Use Giant Trunade to get cards back into your hand
+-Flip Magician of Faith and get Bubble Illusion from the graveyard
+-Activate Bubble Illusion
+-Go into battle phase
+-Attack Cyber Blader with Elemental Hero Flame Wingman and activate 
+Chthonian Blast from your hand after they are both sent to the graveyard; 
+with Chthonian Blast's effect, select Marshmallon
+-Attack with other monsters
+-Go into main phase 2
+-Activate Thunder Crash to win
+
+]]

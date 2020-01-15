@@ -30,3 +30,23 @@ Debug.AddCard(79333300,0,0,LOCATION_SZONE,4,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Flip Summon 'Hiita the Fire Charmer' and select opponent's 'Fox Fire'
+-Special Summon 'Familiar-Possessed - Hiita' from your deck (do this by
+selecting on your deck)
+-Flip Summon 'Aussa the Earth Charmer' and select opponent's 'Archfiend
+Marmot of Nefariousness'
+-Special Summon 'Familiar-Possessed - Aussa' from your deck
+-Flip Summon 'Wynn the Wind Charmer' and select opponent's 'Petit Dragon'
+-Special Summon 'Familiar-Possessed - Wynn' from your deck
+-Flip Summon 'Eria the Water Charmer' and select opponent's 'Gigobyte'
+-Activate 'Spiritual Water Art - Aoi', tribute 'Gigobyte'
+-Attack 'Marshmallon' with 'Familiar-Possessed Wynn'
+-Activate 'Spiritual Wind Art - Miyabi'
+-Attack directly with everyone
+-Activate 'Spiritual Fire Art - Kurenai'
+-Activate 'Spiritual Earth Art - Kurogane'
+-Attack with the new monster
+]]

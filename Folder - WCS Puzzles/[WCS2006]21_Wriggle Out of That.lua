@@ -24,3 +24,19 @@ Debug.AddCard(71413901,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Set 'Statue of the Wicked'
+-Activate 'Premature Burial'
+-Activate 'Multiplication of Ants'
+-Activate 'Book of Taiyou', select 'Magical Plant Mandragola'
+-Activate 'Breaker the Magical Warrior''s effect, select 'Statue of the 
+Wicked'
+-Summon 'Parasitic Ticky'
+-Activate 'Opti-Camouflage Armor'
+-Attack 'Cobra Jar' with 'Army Ant Token'
+-Attack 'Magical Plant Mandragola' with 'Breaker the Magical Warrior'
+-Activate 'Ojama Trio'
+-Attack directly with 'Parasitic Ticky'
+]]

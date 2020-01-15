@@ -35,3 +35,18 @@ Debug.AddCard(89631139,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+
+--[[
+Solution:
+-Set 'Soul Release'
+-Activate 'Giant Trunade'
+-Activate 'Soul Release', select one monster from your opponent's 
+graveyard, two of your 'D.D. Dynamite' and your two 'D.D. Assailant'
+-Summon 'The Ancient Sun Helios'
+-Special Summon 'Helios Duo Megiste'
+-Turn 'Banisher of the Light' to Attack Mode
+-Attack 'Needle Worm' with 'Helios Duo Megiste'
+-Attack 'F.G.D.' with 'Homunculus Gold'
+-Attack directly with 'Banisher of the Light'
+]]

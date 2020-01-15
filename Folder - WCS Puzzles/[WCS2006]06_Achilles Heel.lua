@@ -29,3 +29,21 @@ Debug.AddCard(18511384,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Flip Magician of Faith face up and select The Cheerful Coffin from your 
+graveyard
+-Activate The Forces of Darkness and select both Dark World monsters in 
+your graveyard
+-Activate Magician's Unite and select The Unhappy Girl on the field
+-Summon White Horns D. in attack mode by sacrificing Magician of Faith and
+use its effect to remove all spell cards from your opponent's graveyard
+-Activate The Cheerful Coffin and send both Dark World monster cards to 
+the graveyard (and then special summon them in attack mode)
+-Go into battle phase
+-Attack Elemental Hero Rampart Blaster with The Unhappy Girl
+-Attack Elemental Hero Tempest with White Horns D.
+-Attack with Dark World monsters and win
+
+]]

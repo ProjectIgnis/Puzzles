@@ -38,3 +38,22 @@ Debug.PreEquip(s12,m12)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("１回合內取得勝利")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+-Activate Cyber Laser Dragon's effect and destroy itself (I know, this 
+seems WAY counter-intuitive...)
+-Special summon Cyber Dragon to the field
+-Summon Proto-Cyber Dragon to the field
+-Activate Photon Generator Unit and summon Cyber Laser Dragon in attack 
+mode
+-Use Cyber Laser Dragon's effect to destroy Master of Dragon Soldier
+-Activate Call of the Haunted and select Proto-Cyber Dragon; then chain 
+Inferno Reckless Summon when summoned
+-Activate Power Bond and summon Cyber End Dragon in attack mode
+-Go into battle phase
+-Attack Blue-Eyes Shining Dragon with Cyber End Dragon
+-Attack with Cyber Laser Dragon and win
+
+
+]]
