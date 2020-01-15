@@ -30,3 +30,23 @@ Debug.AddCard(84970821,1,1,LOCATION_SZONE,2,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+--[[
+Solution:
+
+Activate the effect of "Lyla, Lightsworn Sorceress", selecting "Curse of Darkness".
+Activate the effect of "Genex Ally Birdman", returning "Debris Dragon" to your hand to Special Summon it.
+Synchro Summon "Arcanite Magician" using "Lyla, Lightsworn Sorceress" and "Genex Ally Birdman" as Synchro Material Monsters.
+Normal Summon "Frequency Magician".
+Activate the effect of Arcanite Magician 3 times to destroy all 3 copies of "Meklord Emperor Wisel ∞".
+Activate Cards of Consonance, discard "Debris Dragon" to draw 2 cards.
+Set "Super Rejuvenation" and "Dark Hole".
+Activate the effect of "Brionac, Dragon of the Ice Barrier", discarding both copies of "Malefic Blue-Eyes White Dragon" to return your Set "Super Rejuvenation" and "Dark Hole" to your hand.
+Synchro Summon "Stardust Dragon" using "Brionac, Dragon of the Ice Barrier" and "Frequency Magician" as Synchro Material Monsters.
+Activate "Dark Hole", then Chain the effect of "Stardust Dragon".
+Activate "Super Rejuvenation".
+Move to the End Phase
+Choose "Yes" when prompted to revive "Stardust Dragon".
+The effect of "Super Rejuvenation" resolves. IMPORTANT: Make sure you are holding down the A button at this point! You will draw 4 cards.
+Provided you were holding the A button down, you will be asked if you wish to activate a card. Choose "Yes" and activate the "Super Rejuvenation" you just drew. You will draw 4 more cards and win via the effect of "Exodia the Forbidden One".
+
+]]

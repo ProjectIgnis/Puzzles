@@ -20,3 +20,14 @@ Debug.AddCard(37742478,1,1,LOCATION_HAND,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+--[[
+Solution:
+Tribute Summon "Caius the Shadow Monarch" by Tributing "Mystic Tomato". Its effect will activate; select "Reptillianne Naga" for its effect.
+Activate "Curse of Aging", discarding a "Mystic Tomato", then Chain "Give and Take", selecting "Mystic Tomato" in your Graveyard and the "Caius the Shadow Monarch" you control, then Chain "Enemy Controller", using its first effect to select "Voltanis the Adjudicator".
+Activate "Riryoku", selecting "Voltanis the Adjudicator" to halve its ATK and "Caius the Shadow Emperor" to gain ATK.
+BP (Battle Phase):
+
+Attack "Mystic Tomato" with "KA-2 Des Scissors". When the effect of "KA-2 Des Scissors" activates, Chain the effect of "Mystic Tomato" when prompted, and Special Summon a second "KA-2 Des Scissors".
+Attack "Voltanis the Adjudicator" with the second "KA-2 Des Scissors".
+Attack with "Caius the Shadow Monarch" for game.
+]]

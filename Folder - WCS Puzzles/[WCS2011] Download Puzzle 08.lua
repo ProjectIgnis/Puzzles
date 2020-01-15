@@ -28,3 +28,22 @@ Debug.AddCard(47664723,1,1,LOCATION_GRAVE,0,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+--[[
+Solution:
+Activate "Wattcastle".
+Synchro Summon "Wattchimera" and "Watthydra" in no particular order, but do not use "Wattpheasant" as a Synchro Material Monster.
+Activate "Recycling Batteries", selecting "Wattgiraffe" and any other monster.
+Normal Summon "Wattgiraffe".
+BP (Battle Phase):
+
+Attack directly with "Wattpheasant". The effect of "Wattpheasant" will activate afterwards; select "Splendid Venus" for its effect.
+Attack directly with "Watthydra". The effect of "Watthydra" will activate afterwards; select "Earthbound Immortal Aslla piscu".
+Attack directly with "Wattchimera". The effect of "Wattchimera" will activate afterwards, placing "Majestic Mech - Goryu" from your opponent's hand on the top of their Deck.
+Attack directly with "Wattgiraffe".
+Activate "Escape from the Dark Dimension", selecting "Earthbound Immortal Aslla piscu".
+Attack directly with "Earthbound Immortal Aslla piscu".
+Activate "Foolish Revival", selecting "Darklord Edeh Arae".
+Activate "Interdimensional Matter Transporter", selecting "Earthbound Immortal Aslla piscu". After it resolves, the effect of "Earthbound Immortal Aslla piscu" will activate, destroying all monsters your opponent controls and inflicting a total of 4000 damage.
+Activate "Conscription", which will Special Summon "Majestic Mech - Goryu".
+Attack for game.
+]]

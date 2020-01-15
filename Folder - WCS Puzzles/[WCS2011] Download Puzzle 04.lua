@@ -31,3 +31,19 @@ Debug.PreEquip(c2,c1)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+Activate your 2 copies of "Gift of the Martyr", sending the 2 copies of "Getsu Fuhma" equipped with "Darkworld Shackles" to the Graveyard and selecting your unequipped "Getsu Fuhma".
+Activate "Deal of Phantom", selecting "Getsu Fuhma".
+Activate "Bait Doll", destroying your opponent's Set "Mirror Force".
+Activate "DNA Surgery", declaring Spellcaster.
+Activate "Fuhma Shuriken", equipping it to "Crimson Ninja".
+Activate "Blast with Chain", equipping it to "Getsu Fuhma".
+Activate "Twister", paying 500 Life Points to destroy "Blast with Chain". When the effect of "Blast with Chain" activates, select "Crimson Ninja" to be destroyed.
+Activate "Give and Take", selecting a "Getsu Fuhma" in your Graveyard and the "Getsu Fuhma" you control.
+Activate "Diffusion-Wave Motion", paying 1000 Life Points to select your "Getsu Fuhma".
+BP (Battle Phase):
+
+Attack all "Ryu Kokki" your opponent controls for game.
+]]

@@ -22,3 +22,18 @@ Debug.AddCard(23421244,1,1,LOCATION_GRAVE,0,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+Activate "Wiseman's Chalice", selecting "Reborn Zombie".
+Activate "Altar for Tribute", Tributing "Reborn Zombie".
+Activate "Skill Drain" by paying 1000 Life Points.
+Activate "Limit Reverse", selecting "Mormolith".
+Normal Summon "Zombie Mammoth".
+Activate "Dimensional Fissure".
+Activate the effect of "Mormolith" and Tribute "Zombie Mammoth", then Chain "Mystical Space Typhoon", selecting "Skill Drain".
+Activate "Release from Stone", selecting "Mormolith".
+BP (Battle Phase):
+
+Attack for game.
+]]
