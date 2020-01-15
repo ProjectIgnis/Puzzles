@@ -1,4 +1,12 @@
-
+--[[message
+Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
+	
+	
+	Your Starting LP: 
+	Opponent's Starting LP: 
+	Complexity: ?/10.
+	Objective: Win this turn.
+]]
 Debug.SetAIName("勝利の一手！")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 

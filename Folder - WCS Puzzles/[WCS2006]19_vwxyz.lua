@@ -1,3 +1,12 @@
+--[[message
+Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
+	
+	
+	Your Starting LP: 900
+	Opponent's Starting LP: 7400
+	Complexity: ?/10.
+	Objective: Win this turn.
+]]
 
 Debug.SetAIName("ＶＷＸＹＺ")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
@@ -25,7 +34,7 @@ Debug.AddCard(58859575,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.AddCard(84243274,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
 
 --[[
