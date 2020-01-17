@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 600
+	Opponent's Starting LP: 100
+	Complexity: 3/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("Ｆ・Ｇ・Ｄをやっつけろ！")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,600,0,0)
@@ -41,16 +41,14 @@ Debug.AddCard(31553716,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.AddCard(89631139,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
 
 
 --[[
 Solution:
--Set 'Soul Release'
--Activate 'Giant Trunade'
--Activate 'Soul Release', select one monster from your opponent's 
-graveyard, two of your 'D.D. Dynamite' and your two 'D.D. Assailant'
+-Set 'Soul Release' and activate 'Giant Trunade'
+-Activate 'Soul Release', select one monster from your opponent's graveyard, two of your 'D.D. Dynamite' and your two 'D.D. Assailant'
 -Summon 'The Ancient Sun Helios'
 -Special Summon 'Helios Duo Megiste'
 -Turn 'Banisher of the Light' to Attack Mode

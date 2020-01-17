@@ -1,5 +1,5 @@
 
-Debug.SetAIName("Non Player Character - WCS 2006")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,2000,0,0)

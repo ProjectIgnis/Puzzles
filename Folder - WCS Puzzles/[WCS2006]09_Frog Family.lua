@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 1000
+	Opponent's Starting LP: 8000
+	Complexity: 2/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("カエル一家")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1000,0,0)
@@ -35,20 +35,17 @@ Debug.AddCard(24094653,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.AddCard(09910360,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
 
 
 
 --[[
 Solution:
--Activate Magical Stone Excation, discarding a T.A.D.P.O.L.E. and a 
-Treeborn Frog from your hand, to get Polymerization from the graveyard
+-Activate Magical Stone Excation, discarding a T.A.D.P.O.L.E. and a Treeborn Frog from your hand, to get Polymerization from the graveyard
 -Summon a Des Frog, sacrificing the Treeborn Frog on the field
--Use Des Frog's summoning effect to summon Des Frog from your deck 
-(important: NOT YOUR HAND!)
+-Use Des Frog's summoning effect to summon Des Frog from your deck
 -Use Polymerization to summon D.3.S. Frog in attack position
 -Activate Double Attack, discarding Koitsu, and use it on D.3.S. Frog
--Go into battle phase
--Attack twice with D.3.S. Frog and win
+-Go into battle phase and attack twice with D.3.S. Frog and win
 ]]

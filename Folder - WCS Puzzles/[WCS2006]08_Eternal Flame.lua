@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 500
+	Opponent's Starting LP: 2100
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("絶え間ない炎")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,500,0,0)
@@ -26,7 +26,7 @@ Debug.AddCard(33248692,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 Debug.AddCard(32809211,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn")
 aux.BeginPuzzle()
 
 

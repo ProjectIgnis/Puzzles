@@ -1,5 +1,5 @@
 
-Debug.SetAIName("Non Player Character - WCS 2006")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1000,0,0)
@@ -35,13 +35,11 @@ aux.BeginPuzzle()
 
 --[[
 Solution:
--Use Cybernetic Magician's effect on both Spirit Reapers, discarding 
-Battle Footballer and Cyber-tech Alligator
+-Use Cybernetic Magician's effect on both Spirit Reapers, discarding Battle Footballer and Cyber-tech Alligator
 -Put Cybernetic Magician into defense mode
 -Activate Scapegoat
 -Activate Zero Gravity
 -Activate Backup Soldier and bring 3 monsters back from the graveyard
--Use Cybernetic Magician's effect 3 more time on three different 
-scapegoats tokens
+-Use Cybernetic Magician's effect 3 more time on three different scapegoats tokens
 -Go into battle phase, attack and win
 ]]

@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 800
+	Opponent's Starting LP: 8000
+	Complexity: 2/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("封印を解け！")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,800,0,0)
@@ -31,7 +31,7 @@ Debug.AddCard(16762927,1,1,LOCATION_SZONE,2,POS_FACEUP)
 Debug.AddCard(07902349,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 --[[
@@ -40,8 +40,6 @@ Solution:
 -Equip Mystic Tomato with Axe of Despair
 -Go into battle phase
 -Attack Mine Golem with Emissary of the Afterlife
--Attack Summoned Skull with Mystic Tomato (do not activate Mystic Tomato's
-effect, but activate Axe of Despair's and sacrifice Emissary of the 
-Afterlife)
+-Attack Summoned Skull with Mystic Tomato (do not activate Mystic Tomato's effect, but activate Axe of Despair's and sacrifice Emissary of the  Afterlife)
 -Activate Backup Soldier and retrieve the other Exodia parts
 ]]

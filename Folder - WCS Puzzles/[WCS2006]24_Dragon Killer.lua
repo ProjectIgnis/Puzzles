@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 10000
+	Opponent's Starting LP: 10000
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("ドラゴン・キラー")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,10000,0,0)
@@ -45,7 +45,7 @@ Debug.PreEquip(s03,m03)
 Debug.PreEquip(s04,m04)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 
@@ -53,15 +53,10 @@ aux.BeginPuzzle()
 --[[
 Solution:
 -Activate 'Mystic Plasma Zone'
--Activate 'Raigeki Break', discard 'Penumbral Soldier Lady' and select 
-'Gravity Bind'
+-Activate 'Raigeki Break', discard 'Penumbral Soldier Lady' and select 'Gravity Bind'
 -Activate 'Mystical Space Typhoon', select 'United We Stand'
--Activate 'Horn of the Unicorn' and equip it to one 'Master of Dragon 
-Soldier'
--Summon 'Gilford the Legend' by tributing 'Mystic Swordsman LV4' and 
-'Zombyra the Dark', choose to activate its effect, equip 'United We Stand'
-on 'Cliff the Trap Remover' and the two 'Twin Swords of Flashing Light - 
-Tryce' on 'Amazoness Swords Woman'
--Attack the 'Master of Dragon Soldier' equipped with 'Horn of the Unicorn'
-twice with 'Amazoness Swords Woman'
+-Activate 'Horn of the Unicorn' and equip it to one 'Master of Dragon Soldier'
+-Summon 'Gilford the Legend' by tributing 'Mystic Swordsman LV4' and 'Zombyra the Dark', choose to activate its effect, equip 'United We Stand'
+on 'Cliff the Trap Remover' and the two 'Twin Swords of Flashing Light - Tryce' on 'Amazoness Swords Woman'
+-Attack the 'Master of Dragon Soldier' equipped with 'Horn of the Unicorn' twice with 'Amazoness Swords Woman'
 ]]

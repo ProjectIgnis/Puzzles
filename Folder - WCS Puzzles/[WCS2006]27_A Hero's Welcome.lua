@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 1000
+	Opponent's Starting LP: 2000
+	Complexity: 3/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("帰ってきたヒーロー")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1000,0,0)
@@ -26,19 +26,17 @@ Debug.AddCard(48579379,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
 Debug.AddCard(34187685,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 --[[
 Solution:
 -Summon Elemental Hero Avian in attack mode
--Activate Double Attack, sending Elemental Hero Neo Bubbleman to the 
-graveyard, applying effect to Elemental Hero Avian
+-Activate Double Attack, sending Elemental Hero Neo Bubbleman to the graveyard, applying effect to Elemental Hero Avian
 -Set all spell cards on the field
 -Special summon Elemental Hero Bubbleman in attack mode
 -Activate Giant Trunade to return all spell cards to your hand
--Activate The Warrior Returning Alive to get Elemental Hero Neo Bubbleman 
-from your graveyard
+-Activate The Warrior Returning Alive to get Elemental Hero Neo Bubbleman from your graveyard
 -Special summon Elemental Hero Neo Bubbleman in attack mode
 -Equip Elemental Hero Neo Bubbleman with Bubble Blaster
 -Go into battle phase

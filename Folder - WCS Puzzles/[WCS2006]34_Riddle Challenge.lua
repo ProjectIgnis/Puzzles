@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 1500
+	Opponent's Starting LP: 4850
+	Complexity: 6/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("解けるかな？")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1500,0,0)
@@ -35,7 +35,7 @@ Debug.AddCard(30606547,1,1,LOCATION_SZONE,2,POS_FACEUP)
 Debug.AddCard(85742772,1,1,LOCATION_SZONE,3,POS_FACEUP)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 
@@ -47,16 +47,12 @@ Solution:
 -Attack Neo Bug with Jinzo
 -Go into main phase 2
 -Flip Penguin Soldier and send Jinzo to your hand
--Activate Ultimate Offering's effect to summon Little Chimera in attack 
-mode
+-Activate Ultimate Offering's effect to summon Little Chimera in attack mode
 -Activate Fuh-Rin-Ka-Zan and select Draw 2 cards
 -Activate Mystik Wok and use its effect on Little Chimera (select ATK)
--Activate Ultimate Offering's effect to summon Catapult Turtle in attack 
-mode (sacrificing Bladefly)
--Use Great Spirit's effect, then flip it face up and apply effect to 
-itself
--Activate Ultimate Offering's effect to summon Milus Radiant in attack 
-mode
+-Activate Ultimate Offering's effect to summon Catapult Turtle in attack mode (sacrificing Bladefly)
+-Use Great Spirit's effect, then flip it face up and apply effect to itself
+-Activate Ultimate Offering's effect to summon Milus Radiant in attack mode
 -Use Catapult Turtle's effect and select Great Spirit
 -Activate Ultimate Offering's effect to summon Star Boy in attack mode
 -Activate Ultimate Offering's effect to summon Jinzo in attack mode 
@@ -65,6 +61,4 @@ mode
 -Use Catapult Turtle's effect and select Penguin Soldier
 -Use Catapult Turtle's effect and select Star Boy
 -Use Catapult Turtle's effect and select itself
-
-
 ]]

@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 3500
+	Opponent's Starting LP: 3700
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("さらばヒーロー")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,3500,0,0)
@@ -37,14 +37,13 @@ Debug.AddCard(35809262,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.AddCard(25366484,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 --[[
 Solution:
 
--Activate Monster Reincarnation, sending Full Salvo to the graveyard, to 
-get Elemental Hero Burstinatrix
+-Activate Monster Reincarnation, sending Full Salvo to the graveyard, to get Elemental Hero Burstinatrix
 -Use Polymerization to summon Elemental Hero Flame Wingman in attack mode
 -Summon Elemental Hero Sparkman in attack mode
 -Set Chthonian Blast and Giant Trunade on the field
@@ -53,9 +52,7 @@ get Elemental Hero Burstinatrix
 -Flip Magician of Faith and get Bubble Illusion from the graveyard
 -Activate Bubble Illusion
 -Go into battle phase
--Attack Cyber Blader with Elemental Hero Flame Wingman and activate 
-Chthonian Blast from your hand after they are both sent to the graveyard; 
-with Chthonian Blast's effect, select Marshmallon
+-Attack Cyber Blader with Elemental Hero Flame Wingman and activate Chthonian Blast from your hand after they are both sent to the graveyard; with Chthonian Blast's effect, select Marshmallon
 -Attack with other monsters
 -Go into main phase 2
 -Activate Thunder Crash to win

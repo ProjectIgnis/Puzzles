@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 500
+	Opponent's Starting LP: 2500
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("華麗なる舞い")
+Debug.SetAIName("wcs 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,500,0,0)
@@ -30,7 +30,7 @@ Debug.AddCard(82732705,1,1,LOCATION_SZONE,2,POS_FACEUP)
 Debug.AddCard(52503575,1,1,LOCATION_SZONE,3,POS_FACEUP)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 --[[
@@ -40,10 +40,8 @@ Solution:
 -Flip Apprentice Magician and Lady Ninja Yae face up
 -Go into battle phase
 -Attack Troop Dragon with Lady Ninja Yae
--Attack Troop Dragon with Apprentice Magician (and activate its effect to 
-special summon Hurricail in defense mode)
--Activate Spiritual Wind Art, sacrificing Lady Ninja Yae, and select 
-opponent's Skill Drain
+-Attack Troop Dragon with Apprentice Magician (and activate its effect to special summon Hurricail in defense mode)
+-Activate Spiritual Wind Art, sacrificing Lady Ninja Yae, and select opponent's Skill Drain
 -Activate Desert Sunlight and select Troop Dragon due to Wynn's effect
 -Attack and win
 

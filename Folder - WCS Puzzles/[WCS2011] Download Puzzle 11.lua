@@ -2,14 +2,14 @@
 Reproduces a Duel Puzzle from "World Championship Tournament 2011"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 100
+	Opponent's Starting LP: 10500
+	Complexity: 4/10.
 	Objective: Win this turn.
 ]]
 
 --wcs2011-11
-Debug.SetAIName("高性能电子头脑")
+Debug.SetAIName("WCS 2011")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,10500,0,0)

@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 100
+	Opponent's Starting LP: 4500
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("頂上決戦！")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,100,0,0)
@@ -44,20 +44,17 @@ Debug.AddCard(01546123,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
 Debug.PreEquip(s12,m12)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 --[[
 Solution:
--Activate Cyber Laser Dragon's effect and destroy itself (I know, this 
-seems WAY counter-intuitive...)
+-Activate Cyber Laser Dragon's effect and destroy itself (I know, this seems WAY counter-intuitive...)
 -Special summon Cyber Dragon to the field
 -Summon Proto-Cyber Dragon to the field
--Activate Photon Generator Unit and summon Cyber Laser Dragon in attack 
-mode
+-Activate Photon Generator Unit and summon Cyber Laser Dragon in attack mode
 -Use Cyber Laser Dragon's effect to destroy Master of Dragon Soldier
--Activate Call of the Haunted and select Proto-Cyber Dragon; then chain 
-Inferno Reckless Summon when summoned
+-Activate Call of the Haunted and select Proto-Cyber Dragon; then chain Inferno Reckless Summon when summoned
 -Activate Power Bond and summon Cyber End Dragon in attack mode
 -Go into battle phase
 -Attack Blue-Eyes Shining Dragon with Cyber End Dragon

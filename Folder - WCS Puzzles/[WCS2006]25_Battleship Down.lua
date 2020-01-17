@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 8000
+	Opponent's Starting LP: 8000
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("巨大戦艦撃墜！")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,8000,0,0)
@@ -40,7 +40,7 @@ Debug.PreAddCounter(m12,0x1F,3)
 Debug.PreAddCounter(m14,0x1F,3)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 --[[
 solution:

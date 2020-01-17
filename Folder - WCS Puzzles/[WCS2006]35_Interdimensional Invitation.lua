@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 2500
+	Opponent's Starting LP: 5500
+	Complexity: 4/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("異次元への招待")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,2500,0,0)
@@ -56,7 +56,7 @@ Debug.AddCard(82732705,1,1,LOCATION_SZONE,3,POS_FACEUP)
 Debug.AddCard(84970821,1,1,LOCATION_SZONE,4,POS_FACEUP)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 
 
@@ -67,18 +67,13 @@ Solution:
 -Use Dust Tornado and select Skill Drain
 -Flip Hiro's Shadow Scout face up
 -Activate Mystik Wok and select Double Coston (select ATK)
--Summon Ancient Gear Beast in attack mode by sacrificing Hiro's Shadow 
-Scout
--Activate Ultimate Offering's effect to summon both Zolga and The Ancient 
-Sun Helios in attack mode
--Activate Ultimate Offering's effect to summon Dark Magician of Chaos in 
-attack mode (by sacrificing Zolga and The Ancient Sun Helios) and get 
-Mystical Space Typhone from the graveyard with Dark Magician of Chaos' 
-effect
+-Summon Ancient Gear Beast in attack mode by sacrificing Hiro's Shadow Scout
+-Activate Ultimate Offering's effect to summon both Zolga and The Ancient Sun Helios in attack mode
+-Activate Ultimate Offering's effect to summon Dark Magician of Chaos in attack mode (by sacrificing Zolga and The Ancient Sun Helios) and get 
+Mystical Space Typhone from the graveyard with Dark Magician of Chaos' effect
 -Activate Mysitcal Space Typhoon and select Widespread Ruin
 -Activate Card Destruction
--Activate Ultimate Offering's effect to summon Helios Duo Megiste in 
-attack mode by sacrificing Banisher of the Light
+-Activate Ultimate Offering's effect to summon Helios Duo Megiste in attack mode by sacrificing Banisher of the Light
 -Go into battle phase
 -Attack Nobleman-Eater Bug with Ancient Gear Beast
 -Attack Mechanical Hound with Dark Magician of Chaos

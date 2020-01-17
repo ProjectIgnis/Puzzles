@@ -1,5 +1,5 @@
 
-Debug.SetAIName("Non Player Character - WCS 2006")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,1400,0,0)
@@ -32,13 +32,9 @@ aux.BeginPuzzle()
 Solution:
 -Activate Ancient Gear Castle
 -Summon Ancient Gear Soldier in attack mode
--Use Ultimate Offerings effect and summon Ancient Gear Beast by 
-sacrificing Blue-Eyes Ultimate Dragon (note: don't use Ancient Gear 
-Castle's effect!)
--Use Ultimate Offerings effect again to summon Ancient Gear Golem using 
-Ancient Gear Castle's effect
--Go into battle phase and attack Blue-Eyes White Dragon with Ancient Gear 
-Golem
+-Use Ultimate Offerings effect and summon Ancient Gear Beast by tributing Blue-Eyes Ultimate Dragon but dont don't use Ancient Gear Castle's effect!)
+-Use Ultimate Offerings effect again to summon Ancient Gear Golem using Ancient Gear Castle's effect
+-Go into battle phase and attack Blue-Eyes White Dragon with Ancient Gear Golem
 -Attack with other monsters and win
 
 ]]

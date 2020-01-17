@@ -2,12 +2,12 @@
 Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
+	Your Starting LP: 500
+	Opponent's Starting LP: 3800
 	Complexity: ?/10.
 	Objective: Win this turn.
 ]]
-Debug.SetAIName("不屈の闘志")
+Debug.SetAIName("WCS 2006")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 Debug.SetPlayerInfo(0,500,0,0)
@@ -26,16 +26,14 @@ Debug.AddCard(41356845,0,0,LOCATION_SZONE,3,POS_FACEDOWN)
 Debug.AddCard(04206964,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
-Debug.ShowHint("１回合內取得勝利")
+Debug.ShowHint("Win this turn.")
 aux.BeginPuzzle()
 --[[Solution
 
--Activate Shield Crash and select Sand Moth (then special summon Sand Moth
-in attack mode)
+-Activate Shield Crash and select Sand Moth (then special summon Sand Moth in attack position)
 -Activate Acid Trap Hole and select Giant Soldier of Stone
 -Go into battle phase
--Attack Millennium Scoprion with Sand Moth and then activate Rope of Life 
-after monsters are destroyed
+-Attack Millennium Scoprion with Sand Moth and then activate Rope of Life after monsters are destroyed
 -Activate Call of the Haunted and select Berserk Gorilla
 -Attack and win
 ]]

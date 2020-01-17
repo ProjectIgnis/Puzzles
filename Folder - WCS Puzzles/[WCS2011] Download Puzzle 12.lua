@@ -2,13 +2,12 @@
 Reproduces a Duel Puzzle from "World Championship Tournament 2011"
 	
 	
-	Your Starting LP: 
-	Opponent's Starting LP: 
-	Complexity: ?/10.
+	Your Starting LP: 100
+	Opponent's Starting LP: 1500
+	Complexity: 3/10.
 	Objective: Win this turn.
 ]]
---wcs2011-12
-Debug.SetAIName("高性能电子头脑")
+Debug.SetAIName("WCS 2011")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,1500,0,0)
@@ -42,7 +41,5 @@ Normal Summon "Zombie Mammoth".
 Activate "Dimensional Fissure".
 Activate the effect of "Mormolith" and Tribute "Zombie Mammoth", then Chain "Mystical Space Typhoon", selecting "Skill Drain".
 Activate "Release from Stone", selecting "Mormolith".
-BP (Battle Phase):
-
 Attack for game.
 ]]
