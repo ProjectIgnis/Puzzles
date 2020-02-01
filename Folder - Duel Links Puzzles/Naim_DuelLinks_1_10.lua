@@ -9,7 +9,7 @@ Reproduces a Duel Link's puzzle, including its hints.
 
 --Created by Naim for Ygopro Percy
 Debug.SetAIName("Tour Guide From the Underworld")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI+DUEL_SPEED)
 Debug.SetPlayerInfo(0,4000,0,0)
 Debug.SetPlayerInfo(1,100,0,0)
 Debug.ShowHint("When you see strong Spell card(s) on your opponent's field, try to destroy them using your own Spell/Trap cards.")
