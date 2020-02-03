@@ -10,7 +10,7 @@ Reproduces a Duel Link's puzzle, including its hints.
 
 --Created by Naim for Ygopro Percy
 Debug.SetAIName("Tour Guide From the Underworld")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SPEED+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SPEED+DUEL_SIMPLE_AI,3)
 Debug.SetPlayerInfo(0,4000,0,0)
 Debug.SetPlayerInfo(1,600,0,0)
 Debug.ShowHint("Summon a high level monster!")
