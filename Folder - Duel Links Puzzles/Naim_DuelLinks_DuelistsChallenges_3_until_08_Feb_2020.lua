@@ -7,6 +7,7 @@ Reproduces a Duel Link's puzzle, including its hints.
 	Objective: Win this turn.
 	Hint: You're under arrest! Make way for the Superheavy Samurai!
 ]]
+Debug.SetAIName("Tour Guide From the Underworld")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI+DUEL_SPEED,3)
 Debug.SetPlayerInfo(0,4000,0,0)
 Debug.SetPlayerInfo(1,2200,0,0)
