@@ -1,6 +1,13 @@
---created by ygopro puzzle maker
-Debug.SetAIName('Unnamed')
+--[[message
+Reproduces a Duel Puzzle from "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia"
+
+	Your Starting LP: 20000
+	Opponent's Starting LP: 3000
+	Complexity: 5/10.
+	Objective: Win this turn.
+]]
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.SetAIName("WCS 2010")
 Debug.SetPlayerInfo(0,20000,0,0)
 Debug.SetPlayerInfo(1,3000,0,0)
 Debug.AddCard(9888196,0,0,LOCATION_EXTRA,0,POS_FACEUP)
@@ -41,3 +48,28 @@ Debug.AddCard(7672244,0,0,LOCATION_HAND,3,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+
+--[[Solutions
+M1 (Main Phase 1):
+
+Switch Samurai of the Ice Barrier to Defense Position, destroying it to draw 1 card.
+Activate Hand Destruction, sending Batteryman AA and Shien's Spy or another Spell to the Graveyard to draw 2 cards.
+Flip Summon Magician of Faith to pick back up your Shien's Spy or whichever Spell you discarded.
+Flip Summon Marshmallon while you're at it.
+Activate Synchro Control, targeting Ally of Justice Decisive Armor to take control of it.
+Tune Mist Valley Soldier, Mezuki, and Magician of Faith together to Synchro Summon Ally of Justice Field Marshal.
+Activate Brain Control, targeting Road Warrior to take control of.
+Activate Shien's Spy, giving your opponent your Marshmallon.
+Activate De-Synchro, targeting your opponent's Fabled Valkyrus.
+Equip 1 of your monsters with Synchro Boost.
+Activate the 3rd effect of Ally of Justice Decisive Armor, discarding Confiscation to send your opponent's hand to the Graveyard and deal them 4100 Damage.
+BP (Battle Phase):
+
+Attack Marshmallon with your 3 monsters.
+Activate Compulsory Evacuation Device, targeting 1 of your monsters.
+Activate Call of the Haunted, reviving Batteryman AA.
+Activate Inferno Reckless Summon when Batteryman AA is Special Summoned, and Special Summon 2 more.
+Attack Marshmallon with all 3 Batteryman AA for game, and 1000 points of overkill.
+
+
+]]

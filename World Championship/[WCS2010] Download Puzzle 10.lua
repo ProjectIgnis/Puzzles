@@ -1,6 +1,13 @@
---created by ygopro puzzle maker
-Debug.SetAIName('Unnamed')
+--[[message
+Reproduces a Duel Puzzle from "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia"
+
+	Your Starting LP: 3000
+	Opponent's Starting LP: 12200
+	Complexity: 5/10.
+	Objective: Win this turn.
+]]
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.SetAIName("WCS 2010")
 Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,8000,0,0)
 Debug.AddCard(99899504,1,1,LOCATION_DECK,0,POS_FACEUP)
@@ -12,7 +19,7 @@ Debug.AddCard(32314730,0,0,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
 Debug.AddCard(77044671,1,1,LOCATION_MZONE,2,POS_FACEUP_DEFENSE)
 Debug.AddCard(77585514,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
 Debug.AddCard(55117418,0,0,LOCATION_SZONE,0,POS_FACEDOWN)
-Debug.AddCard(34545235,0,0,LOCATION_SZONE,3,POS_FACEDOWN)
+--Debug.AddCard(34545235,0,0,LOCATION_SZONE,3,POS_FACEDOWN)
 Debug.AddCard(80367387,0,0,LOCATION_HAND,0,POS_FACEUP)
 Debug.AddCard(8057630,0,0,LOCATION_SZONE,4,POS_FACEDOWN)
 Debug.AddCard(34545235,0,0,LOCATION_SZONE,1,POS_FACEDOWN)
