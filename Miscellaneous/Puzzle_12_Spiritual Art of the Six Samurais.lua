@@ -3,15 +3,15 @@
 A puzzle featuring Spirital Arts and The Six Samurai monsters
 
 Your Starting LP: 600
-Opponent's Starting LP: 20000
-Complexity: 2/10.
+Opponent's Starting LP: 4300
+Complexity: 5/10.
 
 Objective: Win this turn.
 ]]
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetAIName("Pseudo AI")
 Debug.SetPlayerInfo(0,600,0,0)
-Debug.SetPlayerInfo(1,20000,0,0)
+Debug.SetPlayerInfo(1,1500+2200+600,0,0)
 
 Debug.AddCard(99675356,1,1,LOCATION_DECK,0,POS_FACEUP)
 Debug.AddCard(07672244,1,1,LOCATION_DECK,0,POS_FACEUP)
@@ -77,7 +77,7 @@ aux.BeginPuzzle()
 5- The Six Samurai - Nisashi attacks Hayabusa Knight.
 6- The Six Samurai - Nisashi attacks Marsk of Darkness.
 7- Activate Spiritual Wind Art - Miyabi tributing The Six Samurai - Nisashi, target Great Shogun Shien to place in the deck.
-8- Activate Spiritual Water Art - Aoi tributing Activate The Six Samurai - Yachi, send Pot of Greed from the opponent's hand to the GY.
+8- Activate Spiritual Water Art - Aoi tributing The Six Samurai - Yachi, send Pot of Greed from the opponent's hand to the GY.
 9- The Six Samurai - Yorou attacks Magician of Faith.
 10- Activate Dark Spirit Art - Greed tributing The Six Samurai - Yorou, to draw 2 cards.
 11-Activate Limit Reverse, target The Six Samurai - Yariza
@@ -85,9 +85,6 @@ aux.BeginPuzzle()
 13-Use the effect of Yariza to prevent its destruction, destroying The Six Samurai - Zanghi instead.
 14-Attack directly with Yariza.
 15-Enter Main Phase 2.
-16-Activate Spiritual Fire Art - Kurenai, tributing The Six Samurai - Kamon.
-17-
-
-
+16-Activate Spiritual Fire Art - Kurenai, tributing The Six Samurai - Kamon to inflict damage
 
 ]]
