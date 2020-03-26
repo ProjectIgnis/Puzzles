@@ -8,11 +8,11 @@ Debug.SetPlayerInfo(1,100,0,0)
 A puzzle to use Exodia
 
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 100
-	Complexity: 5/10.
-	Objective: Win this turn.
-	Note: This puzzle is set to Master Rules 3
+Your Starting LP: 100
+Opponent's Starting LP: 100
+Complexity: 5/10.
+Objective: Win this turn.
+Note: This puzzle is set to Master Rules 3
 ]]
 
 Debug.AddCard(07902349,1,1,LOCATION_HAND,0,POS_FACEDOWN)

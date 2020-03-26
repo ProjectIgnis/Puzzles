@@ -5,10 +5,11 @@ Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 Rodenut and Shapesnatch, an iconic duo.
 
 
-	Your Starting LP: 8000
-	Opponent's Starting LP: 1000
-	Complexity: 5/10.
-	Objective: Win this turn.
+Your Starting LP: 8000
+Opponent's Starting LP: 1000
+Complexity: 5/10.
+
+Objective: Win this turn.
 
 ]]
 

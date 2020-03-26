@@ -3,14 +3,13 @@
 --[[message
 Kuribohs are everywhere!
 
+Your Starting LP: 100
+Opponent's Starting LP: 10000
+Complexity: ?/10.
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 10000
-	Complexity: ?/10.
-	Objective: Win this turn.
-	Note: this puzzle has various hidden pranks.
+Objective: Win this turn.
+Note: this puzzle has various hidden pranks.
 ]]
-
 
 --function
 local f1=function (e,tp)

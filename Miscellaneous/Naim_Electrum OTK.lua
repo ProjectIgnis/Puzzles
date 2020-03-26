@@ -1,7 +1,7 @@
 --Electrum OTK
 --Created by Naim for Ygopro Percy
 Debug.SetAIName("Naim")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,8000,0,0)
 
@@ -9,11 +9,12 @@ Debug.SetPlayerInfo(1,8000,0,0)
 This puzzle demonstrates how Electrum OTK is performed, by using the effects of "Chain Material" to overuse "Fusion Gate" and "Elemental Hero Electrum" and continuously summon Superdreadnought Rail Cannon Gustav Max
 
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 8000
-	Complexity: 5/10.
-	Objective: Win this turn.
-	Note: this puzzle is set to Master Rules 3
+Your Starting LP: 100
+Opponent's Starting LP: 8000
+Complexity: 4/10.
+
+Objective: Win this turn.
+Note: this puzzle is set to Master Rules 3
 ]]
 
 Debug.ShowHint("Win this turn!!")
@@ -50,7 +51,5 @@ Debug.AddCard(40838625,1,1,LOCATION_SZONE,1,POS_FACEDOWN)			--quaking
 Debug.AddCard(44656491,1,1,LOCATION_SZONE,2,POS_FACEUP)				--messenger of piece
 Debug.AddCard(5650082,1,1,LOCATION_SZONE,3,POS_FACEDOWN)			--storming
 
---Insert any message here
---insert additional message here
 Debug.ReloadFieldEnd()
 aux.BeginPuzzle()

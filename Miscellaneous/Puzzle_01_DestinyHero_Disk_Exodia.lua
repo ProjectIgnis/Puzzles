@@ -5,10 +5,11 @@ Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 Disk Commandar Pre-Errat strikes again.
 
 
-	Your Starting LP: 8000
-	Opponent's Starting LP: 8000
-	Complexity: 5/10.
-	Objective: Win using Exodia, the Forbidden One.
+Your Starting LP: 8000
+Opponent's Starting LP: 8000
+Complexity: 5/10.
+
+Objective: Win using Exodia, the Forbidden One.
 
 ]]
 

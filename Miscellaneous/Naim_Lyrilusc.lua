@@ -1,18 +1,19 @@
 --Lyrilusc
 --Created by Naim
 Debug.SetAIName("Naim")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,11200,0,0)
 --[[message
 Multiple attackers are fun when you can abuse them. Even funnier if they can attack directly.
 In this puzzle you will do that by using Lyrilusc monsters.
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 11200
-	Complexity: 6/10.
-	Objective: Win this turn.
-	Note: This puzzle is set to Master Rules 3
+Your Starting LP: 100
+Opponent's Starting LP: 11200
+Complexity: 6/10.
+
+Objective: Win this turn.
+Note: This puzzle is set to Master Rules 3
 ]]
 
 

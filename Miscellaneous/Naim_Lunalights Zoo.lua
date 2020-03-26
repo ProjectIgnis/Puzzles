@@ -8,11 +8,12 @@ Debug.SetPlayerInfo(1,56000,0,0)
 --[[message
 And this is one of the many reasons Zoodiac Ratpier and Zoodiac Broadbull should stay banned... Try to inflict 56000 Damage with Lunalights.
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 56000
-	Complexity: 5/10.
-	Objective: Win this turn.
-	Note: this puzzle is set to Master Rules 3
+Your Starting LP: 100
+Opponent's Starting LP: 56000
+Complexity: 4.5/10.
+
+Objective: Win this turn.
+Note: this puzzle is set to Master Rules 3
 ]]
 
 Debug.ShowHint("Win this turn!!")
@@ -57,7 +58,6 @@ Debug.AddCard(44656491,1,1,LOCATION_SZONE,2,POS_FACEUP)				--messenger of piece
 Debug.AddCard(44095762,1,1,LOCATION_SZONE,3,POS_FACEDOWN)			--mirror
 Debug.AddCard(75249652,1,1,LOCATION_SZONE,4,POS_FACEDOWN)			--blazing
 
---Insert any message here
---insert additional message here
+
 Debug.ReloadFieldEnd()
 aux.BeginPuzzle()

@@ -2,10 +2,11 @@
 A synchro spamm puzzle with Level Eater and scrap monsters.
 
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 5900
-	Complexity: 5/10.
-	Objective: Win this turn.
+Your Starting LP: 100
+Opponent's Starting LP: 5900
+Complexity: 5/10.
+
+Objective: Win this turn.
 
 ]]
 

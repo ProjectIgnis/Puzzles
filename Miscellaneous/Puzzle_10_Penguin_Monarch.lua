@@ -2,10 +2,11 @@
 --[[message
 A simple puzzle with Penguin Soldier
 
-	Your Starting LP: 2600
-	Opponent's Starting LP: 2600
-	Complexity: 2/10.
-	Objective: Win this turn.
+Your Starting LP: 2600
+Opponent's Starting LP: 2600
+Complexity: 2/10.
+
+Objective: Win this turn.
 ]]
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetAIName("Pseudo AI")

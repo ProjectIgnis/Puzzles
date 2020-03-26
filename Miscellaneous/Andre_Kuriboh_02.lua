@@ -8,15 +8,12 @@ Debug.SetPlayerInfo(1,4850,0,0)
 Even more Kuribohs!
 
 
+Your Starting LP: 100
+Opponent's Starting LP: 4850
+Complexity: ?/10.
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 4850
-	Complexity: ?/10.
-	Objective: Win this turn.
-	Note:
+Objective: Win this turn.
 ]]
-
-
 --op deck
 Debug.AddCard(21143940,1,1,LOCATION_DECK,0,POS_FACEDOWN)
 Debug.AddCard(24094653,1,1,LOCATION_DECK,0,POS_FACEDOWN)

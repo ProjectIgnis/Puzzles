@@ -1,14 +1,14 @@
 --[[message
 Reproduces a Duel Puzzle from "Yu-Gi-Oh! 5D's World Championship 2011: Over the Nexus"
 
-	Your Starting LP: 2500
-	Opponent's Starting LP: 9800
-	Complexity: 4/10.
-	Objective: Win this turn.
+Your Starting LP: 2500
+Opponent's Starting LP: 9800
+Complexity: 4/10.
+
+Objective: Win this turn.
 ]]
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetAIName("WCS 2011")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 Debug.SetPlayerInfo(0,2500,0,0)
 Debug.SetPlayerInfo(1,9800,0,0)
 

@@ -2,10 +2,10 @@
 A puzzle that uses some pre-errata cards.
 
 
-	Your Starting LP: 4000
-	Opponent's Starting LP: 3700
-	Complexity: 4/10.
-	Objective: Win this turn.
+Your Starting LP: 4000
+Opponent's Starting LP: 3700
+Complexity: 4/10.
+Objective: Win this turn.
 
 ]]
 Debug.SetAIName("Annoying Scrub")

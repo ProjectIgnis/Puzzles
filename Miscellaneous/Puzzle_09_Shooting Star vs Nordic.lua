@@ -8,11 +8,12 @@ Debug.SetPlayerInfo(1,6400,0,0)
 A puzzle to use Shooting Star Dragon
 
 
-	Your Starting LP: 1100
-	Opponent's Starting LP: 6400
-	Complexity: 5/10.
-	Objective: Win this turn.
-	Note: This puzzle is set to Master Rules 3
+Your Starting LP: 1100
+Opponent's Starting LP: 6400
+Complexity: 5/10.
+Objective: Win this turn.
+
+Note: This puzzle is set to Master Rules 3
 ]]
 
 Debug.AddCard(02333365,1,1,LOCATION_HAND,0,POS_FACEDOWN)

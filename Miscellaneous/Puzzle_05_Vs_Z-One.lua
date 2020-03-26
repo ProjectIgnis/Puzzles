@@ -2,10 +2,10 @@
 Defeat Z-One's Timelords with Signer Dragons.
 
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 15300
-	Complexity: 6/10.
-	Objective: Win this turn.
+Your Starting LP: 100
+Opponent's Starting LP: 15300
+Complexity: 6/10.
+Objective: Win this turn.
 
 ]]
 Debug.SetAIName("Z-One")

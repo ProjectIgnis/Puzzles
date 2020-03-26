@@ -3,10 +3,11 @@
 There were many reasons to ban Zoodiacs. Here's another.
 
 
-	Your Starting LP: 8000
-	Opponent's Starting LP: 8000
-	Complexity: 1/10.
-	Objective: Win this turn.
+Your Starting LP: 8000
+Opponent's Starting LP: 8000
+Complexity: 1/10.
+
+Objective: Win this turn.
 
 ]]
 Debug.SetAIName("Haha_You_Cant_Atk")

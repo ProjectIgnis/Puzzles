@@ -1,7 +1,7 @@
 --Deskbots
 --Created by Naim
 Debug.SetAIName("AI_Ygopro")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,30000,0,0)
 
@@ -10,11 +10,12 @@ This puzzle demonstrates Deskbot's ability to output huge damage amount in a sin
 
 
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 30000
-	Complexity: 6/10.
-	Objective: Win this turn.
-	Note: This puzzle is set to Master Rules 3
+Your Starting LP: 100
+Opponent's Starting LP: 30000
+Complexity: 4/10.
+
+Objective: Win this turn.
+Note: This puzzle is set to Master Rules 3
 ]]
 
 
@@ -48,7 +49,6 @@ Debug.AddCard(94693857,0,0,LOCATION_DECK,0,POS_FACEDOWN)			--desbot 001
 Debug.AddCard(16947147,1,1,LOCATION_HAND,0,POS_FACEDOWN)			--speedroid menko
 Debug.AddCard(40605147,1,1,LOCATION_SZONE,2,POS_FACEDOWN)			--solemn strike
 Debug.AddCard(50078509,1,1,LOCATION_SZONE,3,POS_FACEDOWN)			--fiendish chain
---Insert any message here
---insert additional message here
+
 Debug.ReloadFieldEnd()
 aux.BeginPuzzle()
