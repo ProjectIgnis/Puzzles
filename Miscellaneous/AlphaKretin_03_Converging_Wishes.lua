@@ -1,10 +1,11 @@
 --[[message
 Converging wishes form a new shining star! Become the path that lights the way!
 
-	Your Starting LP: 36901
-	Opponent's Starting LP: 37500
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 36901
+Opponent's Starting LP: 37500
+
+Complexity: ?/10.
+Objective: Win this turn.
 
 ]]
 Debug.SetAIName("AlphaKretin")

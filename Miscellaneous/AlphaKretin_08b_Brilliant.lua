@@ -1,11 +1,12 @@
 --[[message
 How much havoc can 1 Brilliant Fusion cause? Alternate combo
 
-	Your Starting LP: 1000
-	Opponent's Starting LP: 4300
-	Complexity: ?/10.
-	Objective: Win this turn.
-	Note: Puzzle set to use Master Rules 3
+Your Starting LP: 1000
+Opponent's Starting LP: 4300
+Complexity: ?/10.
+
+Objective: Win this turn.
+Note: Puzzle set to use Master Rules 3
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_PSEUDO_SHUFFLE+DUEL_SIMPLE_AI+DUEL_ATTACK_FIRST_TURN,3)

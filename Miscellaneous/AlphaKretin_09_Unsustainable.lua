@@ -1,11 +1,12 @@
 --[[message
 Inspired by the video https://www.youtube.com/watch?v=l-RCcbfvo3Q by JebusMcAzn.
 
-	Your Starting LP: 7700
-	Opponent's Starting LP: 6000
-	Complexity: ?/10.
-	Objective: Win this turn.
-	Note: Puzzle set to use Master Rules 3
+Your Starting LP: 7700
+Opponent's Starting LP: 6000
+Complexity: ?/10.
+
+Objective: Win this turn.
+Note: Puzzle set to use Master Rules 3
 ]]
 
 Debug.SetAIName("Jebus McAzn")

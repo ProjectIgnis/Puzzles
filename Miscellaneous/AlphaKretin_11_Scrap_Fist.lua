@@ -2,10 +2,11 @@
 Ride the Road to Tomorrow as you relive an exaggeration of 5Ds' iconic finisher!
 
 
-	Your Starting LP: 16000
-	Opponent's Starting LP: 12000
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 16000
+Opponent's Starting LP: 12000
+
+Complexity: ?/10.
+Objective: Win this turn.
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_PSEUDO_SHUFFLE+DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,4)

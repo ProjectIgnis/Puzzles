@@ -1,10 +1,11 @@
 --[[message
 A very conveniently set-up Tag duel to give Cyber Dragon as much ATK as possible
 
-	Your Starting LP: 100
-	Opponent's Starting LP: 9151952
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 100
+Opponent's Starting LP: 9151952
+
+Complexity: ?/10.
+Objective: Win this turn.
 ]]
 --Cyber Dragon Maximum Attack puzzle
 Debug.SetAIName("AlphaKretin")

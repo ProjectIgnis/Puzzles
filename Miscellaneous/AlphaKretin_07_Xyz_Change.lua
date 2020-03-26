@@ -2,11 +2,12 @@
 Rank-Up! Xyz change!
 
 
-	Your Starting LP: 1000
-	Opponent's Starting LP: 7200
-	Complexity: ?/10.
-	Objective: Win this turn, without attacking.
-	Note: Puzzle set to use Master Rules 3
+Your Starting LP: 1000
+Opponent's Starting LP: 7200
+Complexity: ?/10.
+
+Objective: Win this turn, without attacking.
+Note: Puzzle set to use Master Rules 3
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_PSEUDO_SHUFFLE+DUEL_TEST_MODE,3)

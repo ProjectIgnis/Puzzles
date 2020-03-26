@@ -2,10 +2,11 @@
 Inspired by https://www.youtube.com/watch?v=LyK79rCJGP0 by Gachineta Free Duel
 
 
-	Your Starting LP: 6200
-	Opponent's Starting LP: 9999999
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 6200
+Opponent's Starting LP: 9999999
+
+Complexity: ?/10.
+Objective: Win this turn.
 ]]
 
 Debug.SetAIName("meta_logical")

@@ -1,10 +1,11 @@
 --[[message
 Find a way to attack for game through a board of 3200 ATK behemoths!
 
-	Your Starting LP: 1
-	Opponent's Starting LP: 500
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 1
+Opponent's Starting LP: 500
+
+Complexity: ?/10.
+Objective: Win this turn.
 ]]
 
 Debug.SetAIName("AlphaKretin")
@@ -123,7 +124,7 @@ ab:RegisterEffect(e2)
 
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Attack for game!")
-Debug.ShowHint("By the way, Dora's immune.")
+Debug.ShowHint("By the way, Dora is immune.")
 --Below makes it a one turn puzzle.
 aux.BeginPuzzle()
 

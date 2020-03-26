@@ -1,11 +1,12 @@
 --[[message
 Field spells are fun, right?
 
-	Your Starting LP: 1000
-	Opponent's Starting LP: 3000
-	Complexity: ?/10.
-	Objective: Win this turn.
-	Note:
+Your Starting LP: 1000
+Opponent's Starting LP: 3000
+Complexity: ?/10.
+
+Objective: Win this turn.
+Note:
 ]]
 Debug.SetAIName("AlphaKretin")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI+DUEL_PSEUDO_SHUFFLE,4)

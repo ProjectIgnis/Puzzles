@@ -2,10 +2,11 @@
 A very conveniently set-up single duel to give Cyber Dragon as much ATK as possible
 
 
-	Your Starting LP: 8000
-	Opponent's Starting LP: 5803600
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 8000
+Opponent's Starting LP: 5803600
+
+Complexity: ?/10.
+Objective: Win this turn.
 
 ]]
 --Cyber Dragon Maximum Attack puzzle

@@ -1,10 +1,11 @@
 --[[message
 The good old-fashioned Gallis loop that got Birdman limited
 
-	Your Starting LP: 5200
-	Opponent's Starting LP: 8000
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 5200
+Opponent's Starting LP: 8000
+
+Complexity: ?/10.
+Objective: Win this turn.
 
 ]]
 Debug.SetAIName("AlphaKretin")

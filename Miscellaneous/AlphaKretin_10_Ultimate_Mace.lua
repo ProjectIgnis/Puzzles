@@ -2,10 +2,11 @@
 Once upon a time, searching a Rank-Up-Magic was almost impossible. But there was this one situational card...
 
 
-	Your Starting LP: 200
-	Opponent's Starting LP: 27300
-	Complexity: ?/10.
-	Objective: Win this turn.
+Your Starting LP: 200
+Opponent's Starting LP: 27300
+
+Complexity: ?/10.
+Objective: Win this turn.
 ]]
 Debug.SetAIName("Sanct")
 Debug.ReloadFieldBegin(DUEL_PSEUDO_SHUFFLE+DUEL_SIMPLE_AI+DUEL_ATTACK_FIRST_TURN,3)
