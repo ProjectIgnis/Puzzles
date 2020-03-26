@@ -1,0 +1,65 @@
+--Original Puzzle Name: QB05
+Debug.SetAIName("Pseudo AI")
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
+Debug.SetPlayerInfo(0,1100,0,0)
+Debug.SetPlayerInfo(1,6400,0,0)
+
+--[[message
+A puzzle to use Shooting Star Dragon
+
+
+	Your Starting LP: 1100
+	Opponent's Starting LP: 6400
+	Complexity: 5/10.
+	Objective: Win this turn.
+	Note: This puzzle is set to Master Rules 3
+]]
+
+Debug.AddCard(02333365,1,1,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(16255442,1,1,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(80551130,1,1,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(41788781,1,1,LOCATION_GRAVE,0,POS_FACEUP)
+Debug.AddCard(40844552,1,1,LOCATION_GRAVE,0,POS_FACEUP)
+Debug.AddCard(14464864,1,1,LOCATION_SZONE,1,POS_FACEDOWN)
+Debug.AddCard(16308000,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
+Debug.AddCard(88069166,1,1,LOCATION_SZONE,3,POS_FACEDOWN)
+Debug.AddCard(67098114,1,1,LOCATION_MZONE,1,POS_FACEUP_ATTACK)
+Debug.AddCard(93483212,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
+Debug.AddCard(30604579,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
+
+Debug.AddCard(09012916,0,0,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
+Debug.AddCard(20932152,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(98427577,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(67270095,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(96182448,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(63977008,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(36737092,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(83764718,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(68543408,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(80244114,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(14943837,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(39701395,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(80036543,0,0,LOCATION_SZONE,1,POS_FACEDOWN)
+Debug.AddCard(30123142,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
+Debug.AddCard(31550470,0,0,LOCATION_SZONE,3,POS_FACEDOWN)
+Debug.AddCard(97268402,0,0,LOCATION_GRAVE,0,POS_FACEUP)
+Debug.AddCard(24696097,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
+Debug.AddCard(44508094,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
+Debug.AddCard(50091196,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
+Debug.AddCard(97489701,0,0,LOCATION_REMOVED,0,POS_FACEUP_ATTACK)
+
+Debug.ReloadFieldEnd()
+aux.BeginPuzzle()
+--[[Solution
+--Activate Hope for Escape
+--Activate Card of Consonance, discard Debris Dragon
+--Normal Summon Stardust Phantom
+--Activate Monster Reborn, Special Summon Effect Veiler
+--Synchro Summon Formula Synchron, draw 1 card
+--Activate Synchron Change
+--Special Summon Stardust Dragon
+--Synchro Summon Shooting Star Dragon
+--Activate Synchro Strike target Shooting Star Dragon
+--Activate Synchro Star Dragon
+--Attack for game
+]]
