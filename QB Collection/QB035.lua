@@ -1,6 +1,15 @@
---created by ygopro puzzle maker
-Debug.SetAIName('Unnamed')
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+--Original Puzzle Name: QB035
+--[[message
+
+
+Your Starting LP: 100
+Opponent's Starting LP: 12000
+Complexity: ?/10.
+
+Objective: Win this turn.
+]]
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
+Debug.SetAIName("Pseudo AI")
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,12000,0,0)
 Debug.AddCard(76891401,0,0,LOCATION_EXTRA,0,POS_FACEUP)

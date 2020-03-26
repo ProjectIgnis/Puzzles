@@ -1,6 +1,15 @@
---created by ygopro puzzle maker 
-Debug.SetAIName('高性能电子头脑')
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+--Original Puzzle Name: QB036
+--[[message
+
+
+Your Starting LP: 100
+Opponent's Starting LP: 1900
+Complexity: ?/10.
+
+Objective: Win this turn.
+]]
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
+Debug.SetAIName("Pseudo AI")
 Debug.SetPlayerInfo(0,100,0,0)
 Debug.SetPlayerInfo(1,1900,0,0)
 Debug.AddCard(14553285,0,0,LOCATION_DECK,0,POS_FACEUP_ATTACK)
