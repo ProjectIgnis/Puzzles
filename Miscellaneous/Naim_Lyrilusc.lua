@@ -10,7 +10,7 @@ In this puzzle you will do that by using Lyrilusc monsters.
 
 Your Starting LP: 100
 Opponent's Starting LP: 11200
-Complexity: 6/10.
+Complexity: 5/10.
 
 Objective: Win this turn.
 Note: This puzzle is set to Master Rules 3

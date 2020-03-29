@@ -1,10 +1,10 @@
 --Original Puzzle Name: QB036
 --[[message
-
+A simple Puzzle using Arcanite Magician/Assault Mode
 
 Your Starting LP: 100
 Opponent's Starting LP: 1900
-Complexity: ?/10.
+Complexity: 2/10.
 
 Objective: Win this turn.
 ]]
@@ -32,5 +32,16 @@ Debug.AddCard(72302403,1,1,LOCATION_SZONE,2,POS_FACEUP_ATTACK)
 Debug.AddCard(70902743,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
 Debug.AddCard(70902743,1,1,LOCATION_MZONE,4,POS_FACEUP_ATTACK)
 Debug.ReloadFieldEnd()
-Debug.ShowHint("Win in this turn!")
+
 aux.BeginPuzzle()
+
+--[[Solution
+1-Flip Ryko, the Lightsworn Hunter, destroy Swords of Revealing Light
+2-Activate Assault Beast's effect, add Assault Mode Activated to your hand
+3-Normal Summon Breaker the Magical Warrior
+4-Synchro Summon Arcanite Magician without using Night Wing Sorceress
+5-Activate Assault Mode Activate, Special Summon Arcanite Magician Assault Mode
+6-Activate rcanite Magician Assault Mode's effect to destory all your opponent's monsters
+7-Attack directly
+
+]]

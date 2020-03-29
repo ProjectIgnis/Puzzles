@@ -1,10 +1,10 @@
 --Original Puzzle Name: QB035
 --[[message
-
+You don't need a hand to win. A puzzle demonstrating combos that can be performed with Infernity monsters.
 
 Your Starting LP: 100
 Opponent's Starting LP: 12000
-Complexity: ?/10.
+Complexity: 7/10.
 
 Objective: Win this turn.
 ]]
@@ -54,5 +54,29 @@ Debug.AddCard(14550855,0,0,LOCATION_DECK,7,POS_FACEUP)
 Debug.AddCard(66957584,0,0,LOCATION_DECK,8,POS_FACEUP)
 Debug.AddCard(18712704,0,0,LOCATION_DECK,9,POS_FACEUP)
 Debug.ReloadFieldEnd()
-Debug.ShowHint("Win in this turn!")
+
 aux.BeginPuzzle()
+
+
+--[[Solution
+
+1-Activate the graveyard effect of Stygian Street Patrol, Special Summon Infernity Archfiend
+2-Activate the effect of Infernity Archfiend, add Infernity Mirage to your hand
+3-Normal Summon Infernity Mirage
+4-Activate the effect of Infernity Mirage, Special Summoning Infernity Necromancer and Infernity Avenger
+5-Activate the effect of Infernity Necromancer, Special Summoning Infernity Guardian
+6-Synchro Summon Hundred-Eyes Dragon using Infernity Necromance, Avenger and Archfiend
+7-Activate the effect of Hundred-Eyes Dragon, targetting Infernity Mirage
+8-Activate the effect of Hundred-Eyes Dragon, Special Summoning Infernity Necromancer and Infernity Avenger
+9-Activate the effect of Infernity Necromancer, Special Summoning Infernity Archfiend
+10-Activate the effect of Infernity Archfiend, add Infernity launcher to your hand
+11-Set Infernity Launcher
+12-Synchro Summon Scrap Dragon using Infernity Necromancer, Avenger and Archfiend
+13-Activate Scrap Dragon's effect targetting your Infernity Guardian and the opponent's Legendary Six Samurai - Shi En
+14-Activate Infernity Launcher. Use its effects, special Summon Infernity Necromancer and Infernity Beetle
+15-Activate the effect of Infernity Archfiend, add Infernity launcher to your hand
+16-Synchro Summon Trishula, Ice Barrier Dragon using Beetle, Archfiend and Necromancer
+17-Activate Trishula's effect: banish Swords of Revealing Light, from field, Scrap Iron Scarecrow from hand and Legendary Six Samurai - Shi En, from the Graveyard
+18-Activate Infernity Launcher. Use its effects, special Summon Infernity Avenger and Infernity Archfiend
+19-Activate the effect of Infernity Archfiend, add Infernity launcher to your hand
+--]]

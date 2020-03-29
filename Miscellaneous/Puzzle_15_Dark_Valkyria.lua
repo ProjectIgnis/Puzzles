@@ -4,7 +4,7 @@
 
 Your Starting LP: 800
 Opponent's Starting LP: 6900
-Complexity: ?/10.
+Complexity: 5/10.
 
 Objective: Win this turn.
 ]]
@@ -40,5 +40,32 @@ Debug.AddCard(15187079,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK)
 Debug.AddCard(62279055,1,1,LOCATION_SZONE,3,POS_FACEDOWN_ATTACK)
 Debug.AddCard(16898077,1,1,LOCATION_MZONE,4,POS_FACEUP_ATTACK)
 Debug.ReloadFieldEnd()
-Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+
+
+--[[Solution
+1-Activate Needblebug Nest
+2-Trigger Wuld, Lightsworn Beast's effect and Special Summon it
+3-Chain Interdimensional Matter Transport to Sky Reactor FIRE's effect, banishing Wulf
+4-Special Summon Woodland Archer, activate its effects, adding Dark Valkyria to your hand
+5-Activate Valhalla, Hall of the Fallen and use its effects to Special Summon Dark Valkyria
+6-Gemini Summon Dark Valkyria, activate its effects to place a Spell counter on it
+7-Activate Spell Power Grasp, placing a Spell counter on Dark Valkyria
+8-Activate the effect of Dark Valkyria, destroy Sun Dragon Inti
+9-Activate the effect of Dark Valkyria, destroy Moon Dragon Quila
+10-Activate Gemini Spark, destroy Magical Cylinder
+11-Activate Silent Doom, Special Summon Dark Valkyria
+12-Equip Supervise to Dark Valkyria
+13-Activate  Dark Valkyria's effect to place a Spell counter on it
+14-Activate the effect of Dark Valkyria, destroy Hundred Eyes Dragon
+15-Activate Different Dimension Gate, banishing Dark Valkyria and Earthebound Immortal Uru
+16-Trigger Supervise's effect, Special Summon Tuned Magician
+17-Activate Return from the Differen Dimension, Special Summon Dark Valkyria and Wulf 
+18-Activate Super Double Summon to Normal Summon Tuned Magician
+19-Synchro Summon Black Brutdrago
+20-Use Brutdrago's effect to destroy Mirror Force
+21-Attack with Black Brutdrago so both monsters are destroyed
+22-Trigger Brutdrago's effect, Special Summon Chitonian Emperor Dragon
+23-Attack directly
+
+]]
