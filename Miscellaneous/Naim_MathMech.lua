@@ -1,0 +1,44 @@
+--[[message
+A Simple Mathmech OTK puzzle
+
+
+Your Starting LP: 1000
+Opponent's Starting LP: 19500
+Complexity: 3/10.
+
+Objective: Win this turn.
+Note: This puzzle is set to Master Rules 3
+]]
+
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)
+Debug.SetPlayerInfo(0,1000,0,0)
+Debug.SetPlayerInfo(1,19500,0,0)
+
+--Main Deck
+Debug.AddCard(53577438,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(52354896,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(89743495,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(80965043,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+--Extra Deck
+Debug.AddCard(42632209,0,0,LOCATION_EXTRA,0,8)
+Debug.AddCard(15248594,0,0,LOCATION_EXTRA,0,8)
+Debug.AddCard(85692042,0,0,LOCATION_EXTRA,0,8)
+--Hand
+Debug.AddCard(41410651,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(101101028,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(57160136,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(80965043,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(27182739,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+
+--Hand
+Debug.AddCard(14558127,1,1,LOCATION_HAND,0,POS_FACEDOWN)
+--Monster Zones
+Debug.AddCard(79850798,1,1,LOCATION_MZONE,0,1,true)
+Debug.AddCard(23995346,1,1,LOCATION_MZONE,1,1,true)
+Debug.AddCard(66523544,1,1,LOCATION_MZONE,2,1,true)
+Debug.AddCard(99267150,1,1,LOCATION_MZONE,3,1,true)
+Debug.AddCard(10669138,1,1,LOCATION_MZONE,4,1,true)
+--Spell & Trap Zones
+Debug.AddCard(30606547,1,1,LOCATION_SZONE,3,5)
+Debug.ReloadFieldEnd()
+aux.BeginPuzzle()
