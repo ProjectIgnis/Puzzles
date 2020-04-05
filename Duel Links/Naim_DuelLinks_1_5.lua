@@ -21,7 +21,7 @@ Debug.ShowHint("Duel wisely by checking each monster's ATK and DEF and bring you
 
 
 --your field
-Debug.AddCard(91152256,0,0,LOCATION_MZONE,4,POS_FACEUP_ATTACK) --Celtic Guardian
+Debug.AddCard(91152256,0,0,LOCATION_MZONE,1,POS_FACEUP_ATTACK) --Celtic Guardian
 Debug.AddCard(48305365,0,0,LOCATION_MZONE,3,POS_FACEUP_ATTACK) --Axe Raider
 Debug.AddCard(38916461,0,0,LOCATION_MZONE,2,POS_FACEUP_ATTACK) --Roboyarou
 --opponent's field
