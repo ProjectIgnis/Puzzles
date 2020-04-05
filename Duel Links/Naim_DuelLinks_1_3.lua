@@ -24,7 +24,7 @@ Debug.AddCard(6368038,0,0,LOCATION_HAND,0,POS_FACEUP_ATTACK) --Gaia The Fierce K
 
 --your field
 Debug.AddCard(87796900,0,0,LOCATION_MZONE,3,POS_FACEUP_ATTACK) --Windeg Dragon, Guardian of the Fortress #1
-Debug.AddCard(91152256,0,0,LOCATION_MZONE,4,POS_FACEUP_ATTACK) --Celtic Guardian
+Debug.AddCard(91152256,0,0,LOCATION_MZONE,2,POS_FACEUP_ATTACK) --Celtic Guardian
 --opponent's field
 Debug.AddCard(5053103,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK) --Battle Ox
 
