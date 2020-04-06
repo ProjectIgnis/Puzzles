@@ -123,6 +123,7 @@ ab:RegisterEffect(e2)
 
 
 Debug.ReloadFieldEnd()
+Debug.ShowHint("Elemental Absorber is affecting DARK monsters!")
 Debug.ShowHint("Attack for game!")
 Debug.ShowHint("By the way, Dora is immune.")
 --Below makes it a one turn puzzle.
