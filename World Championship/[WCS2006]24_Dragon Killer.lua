@@ -8,7 +8,7 @@ Reproduces a Duel Puzzle from "Ultimate Masters: World Championship 2006"
 	Objective: Win this turn.
 ]]
 Debug.SetAIName("WCS 2006")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI|DUEL_1_FIELD,3)
 
 Debug.SetPlayerInfo(0,10000,0,0)
 Debug.SetPlayerInfo(1,10000,0,0)
