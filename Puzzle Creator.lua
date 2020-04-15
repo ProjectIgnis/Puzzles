@@ -5,6 +5,7 @@ Debug.SetPlayerInfo(1,8000,0,0)
 
 Debug.ReloadFieldEnd()
 --[[message
+	This is a Puzzle that generates other puzzles. When played, it prompts you to add cards - to locations you choose - until you select No, when the puzzle is saved.
 	Known Issues:
 	-You cannot add cards to your OPPONENT's Extra Monster Zone: prefer to add them to another zone, then edit the puzzle and change their sequences.
 ]]
