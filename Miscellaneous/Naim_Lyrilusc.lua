@@ -35,10 +35,10 @@ Debug.AddCard(60954556,0,0,LOCATION_DECK,0,POS_FACEDOWN)			--sapphire
 Debug.AddCard(97949165,0,0,LOCATION_DECK,0,POS_FACEDOWN)			--turquoise
 
 --your extra deck
-Debug.AddCard(8491961,0,0,LOCATION_EXTRA,0,POS_FACEUP_ATTACK)		--recite starling
-Debug.AddCard(8491961,0,0,LOCATION_EXTRA,0,POS_FACEUP_ATTACK)		--recite starling
-Debug.AddCard(65305468,0,0,LOCATION_EXTRA,0,POS_FACEUP_ATTACK)		--f0
-Debug.AddCard(48608796,0,0,LOCATION_EXTRA,0,POS_FACEUP_ATTACK)		--assembly nightingale
+Debug.AddCard(8491961,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)		--recite starling
+Debug.AddCard(8491961,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)		--recite starling
+Debug.AddCard(65305468,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)		--f0
+Debug.AddCard(48608796,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)		--assembly nightingale
 
 --opponent's
 Debug.AddCard(44968687,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)		--Legendary Fisherman III
