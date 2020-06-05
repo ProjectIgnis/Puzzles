@@ -2,7 +2,7 @@ Debug.SetAIName("Ha You Can't Attack")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
 
 --[[message
-Disk Commandar Pre-Errat strikes again.
+Destiny Hero - Disk Commander Pre-Errata strikes again.
 
 
 Your Starting LP: 8000
@@ -118,7 +118,7 @@ Debug.AddCard(83764718,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 --Double summon
 Debug.AddCard(43422537,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 --Makyura
-Debug.AddCard(21593977,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(21593987,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 --A feather of the phoenix
 Debug.AddCard(49140998,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 
