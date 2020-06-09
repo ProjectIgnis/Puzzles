@@ -29,10 +29,10 @@ Debug.AddCard(29549364,1,1,LOCATION_SZONE,0,POS_FACEUP)
 Debug.ReloadFieldEnd()
 Debug.PreSetTarget(zone,bamboo)
 
---Pre-draw
+--Pre-draw (Edit: Startup now. -Gideon)
 local e1=Effect.CreateEffect(card)
 e1:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
-e1:SetCode(EVENT_PREDRAW)
+e1:SetCode(EVENT_STARTUP)
 e1:SetProperty(EFFECT_FLAG_NO_TURN_RESET)
 e1:SetCountLimit(1,57005)
 e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
@@ -174,3 +174,5 @@ e3:SetValue(function(e,re,rp)
 	return rp~=e:GetOwnerPlayer()
 end)
 bamboo:RegisterEffect(e3,true)
+
+aux.BeginPuzzle()
