@@ -27,7 +27,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	local ban=2209
 	local fu=2211
 	local fd=2212
-	local equip=2213
+	local equip=2216
 	local attch=2214
 	while Duel.SelectYesNo(tp,2200) do
 		local ac=Duel.AnnounceCard(tp)
