@@ -222,7 +222,9 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				if c:IsType(TYPE_FIELD) or c:IsType(TYPE_CONTINUOUS) then
 					local choice=Duel.SelectOption(tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					Duel.MoveToField(c,tp,p,LOCATION_SZONE,pos,true)
+					local loc=LOCATION_SZONE
+					if c:IsType(TYPE_FIELD) then loc=LOCATION_FZONE end
+					Duel.MoveToField(c,tp,p,loc,pos,true)
 				elseif c:IsType(TYPE_EQUIP) and Duel.GetFieldGroup(tp,LOCATION_MZONE,LOCATION_MZONE):IsExists(f,1,nil,p,c) then
 					if Duel.IsExistingTarget(f2,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(tp,aux.Stringid(1546122,14)) then
 						Duel.MoveToField(c,tp,p,LOCATION_SZONE,POS_FACEUP,true)
