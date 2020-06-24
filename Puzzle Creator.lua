@@ -280,7 +280,11 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		Duel.BreakEffect()
 	end
 	Duel.BreakEffect()
-	
+	if Duel.GetFieldGroupCount(tp,0xff,0xff)==0 then
+		Debug.ShowHint("No card has been added, teh puzzle won't be saved.\nRestart to create a new puzzle.")
+		Duel.Win(PLAYER_NONE,0,0)
+		return
+	end
 	local tme=os.date("%Y",os.time()).."-"..os.date("%m",os.time()).."-"..os.date("%d",os.time()).." "..os.date("%H",os.time()).."-"..os.date("%M",os.time()).."-"..os.date("%S",os.time())
 	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
 	local slp=Duel.GetLP(tp)
@@ -301,18 +305,17 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	end
 	
 	if preequips then
-		f:write("\n\n--Equipped Cards"..preequips.."\n")
+		f:write("\n\n--Equipped Cards"..preequips)
 	end
 	
 	if unions then
-		f:write("\n--Equipped Unions"..unions.."\n")
+		f:write("\n\n--Equipped Unions"..unions)
 	end
 		
-	f:write("\nDebug.ReloadFieldEnd()")
+	f:write("\n\nDebug.ReloadFieldEnd()")
 	f:close()
 
-	Duel.BreakEffect()
-	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.")
+	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.\nRestart to create a new puzzle.")
 	Duel.Win(PLAYER_NONE,0,0)
 end)
 Duel.RegisterEffect(e1,0)
@@ -373,6 +376,7 @@ FILE.WriteCard=function(file,card,identifier)
 		if sequence==4 then sequence=1 end
 	elseif card:IsLocation(LOCATION_FZONE) then
 		location=LOCATION_FZONE
+		sequence=0
 	end
 	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(card:GetPosition())..")")
 end
@@ -398,7 +402,7 @@ FILE.WriteLocation=function(file,loc,player)
 		if player==0 then
 			file:write(" (yours)")
 		else
-			file:write(" (opponent)")
+			file:write(" (opponent's)")
 		end
 		for tc in aux.Next(g) do
 			local uniq=nil
