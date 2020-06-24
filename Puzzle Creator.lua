@@ -211,7 +211,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 					if c:IsType(TYPE_FIELD) then loc=LOCATION_FZONE end
 					Duel.MoveToField(c,tp,p,loc,Duel.SelectPosition(tp,c,POS_ATTACK),true)
 				elseif c:IsType(TYPE_EQUIP) and Duel.GetFieldGroup(tp,LOCATION_MZONE,LOCATION_MZONE):IsExists(f,1,nil,p,c) then
-					if Duel.IsExistingTarget(f2,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(tp,aux.Stringid(1546122,14)) then
+					if Duel.IsExistingTarget(f2,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(tp,equip) then
 						Duel.MoveToField(c,tp,p,LOCATION_SZONE,POS_FACEUP,true)
 						local eq=Duel.SelectMatchingCard(tp,f2,tp,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c):GetFirst()
 						Duel.Equip(tp,c,eq)
