@@ -222,6 +222,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	f:write("\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)")
 	f:write("\nDebug.SetPlayerInfo(0,"..slp..",0,0)")
 	f:write("\nDebug.SetPlayerInfo(1,"..olp..",0,0)")
+	CheckEquips()
 	for p=0,1 do
 		f:WriteLocation(LOCATION_DECK,p)
 		f:WriteLocation(LOCATION_EXTRA,p)
@@ -328,6 +329,18 @@ end
 
 uniquecount=0
 equipscheck={}
+function CheckEquips()
+	for tc in aux.Next(Duel.GetFieldGroup(player,LOCATION_MZONE,LOCATION_MZONE)) do
+		for eq in aux.Next(tc:GetEquipGroup()) do
+			local uniqeqip=equipscheck[eq]
+			if not uniqeqip then
+				uniqeqip="eq_"..uniquecount
+				uniquecount=uniquecount+1
+				equipscheck[eq]=uniqeqip
+			end
+		end
+	end
+end
 FILE.WriteLocation=function(file,loc,player)
 	local g=Duel.GetFieldGroup(player,loc,0)
 	if #g>0 then
@@ -344,9 +357,7 @@ FILE.WriteLocation=function(file,loc,player)
 				uniq="m_"..uniquecount
 				uniquecount=uniquecount+1
 				for eq in aux.Next(eqg) do
-					local uniqeqip="eq_"..uniquecount
-					uniquecount=uniquecount+1
-					equipscheck[eq]=uniqeqip
+					local uniqeqip=equipscheck[eq]
 					preequips=preequips and (preequips.."\nDebug.PreEquip("..uniqeqip..","..uniq..")") or ("\nDebug.PreEquip("..uniqeqip..","..uniq..")")
 					if eq:IsHasEffect(EFFECT_UNION_STATUS) then
 						unions=unions and (unions.."\naux.SetUnionState("..uniqeqip..")") or ("\naux.SetUnionState("..uniqeqip..")")
