@@ -14,6 +14,42 @@ Debug.ReloadFieldEnd()
 local io=require("io")
 local os=require("os")
 
+function MoveToEmzone(c,tp)
+	local p=c:GetControler()
+	local tp=0
+	--workaround for opponent's extra monster zone
+	local zone=0x7f
+	if p~=tp then
+		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_TOZONE)
+		zone=Duel.SelectDisableField(tp,1,LOCATION_MZONE,LOCATION_MZONE,~0x1f0060,true)
+		if zone&0x1f0000~=0 then
+			zone=zone>>16
+		elseif zone==64 then
+			zone=32
+		elseif zone==32 then
+			zone=64
+		end
+		--Move to mmzone then to emzone
+		if zone&0x60~=0 then
+			if Duel.GetLocationCount(p,LOCATION_MZONE)>0 then
+				Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
+				Duel.MoveSequence(c,math.log(zone,2))
+			else
+				--Move random monster to emzone, then swap them
+				local tc=Duel.GetFieldGroup(p,LOCATION_MZONE,0):Filter(Card.IsInMainMZone,nil):GetFirst()
+				Duel.MoveSequence(tc,math.log(zone,2))
+				Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
+				Duel.AdjustInstantly()
+				Duel.SwapSequence(c,tc)
+			end
+		else
+			Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true,zone)
+		end
+	else
+		Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true,zone)
+	end
+end
+
 local e1=Effect.GlobalEffect()
 e1:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
 e1:SetCode(EVENT_STARTUP)
@@ -29,8 +65,8 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	local deck=2207
 	local extra=2208
 	local ban=2209
-	local fu=2211
-	local fd=2212
+	-- local fu=2211
+	-- local fd=2212
 	local equip=2216
 	local attch=2214
 	while Duel.SelectYesNo(tp,2200) do
@@ -40,11 +76,9 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		if c:IsType(TYPE_MONSTER) then
 			if c:IsType(TYPE_PENDULUM) then
 				if c:IsType(TYPE_FUSION) or c:IsType(TYPE_SYNCHRO) or c:IsType(TYPE_XYZ) then
-					e:SetLabel(Duel.SelectOption(tp,false,pzone,mzone,grave,hand,deck,extra,ban))
+					e:SetLabel(Duel.SelectOption(tp,false,pzone,mzone,grave,extra,ban))
 					if e:GetLabel()==1 then
-						local choice=Duel.SelectOption(tp,false,fu,fd)
-						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-						Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
+						MoveToEmzone(c,p)
 						c:CompleteProcedure()
 						if c:IsType(TYPE_XYZ) then
 							local ccount=0
@@ -57,23 +91,19 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 							end
 						end
 					elseif e:GetLabel()==0 then
-						Duel.MoveToField(c,tp,p,LOCATION_SZONE,POS_FACEUP,false)
+						Duel.MoveToField(c,tp,p,LOCATION_PZONE,POS_FACEUP,false)
 					elseif e:GetLabel()==2 then
 						Duel.SendtoGrave(c,REASON_RULE,p)
 					elseif e:GetLabel()==3 then
-						local choice=Duel.SelectOption(tp,false,fu,fd)
-						if choice==0 then Duel.SendtoExtraP(c,p,REASON_RULE) elseif choice==1 then Duel.SendtoHand(c,p,REASON_RULE) end
+						local pos=Duel.SelectPosition(tp,c,POS_ATTACK)
+						if (pos&POS_FACEUP~=0) then Duel.SendtoExtraP(c,p,REASON_RULE) else Duel.SendtoHand(c,p,REASON_RULE) end
 					elseif e:GetLabel()==4 then
-						local choice=Duel.SelectOption(tp,false,fu,fd)
-						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-						Duel.Remove(c,pos,REASON_RULE,p)
+						Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 					end
 				else
 					e:SetLabel(Duel.SelectOption(tp,false,pzone,mzone,grave,hand,deck,extra,ban))
 					if e:GetLabel()==1 then
-						local choice=Duel.SelectOption(tp,false,fu,fd)
-						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-						Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
+						MoveToEmzone(c,p)
 						c:CompleteProcedure()
 					elseif e:GetLabel()==0 then
 					Duel.MoveToField(c,tp,p,LOCATION_PZONE,POS_FACEUP,false)
@@ -86,29 +116,19 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 					elseif e:GetLabel()==5 then
 						Duel.SendtoExtraP(c,p,REASON_RULE)
 					elseif e:GetLabel()==6 then
-						local choice=Duel.SelectOption(tp,false,fu,fd)
-						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-						Duel.Remove(c,pos,REASON_RULE,p)
+						Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 					end
 				end
-			elseif c:IsType(TYPE_FUSION) or c:IsType(TYPE_SYNCHRO) or c:IsType(TYPE_XYZ) then 
+			elseif c:IsType(TYPE_EXTRA) then
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0
-					or (Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6)) then
+					or Duel.CheckLocation(p,LOCATION_MZONE,5) or Duel.CheckLocation(p,LOCATION_MZONE,6) then
 					e:SetLabel(Duel.SelectOption(tp,false,mzone,grave,extra,ban))
 				else
 					e:SetLabel(Duel.SelectOption(tp,false,grave,extra,ban)+1)
 				end
 				if e:GetLabel()==0 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					if Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6) 
-						and Duel.SelectYesNo(tp,2215) then
-						Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true,96)
-						c:CompleteProcedure()
-					else
-						Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
-						c:CompleteProcedure()
-					end
+					MoveToEmzone(c,p)
+					c:CompleteProcedure()
 					if c:IsType(TYPE_XYZ) then
 						local ccount=0
 						while ccount<5 and Duel.SelectYesNo(tp,attch) do
@@ -124,9 +144,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==2 then
 					Duel.SendtoHand(c,p,REASON_RULE)
 				elseif e:GetLabel()==3 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					Duel.Remove(c,pos,REASON_RULE,p)
+					Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 				end
 			elseif c:IsType(TYPE_UNION) then
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0 and Duel.GetLocationCount(p,LOCATION_SZONE)>0 and Duel.IsExistingMatchingCard(unchk,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) then
@@ -148,9 +166,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 						aux.SetUnionState(c)
 					end
 				elseif e:GetLabel()==1 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN_DEFENSE end
-					Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
+					Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
 					c:CompleteProcedure()
 				elseif e:GetLabel()==2 then
 					Duel.SendtoGrave(c,REASON_RULE,p)
@@ -159,36 +175,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==4 then
 					Duel.SendtoDeck(c,p,0,REASON_RULE)
 				elseif e:GetLabel()==5 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					Duel.Remove(c,pos,REASON_RULE,p)
-				end
-			elseif c:IsType(TYPE_LINK) then
-				if Duel.GetLocationCount(p,LOCATION_MZONE)>0
-					or ((Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6))
-					or Duel.IsExistingMatchingCard(emzcheck,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil)) then
-						e:SetLabel(Duel.SelectOption(tp,false,mzone,grave,extra,ban))
-					else
-						e:SetLabel(Duel.SelectOption(tp,false,grave,extra,ban)+1)
-				end
-				if e:GetLabel()==0 then
-					if ((Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6))
-						or Duel.IsExistingMatchingCard(emzcheck,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil))
-						and Duel.SelectYesNo(tp,2215) then
-						Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP,true,96)
-						c:CompleteProcedure()
-					else
-						Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP,true)
-						c:CompleteProcedure()
-					end
-				elseif e:GetLabel()==1 then
-					Duel.SendtoGrave(c,REASON_RULE,p)
-				elseif e:GetLabel()==2 then
-					Duel.SendtoHand(c,p,REASON_RULE)
-				elseif e:GetLabel()==3 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					Duel.Remove(c,pos,REASON_RULE,p)
+					Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 				end
 			else
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0 then
@@ -197,9 +184,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 					e:SetLabel(Duel.SelectOption(tp,false,grave,hand,deck,ban)+1)
 				end
 				if e:GetLabel()==0 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN_DEFENSE end
-					Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
+					Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
 					c:CompleteProcedure()
 					if c:IsType(TYPE_GEMINI) and Duel.SelectYesNo(tp,2213) then
 						c:EnableGeminiState()
@@ -211,9 +196,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==3 then
 					Duel.SendtoDeck(c,p,0,REASON_RULE)
 				elseif e:GetLabel()==4 then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					Duel.Remove(c,pos,REASON_RULE,p)
+					Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 				end
 			end
 		elseif c:IsType(TYPE_SPELL) then
@@ -224,11 +207,9 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			end
 			if e:GetLabel()==0 then
 				if c:IsType(TYPE_FIELD) or c:IsType(TYPE_CONTINUOUS) then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					local loc=LOCATION_SZONE
 					if c:IsType(TYPE_FIELD) then loc=LOCATION_FZONE end
-					Duel.MoveToField(c,tp,p,loc,pos,true)
+					Duel.MoveToField(c,tp,p,loc,Duel.SelectPosition(tp,c,POS_ATTACK),true)
 				elseif c:IsType(TYPE_EQUIP) and Duel.GetFieldGroup(tp,LOCATION_MZONE,LOCATION_MZONE):IsExists(f,1,nil,p,c) then
 					if Duel.IsExistingTarget(f2,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(tp,aux.Stringid(1546122,14)) then
 						Duel.MoveToField(c,tp,p,LOCATION_SZONE,POS_FACEUP,true)
@@ -247,9 +228,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			elseif e:GetLabel()==3 then
 				Duel.SendtoDeck(c,p,0,REASON_RULE)
 			elseif e:GetLabel()==4 then
-				local choice=Duel.SelectOption(tp,false,fu,fd)
-				if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-				Duel.Remove(c,pos,REASON_RULE,p)
+				Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 			end
 		elseif c:IsType(TYPE_TRAP) then
 			if Duel.GetLocationCount(p,LOCATION_SZONE)>0 then
@@ -259,9 +238,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			end
 			if e:GetLabel()==0 then
 				if c:IsType(TYPE_CONTINUOUS) then
-					local choice=Duel.SelectOption(tp,false,fu,fd)
-					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-					Duel.MoveToField(c,tp,p,LOCATION_SZONE,pos,true)
+					Duel.MoveToField(c,tp,p,LOCATION_SZONE,Duel.SelectPosition(tp,c,POS_ATTACK),true)
 				else
 					Duel.MoveToField(c,tp,p,LOCATION_SZONE,POS_FACEDOWN,true)
 				end
@@ -272,16 +249,14 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			elseif e:GetLabel()==3 then
 				Duel.SendtoDeck(c,p,0,REASON_RULE)
 			elseif e:GetLabel()==4 then
-				local choice=Duel.SelectOption(tp,false,fu,fd)
-				if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
-				Duel.Remove(c,pos,REASON_RULE,p)
+				Duel.Remove(c,Duel.SelectPosition(tp,c,POS_ATTACK),REASON_RULE,p)
 			end
 		end
 		Duel.BreakEffect()
 	end
 	Duel.BreakEffect()
 	if Duel.GetFieldGroupCount(tp,0xff,0xff)==0 then
-		Debug.ShowHint("No card has been added, teh puzzle won't be saved.\nRestart to create a new puzzle.")
+		Debug.ShowHint("No card has been added, the puzzle won't be saved.\nRestart to create a new puzzle.")
 		Duel.Win(PLAYER_NONE,0,0)
 		return
 	end
@@ -304,6 +279,8 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		f:WriteLocation(LOCATION_SZONE,p)	
 	end
 	
+	f:write("\n\nDebug.ReloadFieldEnd()")
+	
 	if preequips then
 		f:write("\n\n--Equipped Cards"..preequips)
 	end
@@ -311,8 +288,11 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	if unions then
 		f:write("\n\n--Equipped Unions"..unions)
 	end
-		
-	f:write("\n\nDebug.ReloadFieldEnd()")
+	
+	if gemini then
+		f:write("\n\n--Summoned Geminis"..gemini)
+	end
+	
 	f:close()
 
 	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.\nRestart to create a new puzzle.")
@@ -419,6 +399,13 @@ FILE.WriteLocation=function(file,loc,player)
 						unions=unions and (unions.."\naux.SetUnionState("..uniqeqip..")") or ("\naux.SetUnionState("..uniqeqip..")")
 					end
 				end
+			end
+			if tc:IsGeminiState() then
+				if not uniq then
+					uniq="m_"..uniquecount
+					uniquecount=uniquecount+1
+				end
+				gemini=gemini and (gemini.."\n"..uniq..":EnableGeminiState()") or ("\n"..uniq..":EnableGeminiState()")
 			end
 			file:WriteCard(tc,uniq or equipscheck[tc])
 			for _tc in aux.Next(tc:GetOverlayGroup()) do
