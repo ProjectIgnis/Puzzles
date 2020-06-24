@@ -151,7 +151,7 @@ function(c,p)
 		Duel.Hint(HINT_SELECTMSG,0,HINTMSG_FACEUP)
 		local g=Duel.SelectMatchingCard(0,unchk,0,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c)
 		local tc=g:GetFirst()
-		if tc and aux.CheckUnionEquip(c,tc) and Duel.Equip(0,c,tc) then
+		if tc and aux.CheckUnionEquip(c,tc) and Duel.Equip(p,c,tc) then
 			aux.SetUnionState(c)
 		end
 	else
@@ -163,7 +163,7 @@ function(c,p)
 			if Duel.IsExistingTarget(f2,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(0,2216) then
 				Duel.MoveToField(c,0,p,LOCATION_SZONE,POS_FACEUP,true)
 				local eq=Duel.SelectMatchingCard(0,f2,0,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c):GetFirst()
-				Duel.Equip(0,c,eq)
+				Duel.Equip(p,c,eq)
 			else
 				Duel.MoveToField(c,0,p,LOCATION_SZONE,POS_FACEDOWN,true)
 			end
