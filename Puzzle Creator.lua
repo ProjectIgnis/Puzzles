@@ -4,15 +4,19 @@ Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,8000,0,0)
 
 Debug.ReloadFieldEnd()
+
 --[[message
 	This is a Puzzle that generates other puzzles. When played, it prompts you to add cards - to locations you choose - until you select No, when the puzzle is saved.
 	Known Issues:
 	-You cannot add cards to your OPPONENT's Extra Monster Zone: prefer to add them to another zone, then edit the puzzle and change their sequences.
 ]]
 
+local io=require("io")
+local os=require("os")
+
 local e1=Effect.GlobalEffect()
 e1:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
-e1:SetCode(EVENT_PREDRAW)
+e1:SetCode(EVENT_STARTUP)
 e1:SetCountLimit(1)
 e1:SetProperty(EFFECT_FLAG_NO_TURN_RESET)
 e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
@@ -275,221 +279,35 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		end
 		Duel.BreakEffect()
 	end
-
-	local io=require("io")
-	os = require("os")
 	Duel.BreakEffect()
+	
 	local tme=os.date("%Y",os.time()).."-"..os.date("%m",os.time()).."-"..os.date("%d",os.time()).." "..os.date("%H",os.time()).."-"..os.date("%M",os.time()).."-"..os.date("%S",os.time())
 	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
-	local del=io.open("./puzzles/unimportant.lua","w+")
 	local slp=Duel.GetLP(tp)
 	local olp=Duel.GetLP(1-tp)
 	local name="[AI]Ignis"
 	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)\nDebug.SetPlayerInfo(0,"..slp..",0,0)\nDebug.SetPlayerInfo(1,"..olp..",0,0)\n")
-	local g=Duel.GetFieldGroup(tp,LOCATION_DECK,0)
-	if g:GetCount()>0 then
-		f:write("\n--Main Deck")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_DECK,0,POS_FACEDOWN)")
-			tc=g:GetNext()
-		end
+	
+	for p=0,1 do
+		f:WriteLocation(LOCATION_DECK,p)
+		f:WriteLocation(LOCATION_EXTRA,p)
+		f:WriteLocation(LOCATION_HAND,p)
+		f:WriteLocation(LOCATION_GRAVE,p)
+		f:WriteLocation(LOCATION_REMOVED,p)
+		f:WriteLocation(LOCATION_MZONE,p)
+		f:WriteLocation(LOCATION_SZONE,p)	
 	end
-	local g=Duel.GetFieldGroup(tp,LOCATION_EXTRA,0)
-	if g:GetCount()>0 then
-		f:write("\n--Extra Deck")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_EXTRA,0,"..tc:GetPosition()..")")
-			tc=g:GetNext()
-		end
+	
+	if preequips then
+		f:write("\n--Equip Cards"..preequips.."\n")
 	end
-	local g=Duel.GetFieldGroup(tp,LOCATION_HAND,0)
-	if g:GetCount()>0 then
-		f:write("\n--Hand")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_HAND,0,POS_FACEDOWN)")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,LOCATION_GRAVE,0)
-	if g:GetCount()>0 then
-		f:write("\n--GY")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_GRAVE,0,POS_FACEUP)")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,LOCATION_REMOVED,0)
-	if g:GetCount()>0 then
-		f:write("\n--Banished")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_REMOVED,0,"..tc:GetPosition()..")")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,LOCATION_MZONE,0)
-	if g:GetCount()>0 then
-		f:write("\n--Monster Zones")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			if tc:GetEquipCount()>0 and tc:GetOverlayCount()>0 then
-				f:write("\nlocal m_"..i.."=Debug.AddCard("..tc:GetCode()..",0,0,LOCATION_MZONE,"..tc:GetSequence()..","..tc:GetPosition()..",true)")
-				local og=tc:GetOverlayGroup()
-				local oq=og:GetFirst()
-				for b=1,og:GetCount() do
-						f:write("\nDebug.AddCard("..oq:GetCode()..",0,0,LOCATION_MZONE,"..tc:GetSequence()..",POS_FACEUP_ATTACK)")
-						oq=og:GetNext()
-					end
-				local tg=tc:GetEquipGroup()
-				local eq=tg:GetFirst()
-				for b=1,tg:GetCount() do
-					f:write("\nlocal eq_"..i.."_"..b.."=Debug.AddCard("..eq:GetCode()..","..eq:GetControler()..","..eq:GetControler()..",LOCATION_SZONE,"..eq:GetSequence()..","..eq:GetPosition()..")")
-					del:write("\nDebug.PreEquip(eq_"..i.."_"..b..",".."m_"..i..")")
-					eq=tg:GetNext()
-				end
-			elseif tc:GetOverlayCount()>0 then
-				f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_MZONE,"..tc:GetSequence()..","..tc:GetPosition()..",true)")
-					local og=tc:GetOverlayGroup()
-					local oq=og:GetFirst()
-					for b=1,og:GetCount() do
-						f:write("\nDebug.AddCard("..oq:GetCode()..",0,0,LOCATION_MZONE,"..tc:GetSequence()..",POS_FACEUP_ATTACK)")
-						oq=og:GetNext()
-					end
-			else
-				f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_MZONE,"..tc:GetSequence()..","..tc:GetPosition()..",true)")
-			end
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,LOCATION_SZONE,0):Filter((function(c)
-		return not (c:IsFaceup() and (c:IsType(TYPE_EQUIP) or c:IsType(TYPE_UNION)))
-	end),nil)
-	if g:GetCount()>0 then
-		f:write("\n--Spell & Trap Zones")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			if tc:GetType()&TYPE_PENDULUM>0 then
-				f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_PZONE,"..(i-1)..","..tc:GetPosition()..")") --to write pendulums correctly!
-			else
-				f:write("\nDebug.AddCard("..tc:GetCode()..",0,0,LOCATION_SZONE,"..tc:GetSequence()..","..tc:GetPosition()..")")
-			end
-				tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_DECK)
-	if g:GetCount()>0 then
-		f:write("\n--Main Deck")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_DECK,0,POS_FACEDOWN)")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_EXTRA)
-	if g:GetCount()>0 then
-		f:write("\n--Extra Deck")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_EXTRA,0,"..tc:GetPosition()..")")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_HAND)
-	if g:GetCount()>0 then
-		f:write("\n--Hand")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_HAND,0,POS_FACEDOWN)")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_GRAVE)
-	if g:GetCount()>0 then
-		f:write("\n--GY")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_GRAVE,0,POS_FACEUP)")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_REMOVED)
-	if g:GetCount()>0 then
-		f:write("\n--Banished")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_REMOVED,0,"..tc:GetPosition()..")")
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_MZONE)
-	if g:GetCount()>0 then
-		f:write("\n--Monster Zones")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-		if tc:GetEquipCount()>0 and tc:GetOverlayCount()>0 then
-				f:write("\nlocal m_"..i.."=Debug.AddCard("..tc:GetCode()..",1,1,LOCATION_MZONE,"..tc:GetSequence()..","..tc:GetPosition()..",true)")
-				local og=tc:GetOverlayGroup()
-				local oq=og:GetFirst()
-				for b=1,og:GetCount() do
-						f:write("\nDebug.AddCard("..oq:GetCode()..",1,1,LOCATION_MZONE,"..tc:GetSequence()..",POS_FACEUP_ATTACK)")
-						oq=og:GetNext()
-					end
-				local tg=tc:GetEquipGroup()
-				local eq=tg:GetFirst()
-				for b=1,tg:GetCount() do
-					f:write("\nlocal eq_"..i.."_"..b.."=Debug.AddCard("..eq:GetCode()..","..eq:GetControler()..","..eq:GetControler()..",LOCATION_SZONE,"..eq:GetSequence()..","..eq:GetPosition()..")")
-					del:write("\nDebug.PreEquip(eq_"..i.."_"..b..",".."m_"..i..")")
-					eq=tg:GetNext()
-				end
-			elseif tc:GetOverlayCount()>0 then
-				f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_MZONE,"..tc:GetSequence()..","..tc:GetPosition()..",true)")
-					local og=tc:GetOverlayGroup()
-					local oq=og:GetFirst()
-					for b=1,og:GetCount() do
-						f:write("\nDebug.AddCard("..oq:GetCode()..",1,1,LOCATION_MZONE,"..tc:GetSequence()..",POS_FACEUP_ATTACK)")
-						oq=og:GetNext()
-					end
-			else
-				f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_MZONE,"..tc:GetSequence()..","..tc:GetPosition()..",true)")
-			end
-			tc=g:GetNext()
-		end
-	end
-	local g=Duel.GetFieldGroup(tp,0,LOCATION_SZONE):Filter((function(c)
-		return not (c:IsFaceup() and (c:IsType(TYPE_EQUIP) or c:IsType(TYPE_UNION)))
-	end),nil)
-	if g:GetCount()>0 then
-		f:write("\n--Spell & Trap Zones")
-		local tc=g:GetFirst()
-		for i=1,g:GetCount() do
-			if tc:GetType()&TYPE_PENDULUM>0 then
-				f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_PZONE,"..(i-1)..","..tc:GetPosition()..")") --to write pendulums correctly!
-			else
-				f:write("\nDebug.AddCard("..tc:GetCode()..",1,1,LOCATION_SZONE,"..tc:GetSequence()..","..tc:GetPosition()..")")
-			end
-			tc=g:GetNext()
-		end
-	end
+		
 	f:write("\nDebug.ReloadFieldEnd()")
 	f:close()
-	del:close()
-
-	local inFile = io.open("./puzzles/unimportant.lua", "r")
-	local inFileContents = inFile:read("*a")
-	local appendFile = io.open("./puzzles/Generated Puzzle "..tme..".lua","a")
-	appendFile:write("\naux.BeginPuzzle()")
-	appendFile:write(inFileContents)
-	inFile:close()
-	appendFile:close()
-	os.remove("./puzzles/unimportant.lua")
 
 	Duel.BreakEffect()
 	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.")
-	Duel.SetLP(0,0)
+	Duel.Win(PLAYER_NONE,0,0)
 end)
 Duel.RegisterEffect(e1,0)
 
@@ -504,4 +322,99 @@ function unchk(c,eqc)
 end
 function emzcheck(c)
 	return c:IsType(TYPE_LINK) and c:GetSequence()>=5
+end
+function maplocation(loc)
+	if loc==LOCATION_DECK then return "LOCATION_DECK" end
+	if loc==LOCATION_HAND then return "LOCATION_HAND" end
+	if loc==LOCATION_MZONE then return "LOCATION_MZONE" end
+	if loc==LOCATION_SZONE then return "LOCATION_SZONE" end
+	if loc==LOCATION_GRAVE then return "LOCATION_GRAVE" end
+	if loc==LOCATION_REMOVED then return "LOCATION_REMOVED" end
+	if loc==LOCATION_EXTRA then return "LOCATION_EXTRA" end
+	if loc==LOCATION_FZONE then return "LOCATION_FZONE" end
+	if loc==LOCATION_PZONE then return "LOCATION_PZONE" end
+	Debug.Message("unandled location: "..loc)
+	return loc
+end
+function mapposition(pos)
+	if pos==POS_FACEUP then return "POS_FACEUP" end
+	if pos==POS_FACEUP_ATTACK then return "POS_FACEUP_ATTACK" end
+	if pos==POS_FACEUP_DEFENSE then return "POS_FACEUP_DEFENSE" end
+	if pos==POS_FACEDOWN then return "POS_FACEDOWN" end
+	if pos==POS_FACEDOWN_ATTACK then return "POS_FACEDOWN_ATTACK" end
+	if pos==POS_FACEDOWN_DEFENSE then return "POS_FACEDOWN_DEFENSE" end
+	if pos==POS_ATTACK then return "POS_ATTACK" end
+	if pos==POS_DEFENSE then return "POS_DEFENSE" end
+	Debug.Message("unandled position: "..pos)
+	return pos
+end
+
+FILE=getmetatable(io.stdin)
+
+FILE.WriteCard=function(file,card,identifier)
+	identifier=identifier and ("local "..identifier.."=") or ""
+	local location=card:GetLocation()
+	local sequence=card:GetSequence()
+	local controller=card:GetControler()
+	local otg=card:GetOverlayTarget()
+	if otg then
+		location=otg:GetLocation()
+		sequence=otg:GetSequence()
+		controller=otg:GetControler()
+	end
+	if card:IsLocation(LOCATION_PZONE) then
+		location=LOCATION_PZONE
+		if sequence==4 then sequence=1 end
+	elseif card:IsLocation(LOCATION_FZONE) then
+		location=LOCATION_FZONE
+	end
+	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(card:GetPosition())..")")
+end
+
+function maphint(loc)
+	if loc==LOCATION_DECK then return "\n--Main Deck" end
+	if loc==LOCATION_HAND then return "\n--Hand" end
+	if loc==LOCATION_MZONE then return "\n--Monster Zones" end
+	if loc==LOCATION_SZONE then return "\n--Spell & Trap Zones" end
+	if loc==LOCATION_GRAVE then return "\n--GY" end
+	if loc==LOCATION_REMOVED then return "\n--Banished" end
+	if loc==LOCATION_EXTRA then return "\n--Extra Deck" end
+	Debug.Message("unandled location hint: "..loc)
+	return ""
+end
+
+uniquecount=0
+equipscheck={}
+FILE.WriteLocation=function(file,loc,player)
+	local g=Duel.GetFieldGroup(player,loc,0)
+	if #g>0 then
+		file:write(maphint(loc))
+		if player==0 then
+			file:write(" (yours)")
+		else
+			file:write(" (opponent)")
+		end
+		for tc in aux.Next(g) do
+			if tc:GetEquipCount()>0 then
+				local uniq=nil
+				local eqg=tc:GetEquipGroup()
+				if #eqg>0 then
+					uniq="m_"..uniquecount
+					uniquecount=uniquecount+1
+				end
+				file:WriteCard(tc,uniq)
+				for eq in aux.Next(eqg) do
+					local uniqeqip="eq_"..uniquecount
+					uniquecount=uniquecount+1
+					equipscheck[eq]=uniqeqip
+					preequips=preequips and (preequips.."\nDebug.PreEquip("..uniqeqip..","..uniq..")") or ("\nDebug.PreEquip("..uniqeqip..","..uniq..")")
+				end
+			else
+				file:WriteCard(tc,equipscheck[tc])
+			end
+			for _tc in aux.Next(card:GetOverlayGroup()) do
+				file:WriteCard(_tc)
+			end
+		end
+	end
 end
