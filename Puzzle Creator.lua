@@ -40,9 +40,9 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		if c:IsType(TYPE_MONSTER) then
 			if c:IsType(TYPE_PENDULUM) then
 				if c:IsType(TYPE_FUSION) or c:IsType(TYPE_SYNCHRO) or c:IsType(TYPE_XYZ) then
-					e:SetLabel(Duel.SelectOption(tp,pzone,mzone,grave,hand,deck,extra,ban))
+					e:SetLabel(Duel.SelectOption(false,tp,pzone,mzone,grave,hand,deck,extra,ban))
 					if e:GetLabel()==1 then
-						local choice=Duel.SelectOption(tp,fu,fd)
+						local choice=Duel.SelectOption(false,tp,fu,fd)
 						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 						Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
 						c:CompleteProcedure()
@@ -61,17 +61,17 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 					elseif e:GetLabel()==2 then
 						Duel.SendtoGrave(c,REASON_RULE,p)
 					elseif e:GetLabel()==3 then
-						local choice=Duel.SelectOption(tp,fu,fd)
+						local choice=Duel.SelectOption(false,tp,fu,fd)
 						if choice==0 then Duel.SendtoExtraP(c,p,REASON_RULE) elseif choice==1 then Duel.SendtoHand(c,p,REASON_RULE) end
 					elseif e:GetLabel()==4 then
-						local choice=Duel.SelectOption(tp,fu,fd)
+						local choice=Duel.SelectOption(false,tp,fu,fd)
 						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 						Duel.Remove(c,pos,REASON_RULE,p)
 					end
 				else
-					e:SetLabel(Duel.SelectOption(tp,pzone,mzone,grave,hand,deck,extra,ban))
+					e:SetLabel(Duel.SelectOption(false,tp,pzone,mzone,grave,hand,deck,extra,ban))
 					if e:GetLabel()==1 then
-						local choice=Duel.SelectOption(tp,fu,fd)
+						local choice=Duel.SelectOption(false,tp,fu,fd)
 						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 						Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
 						c:CompleteProcedure()
@@ -86,7 +86,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 					elseif e:GetLabel()==5 then
 						Duel.SendtoExtraP(c,p,REASON_RULE)
 					elseif e:GetLabel()==6 then
-						local choice=Duel.SelectOption(tp,fu,fd)
+						local choice=Duel.SelectOption(false,tp,fu,fd)
 						if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 						Duel.Remove(c,pos,REASON_RULE,p)
 					end
@@ -94,12 +94,12 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			elseif c:IsType(TYPE_FUSION) or c:IsType(TYPE_SYNCHRO) or c:IsType(TYPE_XYZ) then 
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0
 					or (Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6)) then
-					e:SetLabel(Duel.SelectOption(tp,mzone,grave,extra,ban))
+					e:SetLabel(Duel.SelectOption(false,tp,mzone,grave,extra,ban))
 				else
-					e:SetLabel(Duel.SelectOption(tp,grave,extra,ban)+1)
+					e:SetLabel(Duel.SelectOption(false,tp,grave,extra,ban)+1)
 				end
 				if e:GetLabel()==0 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					if Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6) 
 						and Duel.SelectYesNo(tp,2215) then
@@ -124,21 +124,21 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==2 then
 					Duel.SendtoHand(c,p,REASON_RULE)
 				elseif e:GetLabel()==3 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					Duel.Remove(c,pos,REASON_RULE,p)
 				end
 			elseif c:IsType(TYPE_UNION) then
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0 and Duel.GetLocationCount(p,LOCATION_SZONE)>0 and Duel.IsExistingMatchingCard(unchk,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) then
-					e:SetLabel(Duel.SelectOption(tp,equip,mzone,grave,hand,deck,ban))
+					e:SetLabel(Duel.SelectOption(false,tp,equip,mzone,grave,hand,deck,ban))
 				elseif Duel.GetLocationCount(p,LOCATION_MZONE)>0 then
-					e:SetLabel(Duel.SelectOption(tp,mzone,grave,hand,deck,ban)+1)
+					e:SetLabel(Duel.SelectOption(false,tp,mzone,grave,hand,deck,ban)+1)
 				elseif Duel.GetLocationCount(p,LOCATION_SZONE)>0 and Duel.IsExistingMatchingCard(unchk,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) then
-					local i=Duel.SelectOption(tp,equip,grave,hand,deck,ban)
+					local i=Duel.SelectOption(false,tp,equip,grave,hand,deck,ban)
 					if i>=1 then i=i+1 end
 					e:SetLabel(i)
 				else
-					e:SetLabel(Duel.SelectOption(tp,grave,hand,deck,ban)+2)
+					e:SetLabel(Duel.SelectOption(false,tp,grave,hand,deck,ban)+2)
 				end
 				if e:GetLabel()==0 then
 					Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
@@ -148,7 +148,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 						aux.SetUnionState(c)
 					end
 				elseif e:GetLabel()==1 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN_DEFENSE end
 					Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
 					c:CompleteProcedure()
@@ -159,7 +159,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==4 then
 					Duel.SendtoDeck(c,p,0,REASON_RULE)
 				elseif e:GetLabel()==5 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					Duel.Remove(c,pos,REASON_RULE,p)
 				end
@@ -167,9 +167,9 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0
 					or ((Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6))
 					or Duel.IsExistingMatchingCard(emzcheck,tp,LOCATION_MZONE,LOCATION_MZONE,1,nil)) then
-						e:SetLabel(Duel.SelectOption(tp,mzone,grave,extra,ban))
+						e:SetLabel(Duel.SelectOption(false,tp,mzone,grave,extra,ban))
 					else
-						e:SetLabel(Duel.SelectOption(tp,grave,extra,ban)+1)
+						e:SetLabel(Duel.SelectOption(false,tp,grave,extra,ban)+1)
 				end
 				if e:GetLabel()==0 then
 					if ((Duel.CheckLocation(p,LOCATION_MZONE,5) and Duel.CheckLocation(p,LOCATION_MZONE,6))
@@ -186,18 +186,18 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==2 then
 					Duel.SendtoHand(c,p,REASON_RULE)
 				elseif e:GetLabel()==3 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					Duel.Remove(c,pos,REASON_RULE,p)
 				end
 			else
 				if Duel.GetLocationCount(p,LOCATION_MZONE)>0 then
-					e:SetLabel(Duel.SelectOption(tp,mzone,grave,hand,deck,ban))
+					e:SetLabel(Duel.SelectOption(false,tp,mzone,grave,hand,deck,ban))
 				else
-					e:SetLabel(Duel.SelectOption(tp,grave,hand,deck,ban)+1)
+					e:SetLabel(Duel.SelectOption(false,tp,grave,hand,deck,ban)+1)
 				end
 				if e:GetLabel()==0 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN_DEFENSE end
 					Duel.MoveToField(c,tp,p,LOCATION_MZONE,pos,true)
 					c:CompleteProcedure()
@@ -211,20 +211,20 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 				elseif e:GetLabel()==3 then
 					Duel.SendtoDeck(c,p,0,REASON_RULE)
 				elseif e:GetLabel()==4 then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					Duel.Remove(c,pos,REASON_RULE,p)
 				end
 			end
 		elseif c:IsType(TYPE_SPELL) then
 			if Duel.GetLocationCount(p,LOCATION_SZONE)>0 then
-				e:SetLabel(Duel.SelectOption(tp,szone,grave,hand,deck,ban))
+				e:SetLabel(Duel.SelectOption(false,tp,szone,grave,hand,deck,ban))
 			else
-				e:SetLabel(Duel.SelectOption(tp,grave,hand,deck,ban)+1)
+				e:SetLabel(Duel.SelectOption(false,tp,grave,hand,deck,ban)+1)
 			end
 			if e:GetLabel()==0 then
 				if c:IsType(TYPE_FIELD) or c:IsType(TYPE_CONTINUOUS) then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					local loc=LOCATION_SZONE
 					if c:IsType(TYPE_FIELD) then loc=LOCATION_FZONE end
@@ -247,19 +247,19 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			elseif e:GetLabel()==3 then
 				Duel.SendtoDeck(c,p,0,REASON_RULE)
 			elseif e:GetLabel()==4 then
-				local choice=Duel.SelectOption(tp,fu,fd)
+				local choice=Duel.SelectOption(false,tp,fu,fd)
 				if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 				Duel.Remove(c,pos,REASON_RULE,p)
 			end
 		elseif c:IsType(TYPE_TRAP) then
 			if Duel.GetLocationCount(p,LOCATION_SZONE)>0 then
-				e:SetLabel(Duel.SelectOption(tp,szone,grave,hand,deck,ban))
+				e:SetLabel(Duel.SelectOption(false,tp,szone,grave,hand,deck,ban))
 			else
-				e:SetLabel(Duel.SelectOption(tp,grave,hand,deck,ban)+1)
+				e:SetLabel(Duel.SelectOption(false,tp,grave,hand,deck,ban)+1)
 			end
 			if e:GetLabel()==0 then
 				if c:IsType(TYPE_CONTINUOUS) then
-					local choice=Duel.SelectOption(tp,fu,fd)
+					local choice=Duel.SelectOption(false,tp,fu,fd)
 					if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 					Duel.MoveToField(c,tp,p,LOCATION_SZONE,pos,true)
 				else
@@ -272,7 +272,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 			elseif e:GetLabel()==3 then
 				Duel.SendtoDeck(c,p,0,REASON_RULE)
 			elseif e:GetLabel()==4 then
-				local choice=Duel.SelectOption(tp,fu,fd)
+				local choice=Duel.SelectOption(false,tp,fu,fd)
 				if choice==0 then pos=POS_FACEUP elseif choice==1 then pos=POS_FACEDOWN end
 				Duel.Remove(c,pos,REASON_RULE,p)
 			end
@@ -286,8 +286,10 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	local slp=Duel.GetLP(tp)
 	local olp=Duel.GetLP(1-tp)
 	local name="[AI]Ignis"
-	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)\nDebug.SetPlayerInfo(0,"..slp..",0,0)\nDebug.SetPlayerInfo(1,"..olp..",0,0)\n")
-	
+	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)")
+	f:write("\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)")
+	f:write("\nDebug.SetPlayerInfo(0,"..slp..",0,0)")
+	f:write("\nDebug.SetPlayerInfo(1,"..olp..",0,0)")
 	for p=0,1 do
 		f:WriteLocation(LOCATION_DECK,p)
 		f:WriteLocation(LOCATION_EXTRA,p)
@@ -299,7 +301,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	end
 	
 	if preequips then
-		f:write("\n--Equip Cards"..preequips.."\n")
+		f:write("\n\n--Equipped Cards"..preequips.."\n")
 	end
 	
 	if unions then
@@ -376,13 +378,13 @@ FILE.WriteCard=function(file,card,identifier)
 end
 
 function maphint(loc)
-	if loc==LOCATION_DECK then return "\n--Main Deck" end
-	if loc==LOCATION_HAND then return "\n--Hand" end
-	if loc==LOCATION_MZONE then return "\n--Monster Zones" end
-	if loc==LOCATION_SZONE then return "\n--Spell & Trap Zones" end
-	if loc==LOCATION_GRAVE then return "\n--GY" end
-	if loc==LOCATION_REMOVED then return "\n--Banished" end
-	if loc==LOCATION_EXTRA then return "\n--Extra Deck" end
+	if loc==LOCATION_DECK then return "Main Deck" end
+	if loc==LOCATION_HAND then return "Hand" end
+	if loc==LOCATION_MZONE then return "Monster Zones" end
+	if loc==LOCATION_SZONE then return "Spell & Trap Zones" end
+	if loc==LOCATION_GRAVE then return "GY" end
+	if loc==LOCATION_REMOVED then return "Banished" end
+	if loc==LOCATION_EXTRA then return "Extra Deck" end
 	Debug.Message("unandled location hint: "..loc)
 	return ""
 end
@@ -392,7 +394,7 @@ equipscheck={}
 FILE.WriteLocation=function(file,loc,player)
 	local g=Duel.GetFieldGroup(player,loc,0)
 	if #g>0 then
-		file:write(maphint(loc))
+		file:write("\n\n--"..maphint(loc))
 		if player==0 then
 			file:write(" (yours)")
 		else
