@@ -301,6 +301,10 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	if preequips then
 		f:write("\n--Equip Cards"..preequips.."\n")
 	end
+	
+	if unions then
+		f:write("\n--Equipped Unions"..unions.."\n")
+	end
 		
 	f:write("\nDebug.ReloadFieldEnd()")
 	f:close()
@@ -395,24 +399,23 @@ FILE.WriteLocation=function(file,loc,player)
 			file:write(" (opponent)")
 		end
 		for tc in aux.Next(g) do
-			if tc:GetEquipCount()>0 then
-				local uniq=nil
-				local eqg=tc:GetEquipGroup()
-				if #eqg>0 then
-					uniq="m_"..uniquecount
-					uniquecount=uniquecount+1
-				end
-				file:WriteCard(tc,uniq)
+			local uniq=nil
+			local eqg=tc:GetEquipGroup()
+			if #eqg>0 then
+				uniq="m_"..uniquecount
+				uniquecount=uniquecount+1
 				for eq in aux.Next(eqg) do
 					local uniqeqip="eq_"..uniquecount
 					uniquecount=uniquecount+1
 					equipscheck[eq]=uniqeqip
 					preequips=preequips and (preequips.."\nDebug.PreEquip("..uniqeqip..","..uniq..")") or ("\nDebug.PreEquip("..uniqeqip..","..uniq..")")
+					if eq:IsHasEffect(EFFECT_UNION_STATUS) then
+						unions=unions and (unions.."\naux.SetUnionState("..uniqeqip..")") or ("\naux.SetUnionState("..uniqeqip..")")
+					end
 				end
-			else
-				file:WriteCard(tc,equipscheck[tc])
 			end
-			for _tc in aux.Next(card:GetOverlayGroup()) do
+			file:WriteCard(tc,uniq or equipscheck[tc])
+			for _tc in aux.Next(tc:GetOverlayGroup()) do
 				file:WriteCard(_tc)
 			end
 		end
