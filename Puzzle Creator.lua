@@ -59,7 +59,7 @@ function(c,p)
 		c:CompleteProcedure()
 		if c:IsType(TYPE_XYZ) then
 			local ccount=0
-			while ccount<5 and Duel.SelectYesNo(0,attch) do
+			while ccount<5 and Duel.SelectYesNo(0,2214) do
 				local ac=Duel.AnnounceCard(0)
 				local mat=Duel.CreateToken(p,ac)
 				Duel.Remove(mat,POS_FACEUP,REASON_RULE)
@@ -113,7 +113,12 @@ function(c,p)
 	return (c:IsType(TYPE_EXTRA) and c:IsType(TYPE_MONSTER)) or c:IsType(TYPE_PENDULUM)
 end,
 function(c,p)
-	local pos=c:IsType(TYPE_PENDULUM) and POS_FACEUP or Duel.SelectPosition(0,c,POS_ATTACK)
+	local pos=POS_FACEDOWN
+	if c:IsType(TYPE_PENDULUM) and c:IsType(TYPE_EXTRA) then
+		pos=Duel.SelectPosition(0,c,POS_ATTACK)
+	elseif c:IsType(TYPE_PENDULUM) then
+		pos=POS_FACEUP
+	end
 	if (pos&POS_FACEUP~=0) then Duel.SendtoExtraP(c,p,REASON_RULE) else Duel.SendtoHand(c,p,REASON_RULE) end
 end,
 2208
@@ -224,7 +229,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		f:WriteLocation(LOCATION_GRAVE,p)
 		f:WriteLocation(LOCATION_REMOVED,p)
 		f:WriteLocation(LOCATION_MZONE,p)
-		f:WriteLocation(LOCATION_SZONE,p)	
+		f:WriteLocation(LOCATION_SZONE,p)
 	end
 	
 	f:write("\n\nDebug.ReloadFieldEnd()")
