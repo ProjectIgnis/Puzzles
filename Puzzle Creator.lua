@@ -17,7 +17,7 @@ local function MoveToEmzone(c,tp)
 	local tp=0
 	--workaround for opponent's extra monster zone
 	local zone=0x7f
-	if p~=tp then
+	if p~=tp and (Duel.CheckLocation(p,LOCATION_MZONE,5) or Duel.CheckLocation(p,LOCATION_MZONE,6)) then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_TOZONE)
 		zone=Duel.SelectDisableField(tp,1,LOCATION_MZONE,LOCATION_MZONE,~0x1f0060,true)
 		if zone&0x1f0000~=0 then
@@ -50,8 +50,8 @@ end
 
 local MoveMzone = {
 function(c,p)
-	return c:IsType(TYPE_MONSTER) and Duel.GetLocationCount(p,LOCATION_MZONE)>0
-			or (c:IsType(TYPE_EXTRA|TYPE_PENDULUM) and (Duel.CheckLocation(p,LOCATION_MZONE,5) or Duel.CheckLocation(p,LOCATION_MZONE,6)))
+	return c:IsType(TYPE_MONSTER) and (Duel.GetLocationCount(p,LOCATION_MZONE)>0
+			or (c:IsType(TYPE_EXTRA|TYPE_PENDULUM) and (Duel.CheckLocation(p,LOCATION_MZONE,5) or Duel.CheckLocation(p,LOCATION_MZONE,6))))
 end,
 function(c,p)
 	if c:IsType(TYPE_EXTRA|TYPE_PENDULUM) then
