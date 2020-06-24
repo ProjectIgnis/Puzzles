@@ -12,7 +12,7 @@ Debug.ReloadFieldEnd()
 local io=require("io")
 local os=require("os")
 
-function MoveToEmzone(c,tp)
+local function MoveToEmzone(c,tp)
 	local p=c:GetControler()
 	local tp=0
 	--workaround for opponent's extra monster zone
@@ -144,17 +144,23 @@ end,
 2209
 }
 
+local function EquipCheck(c,ec)
+	return c:IsFaceup() and ec:CheckEquipTarget(c)
+end
+local function UnionCheck(c,ec)
+	return EquipCheck(c,ec) and aux.CheckUnionEquip(ec,c)
+end
 local MoveSzone = {
 function(c,p)
 	return c:IsType(TYPE_FIELD) or (Duel.GetLocationCount(p,LOCATION_SZONE)>0 and (c:IsType(TYPE_SPELL|TYPE_TRAP) or
-			(c:IsType(TYPE_UNION) and Duel.IsExistingMatchingCard(unchk,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c))))
+			(c:IsType(TYPE_UNION) and Duel.IsExistingMatchingCard(UnionCheck,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c))))
 end,
 function(c,p)
 	if c:IsType(TYPE_UNION) then
 		Duel.Hint(HINT_SELECTMSG,0,HINTMSG_FACEUP)
-		local g=Duel.SelectMatchingCard(0,unchk,0,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c)
-		local tc=g:GetFirst()
-		if tc and aux.CheckUnionEquip(c,tc) and Duel.Equip(p,c,tc) then
+		Duel.MoveToField(c,0,p,LOCATION_SZONE,POS_FACEUP,true)
+		local tc=Duel.SelectMatchingCard(0,UnionCheck,0,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c):GetFirst()
+		if Duel.Equip(p,c,tc) then
 			aux.SetUnionState(c)
 		end
 	else
@@ -162,10 +168,10 @@ function(c,p)
 			local loc=LOCATION_SZONE
 			if c:IsType(TYPE_FIELD) then loc=LOCATION_FZONE end
 			Duel.MoveToField(c,0,p,loc,Duel.SelectPosition(0,c,POS_ATTACK),true)
-		elseif c:IsType(TYPE_EQUIP) and Duel.GetFieldGroup(0,LOCATION_MZONE,LOCATION_MZONE):IsExists(f,1,nil,p,c) then
-			if Duel.IsExistingTarget(f2,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(0,2216) then
+		elseif c:IsType(TYPE_EQUIP) and Duel.GetFieldGroup(0,LOCATION_MZONE,LOCATION_MZONE):IsExists(Card.CheckUniqueOnField,1,nil,p) then
+			if Duel.IsExistingTarget(EquipCheck,0,LOCATION_MZONE,LOCATION_MZONE,1,nil,c) and Duel.SelectYesNo(0,2216) then
 				Duel.MoveToField(c,0,p,LOCATION_SZONE,POS_FACEUP,true)
-				local eq=Duel.SelectMatchingCard(0,f2,0,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c):GetFirst()
+				local eq=Duel.SelectMatchingCard(0,EquipCheck,0,LOCATION_MZONE,LOCATION_MZONE,1,1,nil,c):GetFirst()
 				Duel.Equip(p,c,eq)
 			else
 				Duel.MoveToField(c,0,p,LOCATION_SZONE,POS_FACEDOWN,true)
@@ -217,20 +223,19 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
 	local slp=Duel.GetLP(tp)
 	local olp=Duel.GetLP(1-tp)
-	local name="[AI]Ignis"
 	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\n--Partially rewritten by edo9300")
 	f:write("\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)")
 	f:write("\nDebug.SetPlayerInfo(0,"..slp..",0,0)")
 	f:write("\nDebug.SetPlayerInfo(1,"..olp..",0,0)")
 	CheckEquips()
 	for p=0,1 do
-		f:WriteLocation(LOCATION_DECK,p)
-		f:WriteLocation(LOCATION_EXTRA,p)
-		f:WriteLocation(LOCATION_HAND,p)
-		f:WriteLocation(LOCATION_GRAVE,p)
-		f:WriteLocation(LOCATION_REMOVED,p)
-		f:WriteLocation(LOCATION_MZONE,p)
-		f:WriteLocation(LOCATION_SZONE,p)
+		WriteLocation(f,LOCATION_DECK,p)
+		WriteLocation(f,LOCATION_EXTRA,p)
+		WriteLocation(f,LOCATION_HAND,p)
+		WriteLocation(f,LOCATION_GRAVE,p)
+		WriteLocation(f,LOCATION_REMOVED,p)
+		WriteLocation(f,LOCATION_MZONE,p)
+		WriteLocation(f,LOCATION_SZONE,p)
 	end
 	
 	f:write("\n\nDebug.ReloadFieldEnd()")
@@ -254,19 +259,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 end)
 Duel.RegisterEffect(e1,0)
 
-function f(c,p,ec)
-	return c:CheckUniqueOnField(p)
-end
-function f2(tc,ec)
-	return tc:IsFaceup() and ec:CheckEquipTarget(tc)
-end
-function unchk(c,eqc)
-	return c:IsFaceup() and eqc:CheckEquipTarget(c) and aux.CheckUnionEquip(eqc,c)
-end
-function emzcheck(c)
-	return c:IsType(TYPE_LINK) and c:GetSequence()>=5
-end
-function maplocation(loc)
+local function maplocation(loc)
 	if loc==LOCATION_DECK then return "LOCATION_DECK" end
 	if loc==LOCATION_HAND then return "LOCATION_HAND" end
 	if loc==LOCATION_MZONE then return "LOCATION_MZONE" end
@@ -279,7 +272,7 @@ function maplocation(loc)
 	Debug.Message("unandled location: "..loc)
 	return loc
 end
-function mapposition(pos)
+local function mapposition(pos)
 	if pos==POS_FACEUP then return "POS_FACEUP" end
 	if pos==POS_FACEUP_ATTACK then return "POS_FACEUP_ATTACK" end
 	if pos==POS_FACEUP_DEFENSE then return "POS_FACEUP_DEFENSE" end
@@ -292,9 +285,7 @@ function mapposition(pos)
 	return pos
 end
 
-FILE=getmetatable(io.stdin)
-
-FILE.WriteCard=function(file,card,identifier)
+local function WriteCard(file,card,identifier)
 	identifier=identifier and ("local "..identifier.."=") or ""
 	local location=card:GetLocation()
 	local sequence=card:GetSequence()
@@ -315,7 +306,7 @@ FILE.WriteCard=function(file,card,identifier)
 	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(card:GetPosition())..")")
 end
 
-function maphint(loc)
+local function maphint(loc)
 	if loc==LOCATION_DECK then return "Main Deck" end
 	if loc==LOCATION_HAND then return "Hand" end
 	if loc==LOCATION_MZONE then return "Monster Zones" end
@@ -341,7 +332,7 @@ function CheckEquips()
 		end
 	end
 end
-FILE.WriteLocation=function(file,loc,player)
+function WriteLocation(file,loc,player)
 	local g=Duel.GetFieldGroup(player,loc,0)
 	if #g>0 then
 		file:write("\n\n--"..maphint(loc))
@@ -371,9 +362,9 @@ FILE.WriteLocation=function(file,loc,player)
 				end
 				gemini=gemini and (gemini.."\n"..uniq..":EnableGeminiState()") or ("\n"..uniq..":EnableGeminiState()")
 			end
-			file:WriteCard(tc,uniq or equipscheck[tc])
+			WriteCard(file,tc,uniq or equipscheck[tc])
 			for _tc in aux.Next(tc:GetOverlayGroup()) do
-				file:WriteCard(_tc)
+				WriteCard(file,_tc)
 			end
 		end
 	end
