@@ -218,7 +218,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	local slp=Duel.GetLP(tp)
 	local olp=Duel.GetLP(1-tp)
 	local name="[AI]Ignis"
-	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)")
+	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\n--Partially rewritten by edo9300")
 	f:write("\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)")
 	f:write("\nDebug.SetPlayerInfo(0,"..slp..",0,0)")
 	f:write("\nDebug.SetPlayerInfo(1,"..olp..",0,0)")
