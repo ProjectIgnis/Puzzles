@@ -252,6 +252,8 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		f:write("\n\n--Summoned Geminis"..gemini)
 	end
 	
+	f:write("\naux.BeginPuzzle()")
+	
 	f:close()
 
 	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.\nRestart to create a new puzzle.")
