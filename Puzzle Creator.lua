@@ -148,7 +148,7 @@ local function EquipCheck(c,ec)
 	return c:IsFaceup() and ec:CheckEquipTarget(c)
 end
 local function UnionCheck(c,ec)
-	return EquipCheck(c,ec) and aux.CheckUnionEquip(ec,c)
+	return c:IsFaceup() and ec:CheckUnionTarget(c)
 end
 local MoveSzone = {
 function(c,p)
