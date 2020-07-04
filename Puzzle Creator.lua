@@ -103,7 +103,12 @@ function(c,p)
 	return not (c:IsType(TYPE_EXTRA) and c:IsType(TYPE_MONSTER))
 end,
 function(c,p)
+	local pos=Duel.SelectPosition(0,c,POS_ATTACK)
 	Duel.SendtoDeck(c,p,0,REASON_RULE)
+	if (pos&POS_FACEUP~=0) then
+		Duel.EnableGlobalFlag(GLOBALFLAG_DECK_REVERSE_CHECK)
+		c:ReverseInDeck()
+	end
 end,
 2207
 }
@@ -252,6 +257,10 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		f:write("\n\n--Summoned Geminis"..gemini)
 	end
 	
+	if deckfaceup then
+		f:write("\n\n--Faceup cards in the Deck\nDuel.EnableGlobalFlag(GLOBALFLAG_DECK_REVERSE_CHECK)"..deckfaceup)
+	end
+	
 	f:write("\naux.BeginPuzzle()")
 	
 	f:close()
@@ -293,10 +302,15 @@ local function WriteCard(file,card,identifier)
 	local sequence=card:GetSequence()
 	local controller=card:GetControler()
 	local otg=card:GetOverlayTarget()
+	local position=card:GetPosition()
 	if otg then
 		location=otg:GetLocation()
 		sequence=otg:GetSequence()
 		controller=otg:GetControler()
+	end
+	if location~=LOCATION_MZONE then
+		if (position&POS_FACEUP)~=0 then position=POS_FACEUP
+		else position=POS_FACEDOWN end
 	end
 	if card:IsLocation(LOCATION_PZONE) then
 		location=LOCATION_PZONE
@@ -305,7 +319,7 @@ local function WriteCard(file,card,identifier)
 		location=LOCATION_FZONE
 		sequence=0
 	end
-	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(card:GetPosition())..")")
+	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(position)..")")
 end
 
 local function maphint(loc)
@@ -363,6 +377,13 @@ function WriteLocation(file,loc,player)
 					uniquecount=uniquecount+1
 				end
 				gemini=gemini and (gemini.."\n"..uniq..":EnableGeminiState()") or ("\n"..uniq..":EnableGeminiState()")
+			end
+			if tc:IsLocation(LOCATION_DECK) and tc:IsFaceup() then
+				if not uniq then
+					uniq="m_"..uniquecount
+					uniquecount=uniquecount+1
+				end
+				deckfaceup=deckfaceup and (deckfaceup.."\n"..uniq..":ReverseInDeck()") or ("\n"..uniq..":ReverseInDeck()")
 			end
 			WriteCard(file,tc,uniq or equipscheck[tc])
 			for _tc in aux.Next(tc:GetOverlayGroup()) do
