@@ -8,7 +8,7 @@ Did you know that D/D/D stands for different dimension daemon?
 
 --DDD Remastered
 Debug.SetAIName("Furtie_Hubo")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,4)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_PSEUDO_SHUFFLE+DUEL_SIMPLE_AI,4)
 Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,24100,0,0)
 
@@ -24,11 +24,11 @@ Debug.AddCard(96570609,1,1,LOCATION_MZONE,4,POS_FACEUP_ATTACK)--Ehther the Heave
 Debug.AddCard(47475363,1,1,LOCATION_SZONE,1,POS_FACEDOWN)--Drowning Mirror Force
 Debug.AddCard(47475363,1,1,LOCATION_SZONE,3,POS_FACEDOWN)--Drowning Mirror Force
 
---Challenger's Deck
-Debug.AddCard(73360025,0,0,LOCATION_DECK,0,POS_FACEDOWN)
-Debug.AddCard(67441435,0,0,LOCATION_DECK,0,POS_FACEDOWN)	
+--Challenger's Deck	
 Debug.AddCard(72291412,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 Debug.AddCard(59123937,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(73360025,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(67441435,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 
 --Challenger's Extra Deck
 Debug.AddCard(84569886,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)

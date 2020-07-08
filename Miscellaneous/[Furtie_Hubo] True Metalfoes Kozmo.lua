@@ -8,7 +8,7 @@ Surprisingly, True Draco, Kozmo and Metalfoes have synergy.
 
 --True Metalfoes Kozmo
 Debug.SetAIName("Furtie_Hubo")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI)
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_PSEUDO_SHUFFLE+DUEL_SIMPLE_AI)
 Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,21500,0,0)
 
@@ -44,6 +44,7 @@ Debug.AddCard(67237709,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 Debug.AddCard(67237709,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 Debug.AddCard(69711728,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 Debug.AddCard(69711728,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+Debug.AddCard(74122412,0,0,LOCATION_DECK,0,POS_FACEDOWN)
 
 --Challenger's Extra Deck
 Debug.AddCard(54401832,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
