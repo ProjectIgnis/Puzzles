@@ -6,7 +6,7 @@ Debug.SetPlayerInfo(1,8000,0,0)
 Debug.ReloadFieldEnd()
 
 --[[message
-	This is a Puzzle that generates other puzzles. When played, it prompts you to add cards - to locations you choose - until you select No, when the puzzle is saved.
+This is a Puzzle that generates other puzzles. When played, it prompts you to add cards - to locations you choose - until you select No, when the puzzle is saved.
 ]]
 
 local io=require("io")
@@ -303,6 +303,7 @@ local function WriteCard(file,card,identifier)
 	local controller=card:GetControler()
 	local otg=card:GetOverlayTarget()
 	local position=card:GetPosition()
+	local proc=""
 	if otg then
 		location=otg:GetLocation()
 		sequence=otg:GetSequence()
@@ -318,8 +319,10 @@ local function WriteCard(file,card,identifier)
 	elseif card:IsLocation(LOCATION_FZONE) then
 		location=LOCATION_FZONE
 		sequence=0
+	elseif card:IsLocation(LOCATION_MZONE) then
+		proc=",true"
 	end
-	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(position)..")")
+	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(position)..proc..")")
 end
 
 local function maphint(loc)
