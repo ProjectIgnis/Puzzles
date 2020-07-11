@@ -1,7 +1,7 @@
 --[[message
 Did the world need a one card Slash Draw FTK?
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 9/10
   Master Rule: 3
 ]]

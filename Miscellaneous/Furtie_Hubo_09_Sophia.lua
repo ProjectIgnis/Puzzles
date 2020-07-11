@@ -1,7 +1,7 @@
 --[[message
 Don't think twice, it's all alright.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 7/10
   Master Rule: 4
 ]]

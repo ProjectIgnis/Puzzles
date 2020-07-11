@@ -1,7 +1,7 @@
 --[[message
 You can play Kozmo without Card of Demise. Who'd have thought?
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 9/10
   Master Rule: 3
 ]]

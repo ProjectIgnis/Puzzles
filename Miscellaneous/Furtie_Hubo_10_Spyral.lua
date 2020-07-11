@@ -1,7 +1,7 @@
 --[[message
 Firewall Dragon is a fair and balanced card.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 9/10
   Master Rule: 4
 ]]

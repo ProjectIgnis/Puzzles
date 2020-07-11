@@ -1,7 +1,7 @@
 --[[message
 I hope you like to handloop your opponent.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 10/10
   Master Rule: 3
 ]]

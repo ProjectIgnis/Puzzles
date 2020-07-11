@@ -1,7 +1,7 @@
 --[[message
 After you have solved this puzzle, you will probably never forget the name of the most powerful Equip Spell in Yugioh.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 10/10
   Master Rule: 3
 ]]

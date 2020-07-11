@@ -1,7 +1,7 @@
 --[[message
 Topologic Gumblar Dragon has done nothing wrong.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 9/10
   Master Rule: 4
 ]]

@@ -1,7 +1,7 @@
 --[[message
 Have you ever summoned Zefraath from the Extra Deck?
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 10/10
   Master Rule: 3
 ]]

@@ -1,7 +1,7 @@
 --[[message
 I hope you have patience.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 9/10
   Master Rule: 4
 ]]

@@ -1,7 +1,7 @@
 --[[message
 Did you know that D/D/D stands for different dimension daemon?
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 8/10
   Master Rule: 4
 ]]

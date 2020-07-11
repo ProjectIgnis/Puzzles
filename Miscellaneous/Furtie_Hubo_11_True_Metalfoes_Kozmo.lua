@@ -1,7 +1,7 @@
 --[[message
 Surprisingly, True Draco, Kozmo and Metalfoes have synergy.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 9/10
   Master Rule: 3
 ]]
