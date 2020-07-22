@@ -1,3 +1,7 @@
+--Project Ignis puzzle creator
+--SPDX-License-Identifier: AGPL-3.0-or-later
+--by edo9300, senpaizuri, Naim, Larry126
+
 Debug.SetAIName("[AI]Ignis")
 Debug.ReloadFieldBegin(0,5)
 Debug.SetPlayerInfo(0,8000,0,0)
