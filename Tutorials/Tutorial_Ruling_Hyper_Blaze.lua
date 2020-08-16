@@ -8,7 +8,7 @@ Debug.SetPlayerInfo(1,8000,0,0)
 Debug.ShowHint("Special Summon-only monsters need to be Special Summoned by their own condition written on the card to be properly Special Summoned.")
 Debug.ShowHint("If their Summon is negated or if they are Summoned ignoring conditions, sent from the hand/Deck to the Graveyard or banished .etc; you cannot Special Summon them as they aren't properly Summoned.")
 Debug.ShowHint("Summon Uria, then Hamon, then Raviel, use them all to Link Summon Decode Talker. Then activate Hyper Blaze's effect to Special Summon a Sacred Beast.")
-Debug.ShowHint("Remember that cards such as Chaos Summon Beast or Dark Summoning Beast do not properly Summon the the Sacred Beasts. Therefore Hyper Blaze can't Special Summon them from the Graveyard.")
+Debug.ShowHint("Remember that cards such as Chaos Summoning Beast or Dark Summoning Beast do not properly Summon the the Sacred Beasts. Therefore Hyper Blaze can't Special Summon them from the Graveyard.")
 
 --Extra Deck (yours)
 Debug.AddCard(1861629,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
