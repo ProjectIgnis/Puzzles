@@ -325,7 +325,7 @@ local function WriteCard(file,card,identifier)
 		sequence=0
 	elseif card:IsLocation(LOCATION_MZONE) then
 		proc=",true"
-	elseif not card:IsLocation(LOCATION_ONFIELD) then
+	elseif not otg and not card:IsLocation(LOCATION_ONFIELD) then
 		sequence=0
 	end
 	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(position)..proc..")")
