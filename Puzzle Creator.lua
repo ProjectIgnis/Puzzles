@@ -346,7 +346,7 @@ end
 uniquecount=0
 equipscheck={}
 function CheckEquips()
-	for tc in aux.Next(Duel.GetFieldGroup(player,LOCATION_MZONE,LOCATION_MZONE)) do
+	for tc in aux.Next(Duel.GetFieldGroup(0,LOCATION_MZONE,LOCATION_MZONE)) do
 		for eq in aux.Next(tc:GetEquipGroup()) do
 			local uniqeqip=equipscheck[eq]
 			if not uniqeqip then
