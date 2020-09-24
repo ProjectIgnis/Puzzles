@@ -2,7 +2,7 @@
 Magicians have always been accused of being devil worshippers. Show them, this is not the case!
 
 	Creator: Eroldin
-	Difficulty: ★★★☆☆
+	Difficulty: 5/10
 	Master Rule: 3
 ]]
 
