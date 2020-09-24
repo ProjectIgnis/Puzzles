@@ -2,7 +2,7 @@
 An army of Demons has invaded Heaven. Kill them and drive back the evil sorcerer who summoned them.
 
 	Creator: Eroldin
-	Difficulty: ★★★☆☆
+	Difficulty: 5/10
 	Master Rule: 3
 ]]
 
