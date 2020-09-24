@@ -2,7 +2,7 @@
 According to a Chinese myth, a carp can turn into a dragon. But can you do the same with a coelacanth?
 
 	Creator: Eroldin
-	Difficulty: ★★☆☆☆
+	Difficulty: 2/10
 	Master Rule: 3
 ]]
 
