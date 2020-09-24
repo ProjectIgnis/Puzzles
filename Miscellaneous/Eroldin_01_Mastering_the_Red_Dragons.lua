@@ -2,7 +2,7 @@
 A simple puzzle, which teaches a Red Dragon Archfiend line combo.
 
 	Creator: Eroldin
-	Difficulty: ★☆☆☆☆
+	Difficulty: 1/10
 	Master Rule: 3
 ]]
 
