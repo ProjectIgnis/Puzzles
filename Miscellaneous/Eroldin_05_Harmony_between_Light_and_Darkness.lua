@@ -2,7 +2,7 @@
 Light and darkness have mostly been considered as opposite and polarising forces. However, we shouldn't forget the concept of Ying and Yang. Harmonise the tweo forces and beat your opponent!
 
 	Creator: Eroldin
-	Difficulty: ★★★★☆
+	Difficulty: 6/10
 	Master Rule: 3
 ]]
 
