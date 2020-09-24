@@ -2,7 +2,7 @@
 Using the X-Saber archtype is a great way the swarm the field and synchro summon high level monsters. This puzzle is based on that concept, while also using other forms of summoning. Good Luck!
 
 	Creator: Eroldin
-	Difficulty: ★★★★☆
+	Difficulty: 7/10
 	Master Rule: 3
 ]]
 
