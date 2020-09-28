@@ -1,7 +1,7 @@
 --[[message
 Ultimately, you know that a deck was OP if it was significantly weakened by an emergency banlist after roughly one month.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 8/10
   Master Rule: 3
 ]]
