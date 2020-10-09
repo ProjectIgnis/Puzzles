@@ -1,7 +1,7 @@
 --[[message
 Fortunately, the Plant FTK was only competitive and playable in the OCG.
 
-	Creator: Furtie_Hubo
+  Creator: Furtie_Hubo
   Difficulty: 8/10
   Master Rule: 4
 ]]
