@@ -1,0 +1,63 @@
+--[[message
+Never underestimate low-level monsters!
+
+	Creator: Eroldin
+	Difficulty: 3/10
+	Master Rule: 3
+]]
+
+--Deny, Absorb and Wipe
+Debug.SetAIName("Eroldin: Prove Your Skill!")
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,3)
+Debug.SetPlayerInfo(0,2000,0,0)
+Debug.SetPlayerInfo(1,1000,0,0)
+
+--Extra Deck (yours)
+Debug.AddCard(63519819,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
+Debug.AddCard(30604579,0,0,LOCATION_EXTRA,0,POS_FACEDOWN)
+
+--Hand (yours)
+Debug.AddCard(64631466,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(78063197,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(41426869,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(34853266,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(14087893,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+Debug.AddCard(84257639,0,0,LOCATION_HAND,0,POS_FACEDOWN)
+
+--Deck (yours)
+Debug.AddCard(41788781,0,0,LOCATION_DECK,0,POS_FACEDOWN)
+
+--GY (yours)
+Debug.AddCard(23571046,0,0,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(89785779,0,0,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(27125110,0,0,LOCATION_GRAVE,0,POS_FACEUP,true)
+
+--Spell & Trap Zones (yours)
+Debug.AddCard(31000575,0,0,LOCATION_SZONE,0,POS_FACEDOWN)
+Debug.AddCard(06137095,0,0,LOCATION_SZONE,1,POS_FACEDOWN)
+Debug.AddCard(38699854,0,0,LOCATION_SZONE,2,POS_FACEDOWN)
+Debug.AddCard(06137095,0,0,LOCATION_SZONE,3,POS_FACEDOWN)
+
+--Deck (opponent's)
+Debug.AddCard(00423585,1,1,LOCATION_DECK,0,POS_FACEDOWN)
+
+--GY (opponent's)
+Debug.AddCard(88819587,1,1,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(88819587,1,1,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(89631139,1,1,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(89631139,1,1,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(89631139,1,1,LOCATION_GRAVE,0,POS_FACEUP,true)
+Debug.AddCard(23995346,1,1,LOCATION_GRAVE,0,POS_FACEUP,true)
+
+--Monster Zones (opponent's)
+Debug.AddCard(38517737,1,1,LOCATION_MZONE,0,POS_FACEUP_ATTACK,true)
+Debug.AddCard(38517737,1,1,LOCATION_MZONE,1,POS_FACEUP_ATTACK,true)
+Debug.AddCard(53347303,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK,true)
+Debug.AddCard(38517737,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK,true)
+
+--Spell & Trap Zones (opponent's)
+Debug.AddCard(29616929,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
+
+--Start the puzzle
+Debug.ReloadFieldEnd()
+aux.BeginPuzzle()
