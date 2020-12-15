@@ -78,4 +78,4 @@ Switch to Battle Phase.
 Attack Obnoxious Celtic Guard with Blue-Eyes White Dragon. (8000/8900)
 Attack Obnoxious Celtic Guard with Dark Paladin. (8000/4400)
 Attack The Unhappy Maiden with Blue-Eyes Ultimate Dragon. (8000/0)
-]
+]]
