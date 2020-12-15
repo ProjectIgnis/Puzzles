@@ -14,7 +14,7 @@ Objective: Win this Turn
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,2)
 Debug.SetPlayerInfo(0,8000,0,0)
 Debug.SetPlayerInfo(1,5000,0,0)
-Debug.SetAINAme("Nightmare Troubadour")
+Debug.SetAIName("Nightmare Troubadour")
 
 --Hand (yours)
 Debug.AddCard(74848038,0,0,LOCATION_HAND,0,POS_FACEDOWN)
