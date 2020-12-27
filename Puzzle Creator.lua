@@ -16,66 +16,26 @@ This is a Puzzle that generates other puzzles. When played, it prompts you to ad
 local io=require("io")
 local os=require("os")
 
-local function MoveToEmzone(c,tp)
-	local p=c:GetControler()
-	local tp=0
-	--workaround for opponent's extra monster zone
-	local zone=0x7f
-	if p~=tp and (Duel.CheckLocation(p,LOCATION_MZONE,5) or Duel.CheckLocation(p,LOCATION_MZONE,6)) then
-		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_TOZONE)
-		zone=Duel.SelectDisableField(tp,1,LOCATION_MZONE,LOCATION_MZONE,~0x1f0060,true)
-		if zone&0x1f0000~=0 then
-			zone=zone>>16
-		elseif zone==64 then
-			zone=32
-		elseif zone==32 then
-			zone=64
-		end
-		--Move to mmzone then to emzone
-		if zone&0x60~=0 then
-			if Duel.GetLocationCount(p,LOCATION_MZONE)>0 then
-				Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
-				Duel.MoveSequence(c,math.log(zone,2))
-			else
-				--Move random monster to emzone, then swap them
-				local tc=Duel.GetFieldGroup(p,LOCATION_MZONE,0):Filter(Card.IsInMainMZone,nil):GetFirst()
-				Duel.MoveSequence(tc,math.log(zone,2))
-				Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
-				Duel.AdjustInstantly()
-				Duel.SwapSequence(c,tc)
-			end
-		else
-			Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true,zone)
-		end
-	else
-		Duel.MoveToField(c,tp,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true,zone)
-	end
-end
-
 local MoveMzone = {
 function(c,p)
 	return c:IsType(TYPE_MONSTER) and (Duel.GetLocationCount(p,LOCATION_MZONE)>0
 			or (c:IsType(TYPE_EXTRA|TYPE_PENDULUM) and (Duel.CheckLocation(p,LOCATION_MZONE,5) or Duel.CheckLocation(p,LOCATION_MZONE,6))))
 end,
 function(c,p)
-	if c:IsType(TYPE_EXTRA|TYPE_PENDULUM) then
-		MoveToEmzone(c,p)
-		c:CompleteProcedure()
-		if c:IsType(TYPE_XYZ) then
-			local ccount=0
-			while ccount<5 and Duel.SelectYesNo(0,2214) do
-				local ac=Duel.AnnounceCard(0)
-				local mat=Duel.CreateToken(p,ac)
-				Duel.Remove(mat,POS_FACEUP,REASON_RULE)
-				Duel.Overlay(c,mat)
-				ccount=ccount+1
-			end
+	local zone=c:IsType(TYPE_EXTRA|TYPE_PENDULUM) and 0x7f or 0xff
+	Duel.MoveToField(c,0,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true,zone)
+	c:CompleteProcedure()
+	if c:IsType(TYPE_XYZ) then
+		local ccount=0
+		while ccount<5 and Duel.SelectYesNo(0,2214) do
+			local ac=Duel.AnnounceCard(0)
+			local mat=Duel.CreateToken(p,ac)
+			Duel.Remove(mat,POS_FACEUP,REASON_RULE)
+			Duel.Overlay(c,mat)
+			ccount=ccount+1
 		end
-	else
-		Duel.MoveToField(c,0,p,LOCATION_MZONE,POS_FACEUP|POS_FACEDOWN,true)
-		c:CompleteProcedure()
 	end
-	if c:IsType(TYPE_GEMINI) and Duel.SelectYesNo(0,2213) then
+	if c:IsType(TYPE_GEMINI) and c:IsFaceup() and Duel.SelectYesNo(0,2213) then
 		c:EnableGeminiState()
 	end	
 end,
@@ -207,7 +167,7 @@ e1:SetCountLimit(1)
 e1:SetProperty(EFFECT_FLAG_NO_TURN_RESET)
 e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	while Duel.SelectYesNo(tp,2200) do
-		local ac=Duel.AnnounceCard(tp)
+		local ac=Duel.AnnounceCard(tp,{OPCODE_ALLOW_ALIASES})
 		if Duel.SelectYesNo(tp,2210) then p=tp else p=1-tp end
 		local c=Duel.CreateToken(p,ac)
 		local ops={}
