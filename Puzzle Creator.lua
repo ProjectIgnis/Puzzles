@@ -288,7 +288,7 @@ local function WriteCard(file,card,identifier)
 	elseif not otg and not card:IsLocation(LOCATION_ONFIELD) then
 		sequence=0
 	end
-	file:write("\n"..identifier.."Debug.AddCard("..card:GetCode()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(position)..proc..")")
+	file:write("\n"..identifier.."Debug.AddCard("..card:Code()..","..controller..","..card:GetOwner()..","..maplocation(location)..","..sequence..","..mapposition(position)..proc..")")
 end
 
 local function maphint(loc)
