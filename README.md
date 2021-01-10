@@ -1,4 +1,4 @@
-# Project Ignis canonical puzzle collection for EDOPro.
+# Project Ignis canonical puzzle collection for EDOPro
 
 Pull requests are welcome for new additions and fixes.
 Note that existing inherited puzzles might not be up to par with these standards.
