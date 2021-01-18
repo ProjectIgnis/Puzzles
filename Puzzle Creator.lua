@@ -28,7 +28,7 @@ function(c,p)
 	if c:IsType(TYPE_XYZ) then
 		local ccount=0
 		while ccount<5 and Duel.SelectYesNo(0,2214) do
-			local ac=Duel.AnnounceCard(0)
+			local ac=Duel.AnnounceCard(0,{OPCODE_ALLOW_ALIASES})
 			local mat=Duel.CreateToken(p,ac)
 			Duel.Remove(mat,POS_FACEUP,REASON_RULE)
 			Duel.Overlay(c,mat)
@@ -160,80 +160,6 @@ local function CheckOperation(op,c,p,ops,opts)
 	end
 end
 
-local e1=Effect.GlobalEffect()
-e1:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
-e1:SetCode(EVENT_STARTUP)
-e1:SetCountLimit(1)
-e1:SetProperty(EFFECT_FLAG_NO_TURN_RESET)
-e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
-	while Duel.SelectYesNo(tp,2200) do
-		local ac=Duel.AnnounceCard(tp,{OPCODE_ALLOW_ALIASES})
-		if Duel.SelectYesNo(tp,2210) then p=tp else p=1-tp end
-		local c=Duel.CreateToken(p,ac)
-		local ops={}
-		local opts={}
-		CheckOperation(MovePzone,c,p,ops,opts)
-		CheckOperation(MoveSzone,c,p,ops,opts)
-		CheckOperation(MoveMzone,c,p,ops,opts)
-		CheckOperation(MoveGrave,c,p,ops,opts)
-		CheckOperation(MoveHand,c,p,ops,opts)
-		CheckOperation(MoveDeck,c,p,ops,opts)
-		CheckOperation(MoveExtra,c,p,ops,opts)
-		CheckOperation(MoveBanished,c,p,ops,opts)
-		ops[Duel.SelectOption(tp,false,table.unpack(opts))+1](c,p)
-		Duel.AdjustInstantly()
-	end
-	if Duel.GetFieldGroupCount(tp,0xff,0xff)==0 then
-		Debug.ShowHint("No card has been added, the puzzle won't be saved.\nRestart to create a new puzzle.")
-		Duel.Win(PLAYER_NONE,0,0)
-		return
-	end
-	local tme=os.date("%Y",os.time()).."-"..os.date("%m",os.time()).."-"..os.date("%d",os.time()).." "..os.date("%H",os.time()).."-"..os.date("%M",os.time()).."-"..os.date("%S",os.time())
-	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
-	local slp=Duel.GetLP(tp)
-	local olp=Duel.GetLP(1-tp)
-	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\n--Partially rewritten by edo9300")
-	f:write("\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)")
-	f:write("\nDebug.SetPlayerInfo(0,"..slp..",0,0)")
-	f:write("\nDebug.SetPlayerInfo(1,"..olp..",0,0)")
-	CheckEquips()
-	for p=0,1 do
-		WriteLocation(f,LOCATION_DECK,p)
-		WriteLocation(f,LOCATION_EXTRA,p)
-		WriteLocation(f,LOCATION_HAND,p)
-		WriteLocation(f,LOCATION_GRAVE,p)
-		WriteLocation(f,LOCATION_REMOVED,p)
-		WriteLocation(f,LOCATION_MZONE,p)
-		WriteLocation(f,LOCATION_SZONE,p)
-	end
-	
-	f:write("\n\nDebug.ReloadFieldEnd()")
-	
-	if preequips then
-		f:write("\n\n--Equipped Cards"..preequips)
-	end
-	
-	if unions then
-		f:write("\n\n--Equipped Unions"..unions)
-	end
-	
-	if gemini then
-		f:write("\n\n--Summoned Geminis"..gemini)
-	end
-	
-	if deckfaceup then
-		f:write("\n\n--Faceup cards in the Deck\nDuel.EnableGlobalFlag(GLOBALFLAG_DECK_REVERSE_CHECK)"..deckfaceup)
-	end
-	
-	f:write("\naux.BeginPuzzle()")
-	
-	f:close()
-
-	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.\nRestart to create a new puzzle.")
-	Duel.Win(PLAYER_NONE,0,0)
-end)
-Duel.RegisterEffect(e1,0)
-
 local function maplocation(loc)
 	if loc==LOCATION_DECK then return "LOCATION_DECK" end
 	if loc==LOCATION_HAND then return "LOCATION_HAND" end
@@ -303,9 +229,9 @@ local function maphint(loc)
 	return ""
 end
 
-uniquecount=0
-equipscheck={}
-function CheckEquips()
+local uniquecount=0
+local equipscheck={}
+local function CheckEquips()
 	for tc in aux.Next(Duel.GetFieldGroup(0,LOCATION_MZONE,LOCATION_MZONE)) do
 		for eq in aux.Next(tc:GetEquipGroup()) do
 			local uniqeqip=equipscheck[eq]
@@ -317,7 +243,7 @@ function CheckEquips()
 		end
 	end
 end
-function WriteLocation(file,loc,player)
+local function WriteLocation(file,loc,player)
 	local g=Duel.GetFieldGroup(player,loc,0)
 	if #g>0 then
 		file:write("\n\n--"..maphint(loc))
@@ -361,3 +287,77 @@ function WriteLocation(file,loc,player)
 		end
 	end
 end
+
+local e1=Effect.GlobalEffect()
+e1:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
+e1:SetCode(EVENT_STARTUP)
+e1:SetCountLimit(1)
+e1:SetProperty(EFFECT_FLAG_NO_TURN_RESET)
+e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
+	while Duel.SelectYesNo(tp,2200) do
+		local ac=Duel.AnnounceCard(tp,{OPCODE_ALLOW_ALIASES})
+		if Duel.SelectYesNo(tp,2210) then p=tp else p=1-tp end
+		local c=Duel.CreateToken(p,ac)
+		local ops={}
+		local opts={}
+		CheckOperation(MovePzone,c,p,ops,opts)
+		CheckOperation(MoveSzone,c,p,ops,opts)
+		CheckOperation(MoveMzone,c,p,ops,opts)
+		CheckOperation(MoveGrave,c,p,ops,opts)
+		CheckOperation(MoveHand,c,p,ops,opts)
+		CheckOperation(MoveDeck,c,p,ops,opts)
+		CheckOperation(MoveExtra,c,p,ops,opts)
+		CheckOperation(MoveBanished,c,p,ops,opts)
+		ops[Duel.SelectOption(tp,false,table.unpack(opts))+1](c,p)
+		Duel.AdjustInstantly()
+	end
+	if Duel.GetFieldGroupCount(tp,0xff,0xff)==0 then
+		Debug.ShowHint("No card has been added, the puzzle won't be saved.\nRestart to create a new puzzle.")
+		Duel.Win(PLAYER_NONE,0,0)
+		return
+	end
+	local tme=os.date("%Y-%m-%d %H-%M-%S",os.time())
+	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
+	local slp=Duel.GetLP(tp)
+	local olp=Duel.GetLP(1-tp)
+	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\n--Partially rewritten by edo9300")
+	f:write("\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)")
+	f:write("\nDebug.SetPlayerInfo(0,"..slp..",0,0)")
+	f:write("\nDebug.SetPlayerInfo(1,"..olp..",0,0)")
+	CheckEquips()
+	for p=0,1 do
+		WriteLocation(f,LOCATION_DECK,p)
+		WriteLocation(f,LOCATION_EXTRA,p)
+		WriteLocation(f,LOCATION_HAND,p)
+		WriteLocation(f,LOCATION_GRAVE,p)
+		WriteLocation(f,LOCATION_REMOVED,p)
+		WriteLocation(f,LOCATION_MZONE,p)
+		WriteLocation(f,LOCATION_SZONE,p)
+	end
+	
+	f:write("\n\nDebug.ReloadFieldEnd()")
+	
+	if preequips then
+		f:write("\n\n--Equipped Cards"..preequips)
+	end
+	
+	if unions then
+		f:write("\n\n--Equipped Unions"..unions)
+	end
+	
+	if gemini then
+		f:write("\n\n--Summoned Geminis"..gemini)
+	end
+	
+	if deckfaceup then
+		f:write("\n\n--Faceup cards in the Deck\nDuel.EnableGlobalFlag(GLOBALFLAG_DECK_REVERSE_CHECK)"..deckfaceup)
+	end
+	
+	f:write("\naux.BeginPuzzle()")
+	
+	f:close()
+
+	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.\nRestart to create a new puzzle.")
+	Duel.Win(PLAYER_NONE,0,0)
+end)
+Duel.RegisterEffect(e1,0)
