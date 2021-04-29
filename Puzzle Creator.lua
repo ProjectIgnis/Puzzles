@@ -243,6 +243,30 @@ local function CheckEquips()
 		end
 	end
 end
+local EquipFunc = [[
+local function Equip(c,target)
+	Debug.PreEquip(c,target)
+	local ctype=c:Type()
+	if ctype&TYPE_EQUIP==0 then
+		local code=EFFECT_CHANGE_TYPE
+		local value=TYPE_EQUIP+TYPE_SPELL
+		if c:IsType(TYPE_TRAP) then
+			code=EFFECT_ADD_TYPE
+			value=TYPE_EQUIP
+		elseif ctype&TYPE_UNION~=0 then
+			value=value+TYPE_UNION
+		elseif ctype&TYPE_TOKEN~=0 then
+			value=value+TYPE_TOKEN
+		end
+		local eff=Effect.CreateEffect(c)
+		eff:SetType(EFFECT_TYPE_SINGLE)
+		eff:SetCode(code)
+		eff:SetValue(value)
+		eff:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
+		eff:SetReset(RESET_EVENT+0x17e0000)
+		c:RegisterEffect(eff,true)
+	end
+end]]
 local function WriteLocation(file,loc,player)
 	local g=Duel.GetFieldGroup(player,loc,0)
 	if #g>0 then
@@ -260,7 +284,7 @@ local function WriteLocation(file,loc,player)
 				uniquecount=uniquecount+1
 				for eq in aux.Next(eqg) do
 					local uniqeqip=equipscheck[eq]
-					preequips=preequips and (preequips.."\nDebug.PreEquip("..uniqeqip..","..uniq..")") or ("\nDebug.PreEquip("..uniqeqip..","..uniq..")")
+					preequips=preequips and (preequips.."\nEquip("..uniqeqip..","..uniq..")") or ("\nEquip("..uniqeqip..","..uniq..")")
 					if eq:IsHasEffect(EFFECT_UNION_STATUS) then
 						unions=unions and (unions.."\naux.SetUnionState("..uniqeqip..")") or ("\naux.SetUnionState("..uniqeqip..")")
 					end
@@ -338,6 +362,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	f:write("\n\nDebug.ReloadFieldEnd()")
 	
 	if preequips then
+		f:write("\n\n--Equip Function\n"..EquipFunc)
 		f:write("\n\n--Equipped Cards"..preequips)
 	end
 	
