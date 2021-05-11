@@ -63,3 +63,4 @@ Switch to Battle Phase.
 Attack Gearfried the Iron Knight with Slot Machine. (200/4800)
 Attack opponent's life points with Zolga. (200/2800)
 Attack opponent's life points with Blue-Eyes White Dragon. (200/0)
+]]
