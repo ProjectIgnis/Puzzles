@@ -1,4 +1,5 @@
 --Created by The Good Doctor using senpaizuri's Puzzle Maker (updated by Naim & Larry126, partially rewritten by edo9300)
+--Ruling Source: https://www.db.yugioh-card.com/yugiohdb/faq_search.action?ope=5&fid=18354&request_locale=ja
 
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)
 Debug.SetPlayerInfo(0,1300,0,0)
