@@ -13,9 +13,6 @@ Debug.ReloadFieldEnd()
 This is a Puzzle that generates other puzzles. When played, it prompts you to add cards - to locations you choose - until you select No, when the puzzle is saved.
 ]]
 
-local io=require("io")
-local os=require("os")
-
 local MoveMzone = {
 function(c,p)
 	return c:IsType(TYPE_MONSTER) and (Duel.GetLocationCount(p,LOCATION_MZONE)>0
@@ -340,7 +337,8 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		Duel.Win(PLAYER_NONE,0,0)
 		return
 	end
-	local tme=os.date("%Y-%m-%d %H-%M-%S",os.time())
+	-- local tme=os.date("%Y-%m-%d %H-%M-%S",os.time())
+	local tme = ""
 	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
 	local slp=Duel.GetLP(tp)
 	local olp=Duel.GetLP(1-tp)
