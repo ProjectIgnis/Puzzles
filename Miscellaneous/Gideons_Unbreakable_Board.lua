@@ -20,6 +20,7 @@ Objective: Find a way to break the board.
 local card=Debug.AddCard(35984222,0,0,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
 
 local bamboo=Debug.AddCard(20174189,1,1,LOCATION_MZONE,2,POS_FACEUP_DEFENSE)
+Debug.AddCard(47355498,1,1,LOCATION_SZONE,5,POS_FACEUP)
 Debug.AddCard(30459350,1,1,LOCATION_SZONE,4,POS_FACEUP)
 Debug.AddCard(73599290,1,1,LOCATION_SZONE,3,POS_FACEUP)
 local zone=Debug.AddCard(38296564,1,1,LOCATION_SZONE,2,POS_FACEUP)
@@ -58,7 +59,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	while Duel.SelectYesNo(tp,1004) do
 		local ac=Duel.AnnounceCard(tp)
 		local c=Duel.CreateToken(tp,ac)
-		Duel.SendtoGrave(c,nil,REASON_RULE)	
+		Duel.SendtoGrave(c,REASON_RULE)	
 	end
 	Debug.ShowHint("Choose 'Yes' to add cards face-down to your S/T Zone. Choose 'No' to continue to the next location.")
 	while Duel.SelectYesNo(tp,1003) do
