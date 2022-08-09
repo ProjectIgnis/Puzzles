@@ -26,7 +26,7 @@ Debug.AddCard(160204007,0,0,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.AddCard(160204051,0,0,LOCATION_SZONE,1,POS_FACEDOWN_ATTACK)
 
 --Monster Zones (opponent's)
-local c=Debug.AddCard(160421004,1,1,LOCATION_MZONE,1,POS_FACEUP_ATTACK)
+local c=Debug.AddCard(160001029,1,1,LOCATION_MZONE,1,POS_FACEUP_ATTACK)
 Debug.AddCard(160204022,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
 
 --Yamiruler the Dark Delayer's "cannot tribute summon" effect
@@ -42,11 +42,11 @@ e1:SetReset(RESET_PHASE+PHASE_END+RESET_OPPO_TURN,1)
 e1:SetTargetRange(1,1)
 c:RegisterEffect(e1)
 local e2=e1:Clone()
-e2:SetDescription(aux.Stringid(160421004,1))
+e2:SetDescription(aux.Stringid(160001029,1))
 e2:SetProperty(EFFECT_FLAG_CLIENT_HINT+EFFECT_FLAG_PLAYER_TARGET)
 e2:SetCode(EFFECT_CANNOT_MSET)
 c:RegisterEffect(e2)
-c:AddNoTributeCheck(160421004,1,1,1)
+c:AddNoTributeCheck(160001029,1,1,1)
 		
 Debug.ReloadFieldEnd()
 Duel.SetLP(0,1200)

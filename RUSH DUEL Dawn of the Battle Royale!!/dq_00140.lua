@@ -15,7 +15,7 @@ Debug.AddCard(160304012,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)
 Debug.AddCard(160304012,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)
 
 --Monster Zones (opponent's)
-Debug.AddMaximumCard(1,160421006,160202010,160202012)
+Debug.AddMaximumCard(1,160202011,160202010,160202012)
 
 Debug.ReloadFieldEnd()
 Duel.SetLP(0,200)
