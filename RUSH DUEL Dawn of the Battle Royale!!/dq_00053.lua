@@ -28,6 +28,7 @@ Debug.AddCard(160201015,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)
 
 --Spell & Trap Zones (opponent's)
 Debug.AddCard(160002049,1,1,LOCATION_SZONE,1,POS_FACEDOWN)
+Debug.AddCard(160201027,1,1,LOCATION_SZONE,2,POS_FACEDOWN)
 
 Debug.ReloadFieldEnd()
 Duel.SetLP(0,100)
