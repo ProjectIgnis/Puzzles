@@ -33,3 +33,11 @@ Debug.ReloadFieldEnd()
 Duel.SetLP(0,100)
 Duel.SetLP(1,3300)
 aux.BeginPuzzle()
+
+Duel.SelectOption=(function()
+	local oldfunc=Duel.SelectOption
+	return function(p,opt1,opt2,opt3)
+		oldfunc(p,opt2)
+		return 1
+	end
+end)()
