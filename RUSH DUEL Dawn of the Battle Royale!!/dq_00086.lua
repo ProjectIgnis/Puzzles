@@ -34,6 +34,8 @@ Duel.SetLP(0,100)
 Duel.SetLP(1,3300)
 aux.BeginPuzzle()
 
+--Cat's Eye needs the opponent NOT TO declare "Monster"
+--overwrite the function so that it will always declare "Spell"
 Duel.SelectOption=(function()
 	local oldfunc=Duel.SelectOption
 	return function(p,opt1,opt2,opt3)
