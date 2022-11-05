@@ -56,8 +56,8 @@ Debug.AddCard(67237709,0,0,LOCATION_DECK,0,POS_FACEDOWN) --Kozmotown
 Debug.AddCard(85668449,0,0,LOCATION_DECK,0,POS_FACEDOWN) --Brain Lab
 
 --Player's GY
-Debug.AddCard(5133471,0,0,LOCATION_GRAVE,0,POS_FACEDOWN) --Galaxy Cyclone
-Debug.AddCard(58695102,0,0,LOCATION_GRAVE,0,POS_FACEDOWN) --Recover
+Debug.AddCard(5133471,0,0,LOCATION_GRAVE,0,POS_FACEUP) --Galaxy Cyclone
+Debug.AddCard(58695102,0,0,LOCATION_GRAVE,0,POS_FACEUP) --Recover
 
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in one turn!")

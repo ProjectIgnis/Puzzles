@@ -43,7 +43,7 @@ Debug.AddCard(19302550,0,0,LOCATION_DECK,0,POS_FACEDOWN) --D/D Newton
 Debug.AddCard(46372010,0,0,LOCATION_DECK,0,POS_FACEDOWN) --Contract w/ Gate
 
 --Player's GY
-Debug.AddCard(73360025,0,0,LOCATION_GRAVE,0,POS_FACEDOWN) --Contract w/ Swamp
+Debug.AddCard(73360025,0,0,LOCATION_GRAVE,0,POS_FACEUP) --Contract w/ Swamp
 Debug.AddCard(80925836,0,0,LOCATION_GRAVE,0,POS_FACEUP) --Koaki Meiru Doom
 
 Debug.ReloadFieldEnd()

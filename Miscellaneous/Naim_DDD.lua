@@ -50,7 +50,7 @@ Debug.AddCard(52145422,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK)		--graydle dragon
 Debug.AddCard(87567063,1,1,LOCATION_SZONE,3,POS_FACEDOWN)			--rebellion
 Debug.AddCard(40838625,1,1,LOCATION_SZONE,2,POS_FACEDOWN)			--mirror
 
-Debug.AddCard(29834183,1,1,LOCATION_GRAVE,0,POS_FACEDOWN)			-- eagle
+Debug.AddCard(29834183,1,1,LOCATION_GRAVE,0,POS_FACEUP)			-- eagle
 
 
 --Insert any message here
