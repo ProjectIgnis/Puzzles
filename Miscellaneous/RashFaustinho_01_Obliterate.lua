@@ -5,9 +5,9 @@
 Help Exodia obliterate the opponent's field!
 
 Creator: RashFaustinho
-Your Starting LP: 400
+Your Starting LP: 1000
 Opponent's Starting LP: 4000
-Difficulty: 1/10
+Difficulty: 6/10
 ]]
 
 Debug.SetAIName("Seto Kaiba")
