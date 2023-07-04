@@ -6,7 +6,7 @@ Note that existing inherited puzzles might not be up to par with these standards
 * Puzzles must be solvable, except maybe tutorials.
 * Puzzles should go in an existing folder. Custom puzzles belong under Miscellaneous.
 * Puzzle names should not contain special characters and underscores are preferred to spaces.
-* Creators may include their names in the puzzle name, in which case the puzzles should be numbered.
+* Creators should include their names in the puzzle name for custom puzzles, in which case the puzzles should be numbered.
 * Solutions should be in a second comment in the puzzle, attached to the pull request, or sent to gidoen_g2 on discord via replay form.
 * In puzzle code, prefer tabs for indentation.
 
