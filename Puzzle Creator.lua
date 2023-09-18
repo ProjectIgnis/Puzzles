@@ -337,9 +337,16 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 		Duel.Win(PLAYER_NONE,0,0)
 		return
 	end
-	-- local tme=os.date("%Y-%m-%d %H-%M-%S",os.time())
-	local tme = ""
-	local f=io.open("./puzzles/Generated Puzzle "..tme..".lua","w+")
+	local function genfile(num)
+		local f=io.open("./puzzles/Generated Puzzle "..num..".lua","r")
+		--if it doesn't exist, call open again but this time generating a file
+		if not f then return io.open("./puzzles/Generated Puzzle "..num..".lua","w+"),num end
+		--if it exists, close it then try again with higher num
+		f:close()
+		return genfile(num+1)
+	end
+	--start at 1
+	local f,filenum=genfile(1)
 	local slp=Duel.GetLP(tp)
 	local olp=Duel.GetLP(1-tp)
 	f:write("--Created using senpaizuri's Puzzle Maker (updated by Naim & Larry126)\n--Partially rewritten by edo9300")
@@ -380,7 +387,7 @@ e1:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
 	
 	f:close()
 
-	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..tme..".lua'.\nRestart to create a new puzzle.")
+	Debug.ShowHint("The puzzle has been sucessfully exported as 'Generated Puzzle "..filenum..".lua'.\nRestart to create a new puzzle.")
 	Duel.Win(PLAYER_NONE,0,0)
 end)
 Duel.RegisterEffect(e1,0)
