@@ -50,7 +50,7 @@ Remove from play 1 "Cloudian - Smoke Ball" in order to Special Summon 1 "Cloudia
 Activate the effect of "Cloudian - Storm Dragon" to place 1 Fog Counter on "Cloudian - Turbulence".
 Activate the effect of "Cloudian - Turbulence", removing a Fog Counter to Special Summon the "Cloudian - Smoke Ball" from your Graveyard.
 Activate "Fishborg Blaster", by discarding the "Cloudian - Smoke Ball from your hand.
-Synchro Summon "Gungnir, Dragon of the Ice Barrier" using "Fishborg Blaster", Cloudian - Storm Dragon", and "Cloudian - Smoke Ball" as Synchro Material Monsters.
+Synchro Summon "Gungnir, Dragon of the Ice Barrier" using "Formula Synchron", Cloudian - Storm Dragon", and "Cloudian - Smoke Ball" as Synchro Material Monsters.
 Special Summon 1 "Cloudian - Storm Dragon" from your hand by removing from play the "Cloudian - Storm Dragon" in your Graveyard.
 Activate the effect of "Cloudian - Storm Dragon" to place 1 Fog Counter on "Cloudian - Turbulence".
 Activate the effect of "Cloudian - Turbulence", by removing a Fog Counter to Special Summon "Cloudian - Smoke Ball" from your Graveyard.
