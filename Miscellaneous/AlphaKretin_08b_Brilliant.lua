@@ -17,7 +17,7 @@ Debug.SetPlayerInfo(1,4300,0,0)
 --AI's field.
 local c=Debug.AddCard(51814159,0,0,LOCATION_MZONE,0,POS_FACEUP_DEFENSE) --Nekroz of Vulture
 Debug.AddCard(51788412,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK) --Jobbed to RR
-Debug.AddCard(21648584,1,1,LOCATION_SZONE,2,POS_FACDOWN) --RRReady
+Debug.AddCard(21648584,1,1,LOCATION_SZONE,2,POS_FACEDOWN) --RRReady
 
 --AI's Extra Deck
 
