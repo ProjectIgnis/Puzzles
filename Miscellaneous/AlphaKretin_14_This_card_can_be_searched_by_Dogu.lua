@@ -49,7 +49,7 @@ Debug.AddCard(49725936,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --Bang Bang Bang Drago
 Debug.AddCard(49725936,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --Bang Bang Bang Dragon
 Debug.AddCard(89310929,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --Self-Bounce Always Broke
 Debug.AddCard(61665255,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --Brexit Sorceress
-Debug.AddCard(5043010,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --Good news! She's dead!
+Debug.AddCard(5043020,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --Good news! She's dead!
 Debug.AddCard(48995978,0,0,LOCATION_EXTRA,0,POS_FACEDOWN) --The Cowardly Lion
 
 --AI's field
