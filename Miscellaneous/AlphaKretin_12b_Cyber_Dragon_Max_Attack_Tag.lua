@@ -9,7 +9,7 @@ Objective: Win this turn.
 ]]
 --Cyber Dragon Maximum Attack puzzle
 Debug.SetAIName("AlphaKretin")
-Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN + DUEL_SIMPLE_AI + DUEL_TAG_MODE, 4) --tag mode shouldn't actually come up but justifies extra copies of cards
+Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN + DUEL_SIMPLE_AI, 4) --tag mode shouldn't actually come up but justifies extra copies of cards
 
 Debug.SetPlayerInfo(0, 100, 0, 0)
 Debug.SetPlayerInfo(1, 9151952, 0, 0)
