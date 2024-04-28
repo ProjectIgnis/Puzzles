@@ -5,8 +5,8 @@ The filenames should exclude '.ydk' when you input them.
 This script WILL ignore and remove cards that are not included in the goat banlist.
 This is a beta version. Report any bugs you find to @senpaizuri3#9082.
 ]]
-local io=require("io")
-local os=require('os')
+
+
 
 os.execute('cls')
 print("Input import name (omitting '.ydk').")
@@ -15,7 +15,7 @@ assert(name,"Enable the console with the Ctrl+O options menu to input text.")
 local filename="deck/"..name..".ydk"
 local f=assert(io.open(filename,"r"),'Deck name "'..name..'" not found.')
 
-os.execute('cls')
+
 print("Input export name (omitting '.ydk'). Leave it empty to overwrite the import file instead.")
 local export=io.read()
 if not export or export=="" then export=name end
@@ -36,7 +36,7 @@ for line in io.lines(filename) do
 		else
 			loc=LOCATION_DECK
 		end
-		Debug.AddCard(line,0,0,loc,0,POS_FACEDOWN)
+		Debug.AddCard(0,0,0,loc,0,POS_FACEDOWN)
 	else
 		state=string.sub(line,2)
 	end
@@ -46,9 +46,9 @@ Debug.ReloadFieldEnd()
 
 function bangroup()
 	local pool=Group.CreateGroup()
-	require('os').execute('cls')
+
 	print("Extracting card pool from goat banlist file...")
-	local io=require("io")
+
 	local banlist="repositories/lflists/GOAT.lflist.conf"
 	local f=assert(io.open(banlist,"r"),"Could not load goat banlist.")
 	for line in io.lines(banlist) do
@@ -102,7 +102,7 @@ function startup(name)
 end
 
 function writedeck(name,codesub,list)
-	local io=require("io")
+
 	local f=io.open("./deck/"..name..".ydk","w+")
 	f:write("#created by ..\n")
 	f:write("#main\n")
