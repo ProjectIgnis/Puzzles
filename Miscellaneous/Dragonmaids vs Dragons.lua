@@ -9,7 +9,7 @@ https://www.bilibili.com/video/BV1Lq4y1p7Mh/
 Debug.SetAIName("闪光的白日梦: Prove your skill!")
 Debug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN+DUEL_SIMPLE_AI,5)
 Debug.SetPlayerInfo(0,1001,0,0)
-Debug.SetPlayerInfo(1,6250,0,0)
+Debug.SetPlayerInfo(1,2850,0,0)
 Debug.AddCard(40110009,0,0,LOCATION_DECK,0,POS_FACEUP_ATTACK)
 Debug.AddCard(42055234,0,0,LOCATION_DECK,0,POS_FACEUP_ATTACK)
 Debug.AddCard(49575521,0,0,LOCATION_DECK,0,POS_FACEUP_ATTACK)
