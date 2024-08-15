@@ -59,7 +59,7 @@ Debug.AddCard(89943724,1,1,LOCATION_DECK,0,POS_FACEDOWN)
 local m_3=Debug.AddCard(78512663,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK,true)
 Debug.AddCard(76263644,1,1,LOCATION_MZONE,1,POS_FACEUP_ATTACK,true)
 local m_4=Debug.AddCard(4896788,1,1,LOCATION_MZONE,3,POS_FACEUP_ATTACK,true)
-Debug.AddCard(91932350,1,1,LOCATION_MZONE,0,POS_FACEUP_ATTACK,true)
+local m_5=Debug.AddCard(91932350,1,1,LOCATION_MZONE,0,POS_FACEUP_ATTACK,true)
 Debug.AddCard(21844577,1,1,LOCATION_MZONE,4,POS_FACEUP_ATTACK,true)
 
 --Spell & Trap Zones (opponent's)
@@ -68,7 +68,7 @@ local eq_1=Debug.AddCard(6178850,1,1,LOCATION_SZONE,2,POS_FACEUP)
 local eq_0=Debug.AddCard(11913700,1,1,LOCATION_SZONE,1,POS_FACEUP)
 Debug.AddCard(56120475,1,1,LOCATION_SZONE,3,POS_FACEDOWN)
 Debug.AddCard(78783370,1,1,LOCATION_SZONE,0,POS_FACEDOWN)
-local eq_2=Debug.AddCard(39897277,1,1,LOCATION_SZONE,4,POS_FACEUP)
+local eq_2=Debug.AddCard(56747793,1,1,LOCATION_SZONE,4,POS_FACEUP)
 
 Debug.ReloadFieldEnd()
 
@@ -100,5 +100,5 @@ end
 --Equipped Cards
 Equip(eq_0,m_3)
 Equip(eq_1,m_4)
-Equip(eq_2,m_4)
+Equip(eq_2,m_5)
 aux.BeginPuzzle()
