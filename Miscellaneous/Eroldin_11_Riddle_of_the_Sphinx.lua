@@ -84,3 +84,23 @@ end
 Equip(eq_0,m_2)
 Equip(eq_1,m_3)
 aux.BeginPuzzle()
+
+--[[
+The answer for Puzzle 11
+1. Return from the Different Dimension
+2. Order to Smash --> Mokey Mokey --> Sword of Revealing Light x2
+3. Pot of Benevolence --> Mokey & Swords
+4. Advanced Ritual Art
+5. Relinquished --> Guardian Sphinx
+6. Pot of Greed
+7. Polymerization
+8. Thousand-Eye Restrict --> Guardian Sphinx
+9. De-Fusion. Do summon
+10. Relinquished --> Any monster except Theinen the Great Sphinx
+11. Shrink --> Relinquished
+12. Mist Body --> Relinquished
+13. Axe of Despair --> Theinen
+14. Twin Swords of Flashing Light - Tryce --> Relinquished
+---Battle Phase---
+15. Attack Theinen twice with Relinquished for the win
+]]
