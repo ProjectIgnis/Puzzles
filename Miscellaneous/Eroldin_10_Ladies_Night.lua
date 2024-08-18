@@ -102,3 +102,35 @@ Equip(eq_0,m_3)
 Equip(eq_1,m_4)
 Equip(eq_2,m_5)
 aux.BeginPuzzle()
+--[[
+The Answer:
+Puzzle 10
+
+1. Summon Burstinatrix
+2. Order to Charge --> Magma Neos
+3. Mind Control --> Avian
+4. O - Oversoul
+5. Dark Fusion
+6. Pot of greed. Draw 1 extra
+7. Dimensional Fissure
+8. Ritual of Grace. Tribute Caam, Serenity of Gusto & Amazoness Paladin
+9. Select Shorus of Sanctuary with Northwemko's Effect
+10. Pot of Grred. Draw 1 extra
+11. Graceful Charity. Discard Salamandra & Wynn the Wind Charmer
+12. Dimmension Fusion
+13. Amazoness Spellcaster --> Destiny End Dragoon
+14. De-Spell --> Dimensional Fissure
+15. Pot of Greed. Draw 1 extra
+16. Fighting Spirit --> Northwemko
+17. Special Summon Familiar-Possessed - Wynn from deck
+18. Premature Burial --> Caam
+19. Gift of the Martyr --> Caam --> Wynn
+20. Fusion Weapon
+21. Elegant Egotist
+---Battle Phase---
+22. Northwemko --> Dragoon
+23. Cyber Harpie Lady --> Spirit of the Pot of Greed
+24. Wynn --> Neos
+25. Inferno Wing --> Spirit
+26. Attack with Paladin for the Win
+]]
