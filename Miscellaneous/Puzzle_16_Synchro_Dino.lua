@@ -46,3 +46,23 @@ Debug.AddCard(53334471,1,1,LOCATION_SZONE,2,POS_FACEUP_ATTACK)
 Debug.ReloadFieldEnd()
 
 aux.BeginPuzzle()
+
+
+--[[
+
+1- Activate "The Trasmigration Prophecy", target "Babycerasaurus" and "Jurrac Monoloph".
+2- Activate "Fossil Dig", search "Babycerasaurus".
+3- Normal Summon "Babycerasaurus", "Future Visions" will trigger, chain "Chain Destruction"
+4- The effects of both "Babycerasaurus" will trigger. Special Summon "Jurrac Velo" and "Jurrac Gallim" in Attack Position
+5- Enter the Battle Phase, attack "Stardust Dragon" with "Jurrac Velo".
+6- Activate the effect of "Jurrac Velo" and Special Summon "Jurrac Monoloph".
+7- Attack "Stardust Dragon" with "Jurrac Gallim".
+8- Activate the effect of "Jurrac Gallim". "Stardust Dragon" will be activated in response, negating Jurrac Gallim
+9- Attack with "Jurrac Monoloph".
+10- Activate "Skull Lair" and use its effect, removing 3 cards (Gallim, Velo and Miracle Jurasic Egg), destroy "Jurrac Monoloph".
+11- Activate "Fossil Excavation", discard "Debris Dragon" and target "Babycerasaurus".
+12- Attack with "Babycerasaurus".
+13- Activate "Skull Lair"'s effect, removing 2 cards (Babycerasaurus and Monoloph), destroy "Babycerasaurus".
+14- Activate the effect of "Babycerasaurus" and Special Summon "Tyranno Infinity".
+15- Attack directly with "Tyranno Infinity".
+--]]
