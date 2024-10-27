@@ -132,3 +132,52 @@ Debug.ReloadFieldEnd()
 
 	--begin
 aux.BeginPuzzle()
+
+--[[Solution:
+
+1- Set "Ojama Duo", then activate it with "Temple of the Kings" effect.
+2- Xyz Summon "Dark Anthelion Dragon" using the two "D/D Vice Typhon".
+3- Activate "Magical Stone Excavation", discard "Straight Flush" and "Rank-Up-Magic Argent Chaos Force" to add "Chain Summoning" from your GY to the hand.
+4- Activate "Super Polymerization", discarding "Supreme King Dragon Darkwurm" and Fusion Summon "Mudragon of the Swamp" targetting "Makyura the Destructor" and "Anthelion".
+5- Activate "Makyura" GY effect, then Normal Summon "Starleige Seyfert". Xyz Summon "Tornado Dragon" using "Mudragon" and "Starleige".
+6- Activate "Genex Ally Birdman" effect from your hand and return "Eater of Millions" to the hand. 
+7- Chain "Tornado" to "Birdman" and target "Mistake", then chain "Chain Summoning" to "Tornado". "Birdman" is Special Summoned.
+8- Activate "Draconic Diagram" and target "Eater of Millions", then chain "The Trasmigration Prophecy" from your hand, targetting "Ice Barrier" and "Rise to Full Height".
+9- Add "True King Bahrastos, the Fathomer" from your Deck to the Hand with "Diagram" effect.
+10- Normal Summon "Aleister the Invoker", then activate its effect to add "Invocation" from your Deck to the Hand.
+11- Synchro Summon "Power Tool Dragon" using "Birdman" and "Aleister". Activate its effect, choose the three copies of "Premature Burial" and add one to the hand.
+12- Special Summon "Elder Entity N'Tss". Then activate "Foolish Burial" and Special Summon "Souleating Oviraptor".
+13- Activate "Oviraptor" effect and add "Miscellaneousaurus" from the Deck to the Hand. Activate "N'Tss" effect to Special Summon it.
+14- Xyz Summon "Castel, the Skyblaster Musketeer" using "N'Tss" and "Miscellaneousaurus", then activate its effect to shuffle "Imperial Iron Wall" back to the Deck.
+15- Activate "N'Tss" effect to destroy "Topologic Zeroboros". Activate "Miscellaneousaurus" and banish it to Special Summon "Jurrac Aeolo" from your Deck.
+16- Synchro Summon "Ib the World Chalice Justiciar" using "Aeolo" and "Oviraptor". Activate its effect and add "World Legacy Guardragon" from your Deck to the Hand.
+16- Activate "Invocation" and Fusion Summon "Invoked Radjin" banishing "Aleister" and "Tornado" from the GY.
+17- Special Summon "Ultimaya Tzolkin" using "Radjin" and "Ib". Activate "Ib" GY effect and Special Summon "Beckoned by the World Chalice" from your Deck.
+18- Special Summon "Jet Synchron" from the GY with its effect, discarding "Blaster, Dragon Ruler of Infernos".
+19- Special Summon "White Dragon Wyverbuster" from your Hand, banishing "Birdman" from the GY.
+20- Synchro Summon "Trishula, Dragon of the Ice Barrier" using "Wyverbuster", "Beckoned" and "Jet Synchron".
+21- Activate "Trishula" effect, then chain "Wyverbuster" effect from the GY to add "Black Dragon Collapserpent" from the Deck to the hand.
+22- Banish "Nekroz of Valkyrus", "Spiritual Swords of Revealing Light" and "Electromagnetic Turtle" with Trishula's effect.
+23- Activate "Starleige" effect from the GY and banish it to add "Chaos Dragon Levianeer" from the GY to the hand.
+24- Banish "Oviraptor", "Zerovoros" and "Eater of Millions" to Special Summon "Levianeer". Activate its effect to shuffle "Valkyrus" into the Deck.
+25- Set "Guardragon", then activate "Ultimaya" effect to Special Summon "Crystal Wing Synchro Dragon".
+26- Tribute "Ultimaya", "Castel" and "Levianeer" to Normal Summon "The Wicked Avatar".
+27- Banish "D/D/D Flame High King Genghis" and "Aeolo" to Special Summon "Blaster" from the GY. Activate "Mass Driver" and Tribute "Blaster".
+28- Activate from your hand and Special Summon "Nemeses Umbrella", then shuffle "Genghis" back into the Deck.
+29- Special Summon "Bahrastos" destroying "Umbrella" and "Trishula", then with its effect destroy "Swords" and "Mystic Mine".
+30- Activate "Guardragon", then chain "Crystal Wing" to "Kozmo Dark Planet" to negate it. Special Summon "Darkwurm" from the GY.
+31- Activate "Darkwurm" effect and add "Supreme King Gate Zero" from the Deck to the hand. Then activate "Zero".
+32- Pendulum Summon "Anthelion" from your Extra Deck. Activate "Argent Chaos" to add it from the GY to the hand.
+33- Tribute "Anthelion" and "Darkwurm" to Special Summon "Supreme King Dragon Starving Venom".
+34- Activate "Typhon" GY effect and banish both "Typhon" to Fusion Summon "Genghis".
+35- Activate "Odd-Eyes Revolution Dragon" to Special Summon "Trishula" from the GY. Activate "Supreme King Starving Venom" and target "Avatar".
+36- Activate "Invocation" from your GY and add "Aleister" back to the hand.
+37- Enter Battle Phase, attack the two Ojamas with "Supreme King Starving Venom" and "Avatar".
+38- Activate "Super Polymerization", discarding "Eater of Millions" and Fusion Summon "Starving Venom Fusion Dragon" using "Supreme King Starving Venom" and "Avatar".
+39- Activate "Starving Venom" effect, then attack "Blue-Eyes Chaos MAX Dragon" with "Crystal Wing". Attack with "Starving Venom", then chain "Genghis" to negate "Burnout".
+40- Activate "Aleister" from your hand and target "Starving Venom". Attack with "Genghis", "Bahrastos" and "Trishula". End the Battle Phase.
+41- Xyz Summon "Number 9: Dyson Sphere" using "Trishula" and "Bahrastos". Activate "Argent Chaos" and target "Number 9" to Special Summon "Number C9: Chaos Dyson Sphere".
+42- Activate "Number C9" effect to inflict 900 damage, then detach all the materials to inflict 2400 damage.
+43- Special Summon "Collapserpent" from your hand, banishing "N'Tss" from the GY.
+44- Tribute all monsters with "Mass Driver" for game.
+--]]
