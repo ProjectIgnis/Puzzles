@@ -51,3 +51,20 @@ Debug.AddCard(7841112,1,1,LOCATION_MZONE,2,POS_FACEUP_ATTACK,true)
 
 Debug.ReloadFieldEnd()
 aux.BeginPuzzle()
+
+--Puzzle Solution
+--1 Summon Fog Kink
+--2 Activate Curse of the Circle, target Majestic Star Dragon
+--3 Activate Earthbound Prison
+--4 Activate Supay, Duskwalker, discard Transaction Rollback
+--5 Activate Ascator, Dawnwalker, discard Limit Impulse
+--6 Synchro Summon Sun Dragon Inti by using Ascator and Fire Ant
+--8 Synchro Summon Moon Dragon Quilla by using Supay and Duskwalker
+--9 Activate Transaction Rollback, target Limit Impulse in the GY
+--10 Activate High Rate Draw, destroy every monster except one token
+--11 Special Summon Sun Dragon Inti from GY
+--12 Special Summon Earthbound Greater Linewalker
+--13 Set Offering to the Immortals and Earthbound Immortal Revival
+--14 Using Earthbound Prison effect, Normal Summon Wiraqocha Rasca
+--15 Use the effect of Wiraqocha Rasca, sending Linewalker and the two set cards to the Deck. In response, chain Linewalker effect so that the opponent's LP become 3000
+--16 Battle Phase, attack directly for game
