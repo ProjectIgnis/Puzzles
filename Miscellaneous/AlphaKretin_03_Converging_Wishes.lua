@@ -129,3 +129,18 @@ aux.BeginPuzzle()
 --Debug.PreSummon(c,type)
 --Debug.AddCard()
 --aux.BeginPuzzle()
+
+--[[Solution:
+1- Activate "Resonator Call" and add "Red Resonator" from the Deck to the Hand. Activate another "Resonator Call" and add "Creation Resonator".
+2- Normal Summon "Red Resonator", then activate its effect to Special Summon "Glow-Up Bulb" from the Hand. Chain "Red Warg" to Special Summon it from the Hand.
+3- Synchro Summon "Scarlight Red Dragon Archfiend" using "Red Resonator" and "Red Warg", then Synchro Summon "Hot Red Dragon Archfiend Abyss" using "Scarlight" and "Glow-Up".
+4- Activate "Glow-Up" from the GY and Special Summon it. Synchro Summon "Hot Red Dragon Archfiend Bane" using "Abyss" and "Glow-Up".
+5- Activate "Bane" effect and Tribute it to Special Summon "Scarlight" from the GY. Special Summon "Red Nova" and "Creation Resonator" from the Hand.
+6- Synchro Summon "Hot Red Dragon Archfiend King Calamity" using "Red Nova" and "Creation Resonator". Activate "Red Nova" GY effect to Special Summon "Flare Resonator" from the GY.
+7- Enter Battle Phase and attack "Number C15: Gimmick Puppet Giant Hunter" with "King Calamity". Activate its GY effect to Special Summon "Scarlight".
+8- Activate "Synchro Call" and Special Summon "Red Nova", then Synchro Summon "Red Nova Dragon" using "Scarlight", "Red Nova" and "Flare Resonator".
+9- Activate "Red Nova" GY effect to Special Summon "Red Resonator" from the GY. Activate "Red Resonator" effect and target "Number C15".
+10- Attack "Number C15: Gimmick Puppet Giant Hunter" with "Red Nova Dragon". Activate "Converging Wishes" and Special Summon "Stardust Dragon".
+11- Attack "Red Rose Dragon" with "Stardust", banish "Red Nova Dragon" from the GY. Attack "Red-Eyes Black Dragon" with "Stardust", banish "King Calamity".
+12- Attack "Elemental HERO Thunder Giant" for game.
+--]]
