@@ -100,3 +100,33 @@ end
 Equip(eq_0,m_2)
 Equip(eq_1,m_2)
 aux.BeginPuzzle()
+
+
+--[[Solution:
+1. Activate the set "Extra-Foolish Burial" and send "Dark Magician the Dragon Knight" to the GY.
+2. Activate "Mystic Box", destroy "Annihilator Archfiend" and give control of "Dark Magician" to your opponent.
+3. Activate the set "Graceful Charity" and discard two copies of "Magician of Black Chaos".
+4. Activate the set "Pot of Greed", then discard "Dark Magician Girl" to Special Summon from your Hand "Apprentice Illusion Magician".
+5. On Summon, activate "Apprentice" effect to add "Dark Magician" from the Deck to your Hand.
+6. Discard "Black Chaos" to Special Summon another "Apprentice" from your Hand. 
+7. On Summon, activate "Apprentice" effect to add another "Dark Magician" from the Deck to your Hand.
+8. Normal Summon "Chocolate Magician Girl" then activate its effect and discard "Dark Magician".
+9. Xyz Summon "Magi Magi ☆ Magician Gal" using the two copies of "Apprentice" as materials.
+10. Activate "Magi Magi" effect and banish "Order to Charge" from your Hand to take control of "Archfiend Heiress".
+11. Switch "Heiress" to Attack Position, then Xyz Summon "Ebon Illusion Magician" on top of "Magi Magi".
+12. Activate "Ebon" effect and detatch "Magi Magi" to Special Summon "Dark Magician" from your Hand.
+13. Activate "Bond Between Teacher and Student" from your Hand to Special Summon "Dark Magician Girl" from your GY.
+14. Activate "The Eye of Timaeus" from your Hand and target "Magician Girl" to Fusion Summon "Dark Magician Girl the Dragon Knight".
+15. Activate "Magician Girl Dragon Knight" effect and discard "Palladium Oracle Mana" to destroy "Burden of the Mighty".
+16. Activate "Dragon's Mirror" from your Hand.
+17. Fusion Summon "Amulet Dragon" using "Dark Magician" on the Field and the "Dragon Knight" in the GY as materials.
+18. Activate "Amulet Dragon" effect and banish all 11 Spell Cards in both player's GY.
+19. Enter Battle Phase. Attack "Dark Magician" with "Heiress" and "Chocolate".
+20. Chain the "Dimensional Prison" on "Chocolate" with "Palladium" to Special Summon the latter from the GY.
+21. Activate "Call of the Haunted" to Special Summon "Apprentice". Attack "Dark Magician" with "Apprentice".
+22. Attack "Annihilator" with "Palladium". Activate the latter's effect to Special Summon "Magician Girl" from the GY.
+23. Attack "Heiress" with "Magician Girl". Before Damage Calculation, activate "Apprentice" effect.
+24. Activate "Xyz Reborn" and Special Summon "Magi Magi" from the GY.
+25. Attack "The First Darklord" with "Amulet Dragon". Activate the latter's effect to Special Summon "Dark Magician" from the GY.
+26. Attack directly with all for game.
+--]]
