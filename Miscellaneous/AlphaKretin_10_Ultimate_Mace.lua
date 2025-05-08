@@ -71,19 +71,41 @@ Debug.ShowHint("Win in one turn!")
 --Below makes it a one turn puzzle.
 aux.BeginPuzzle()
 
---LOCATION_DECK
---LOCATION_SZONE
---LOCATION_GRAVE
---LOCATION_HAND
---LOCATION_MZONE
---LOCATION_EXTRA
---LOCATION_REMOVED
---POS_FACEDOWN
---POS_FACEDOWN_DEFENSE
---POS_FACEUP
---POS_FACEUP_DEFENSE
---POS_FACEUP_ATTACK
---Debug.PreEquip(e1,c1)
---Debug.PreSummon(c,type)
---Debug.AddCard()
---aux.BeginPuzzle()
+--[[Solution
+1 - Normal Summon "Raidraptor - Wild Vulture".
+2 - Activate the effect of "Raidraptor - Wild Vulture" and Special Summon 2 "Raidraptor - Skull Eagle".
+3 - Xyz Summon "Leviair the Sea Dragon" in Attack Position, triggering the mandatory effects of "Raidraptor - Skull Eagle".
+4 - Activate the effect of "Leviair the Sea Dragon" and Special Summon "Raidraptor - Tribute Lanius".
+5 - Trigger the effect of the detached "Raidraptor - Skull Eagle", adding "Raidraptor - Singing Lanius" to the hand.
+6 - Activate the effect of "Raidraptor - Tribute Lanius", sending "Raidraptor - Mimicry Lanius" to the GY.
+7 - Activate the effect of "Raidraptor - Mimicry Lanius", adding "Raidraptor - Pain Lanius" to the hand.
+8 - Special Summon "Raidraptor - Singing Lanius" in Attack Position.
+9 - Special Summon "Raidraptor - Pain Lanius", targeting "Raidraptor - Singing Lanius", in Attack Position.
+10 - Activate the Set "Raptor's Ultimate Mace" and equip it to "Raidraptor - Pain Lanius".
+11 - Activate the Set "Safe Zone", targeting "Raidraptor - Pain Lanius".
+12 - Activate "Creature Swap" and change control of "Raidraptor - Pain Lanius" and "Blackwing - Bora the Spear".
+13 - Xyz Summon "Raidraptor - Rise Falcon" in Attack Position.
+14 - Activate the effect of "Raidraptor - Rise Falcon", detaching "Blackwing - Bora the Spear" and targeting "Raidraptor - Pain Lanius".
+15 - Enter the Battle Phase.
+16 - Attack with "Raidraptor - Rise Falcon".
+17 - Activate the trigger effect of "Raptor's Ultimate Mace", adding "Rank-Up-Magic Revolution Force" to your hand.
+18 - Activate "Rank-Up-Magic Revolution Force"; Special Summon "Raidraptor - Stranger Falcon" in Attack Position.
+19 - Attack with "Raidraptor - Stranger Falcon".
+20 - Activate the trigger effect of "Raptor's Ultimate Mace", adding "Rank-Up-Magic Revolution Force" to your hand.
+21 - Activate "Rank-Up-Magic Revolution Force"; Special Summon "Raidraptor - Revolution Falcon" in Attack Position.
+22 - Attack with "Raidraptor - Revolution Falcon".
+23 - Activate the trigger effect of "Raptor's Ultimate Mace", adding "Rank-Up-Magic Revolution Force" to your hand.
+24 - Attack with "Leviair the Sea Dragon".
+25 - Activate the trigger effect of "Raptor's Ultimate Mace", adding any "Rank-Up-Magic" Spell to your hand.
+27 - Attack with "Raidraptor - Arsenal Falcon".
+28 - Activate "Rank-Up-Magic Revolution Force"; Special Summon "Raidraptor - Arsenal Falcon" in Attack Position.
+29 - Repeat steps 27 and 28 until "Raidraptor - Arsenal Falcon" can no longer attack.
+30 - Activate "Cattle Call", sending "Raidraptor - Arsenal Falcon" to the GY to Special Summon "Raidraptor - Ultimate Falcon".
+31 - Activate the trigger effect of "Raidraptor - Arsenal Falcon" and Special Summon "Raidraptor - Final Fortress Falcon" in Attack Position, attaching "Raidraptor - Arsenal Falcon" to it.
+32 - Activate "Wonder Xyz", Special Summoning "Number 77: The Seven Sins" in Attack Position.
+33 - Attack with "Number 77: The Seven Sins".
+34 - Activate the trigger effect of "Raptor's Ultimate Mace", adding any "Rank-Up-Magic" Spell to your hand.
+35 - Attack with "Raidraptor - Final Fortress Falcon".
+36 - Activate the trigger effect of "Raptor's Ultimate Mace", adding any "Rank-Up-Magic" Spell to your hand.
+37 - Activate "Full Salvo".
+]]
