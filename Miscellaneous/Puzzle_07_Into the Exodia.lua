@@ -54,3 +54,13 @@ Debug.AddCard(55144522,0,0,LOCATION_HAND,0,POS_FACEDOWN)
 Debug.ReloadFieldEnd()
 Debug.ShowHint("Win in this turn!")
 aux.BeginPuzzle()
+
+--[[
+Solution:
+Activate The Cheerful Coffin and send Sillva, Beiige, and Broww to the graveyard
+Special summon Beiige and Silva in attack position. Draw with Broww
+Summon Zure in attack position. Enter Battle phase
+Attack White Magical Hat with Scarr (discarding Goldd and destroy both Blue-Eyes White Dragons)
+Special summon Goldd in attack position and then attack.
+
+]]
